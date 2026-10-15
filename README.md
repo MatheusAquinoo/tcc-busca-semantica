@@ -15,16 +15,19 @@ O sistema adota uma Arquitetura em Três Camadas (*Layered Architecture*), asseg
 
 ```mermaid
 flowchart TD
-    subgraph Cliente ["Cliente / Interface de Aplicação"]
-        User(["Usuário / Técnico Help Desk"])
+    subgraph Cliente["Cliente / Interface de Aplicação"]
+        User["Usuário / Técnico Help Desk"]
+        WebUI["Web Portal (index.html)"]
         CLI["CLI de Consulta (query_cli.py)"]
         Swagger["FastAPI Swagger UI (/docs)"]
+        User --> WebUI
         User --> CLI
         User --> Swagger
     end
 
-    subgraph Camada_API ["Camada de Aplicação / API"]
+    subgraph Camada_API["Camada de Aplicação / API"]
         FastAPI["FastAPI Web Server (main.py)"]
+        WebUI --> FastAPI
         CLI --> FastAPI
         Swagger --> FastAPI
         FastAPI --> SemRoute["POST /search/semantic"]
@@ -32,25 +35,25 @@ flowchart TD
         FastAPI --> HealthRoute["GET /health"]
     end
 
-    subgraph Camada_Negocio ["Camada de Negócio / Inteligência"]
+    subgraph Camada_Negocio["Camada de Negócio / Inteligência"]
         EmbedService["EmbeddingService (Sentence-Transformers)"]
         Model["paraphrase-multilingual-mpnet-base-v2 (768d)"]
         EmbedService --> Model
         SemRoute --> EmbedService
     end
 
-    subgraph Camada_Dados ["Camada de Persistência Unificada (Docker)"]
-        Postgres[("PostgreSQL 16 + pgvector")]
+    subgraph Camada_Dados["Camada de Persistência Unificada (Docker)"]
+        Postgres[(PostgreSQL 16 + pgvector)]
         T_Doc["Tabela: documentos"]
         T_Chunks["Tabela: documento_chunks"]
         HNSW["Índice Vetorial HNSW (vector_cosine_ops)"]
         GIN["Índice Lexical GIN (Full-Text Search)"]
         
-        SemRoute -->|Query Distância Cosseno <=> + Pre-filter| HNSW
-        LexRoute -->|Query Palavras-chave ts_rank| GIN
+        SemRoute -->|"Query Distância Cosseno + Pre-filter"| HNSW
+        LexRoute -->|"Query Palavras-chave ts_rank"| GIN
         HNSW --> T_Chunks
         GIN --> T_Chunks
-        T_Chunks -->|Foreign Key| T_Doc
+        T_Chunks -->|"Foreign Key"| T_Doc
     end
 ```
 
