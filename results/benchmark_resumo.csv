@@ -1,0 +1,4 @@
+Abordagem,Precisão@5 Média,Revocação@5 Média,MRR,T_emb Médio (ms),T_sql Médio (ms),T_total Médio (ms)
+Busca Lexical (FTS - Grupo de Controle),0.0000,0.0000,0.0000,0.00,50.40,50.40
+Busca Semântica (pgvector HNSW),0.1767,0.8833,0.7500,21.78,27.12,48.90
+Busca Semântica Híbrida (HNSW + Pre-filtering),0.1833,0.9167,0.8097,21.57,28.53,50.10

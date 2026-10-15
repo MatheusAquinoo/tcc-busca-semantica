@@ -1,0 +1,482 @@
+[
+  {
+    "consulta_id": 1,
+    "cenario": "Microsoft",
+    "consulta_texto": "minha internet nao funciona e aparece rede nao identificada",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 1,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 2,
+    "cenario": "Microsoft",
+    "consulta_texto": "como conectar na vpn da empresa no windows",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 2,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 3,
+    "cenario": "Microsoft",
+    "consulta_texto": "o wifi esta muito lento e caindo toda hora",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 3,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 4,
+    "cenario": "Microsoft",
+    "consulta_texto": "nao consigo acessar a pasta compartilhada no servidor",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 4,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 5,
+    "cenario": "Microsoft",
+    "consulta_texto": "problema para resolver nomes dns internos",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 5,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 6,
+    "cenario": "Microsoft",
+    "consulta_texto": "nao consigo conectar na area de trabalho remota rdp",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 6,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 7,
+    "cenario": "Microsoft",
+    "consulta_texto": "aviso de conflito de endereco ip no computador",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 7,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 8,
+    "cenario": "Microsoft",
+    "consulta_texto": "sites internos travando e conexao fragmentando pacotes",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 8,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 9,
+    "cenario": "Microsoft",
+    "consulta_texto": "chamada do microsoft teams com audio falhando e cortando",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 9,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 10,
+    "cenario": "Microsoft",
+    "consulta_texto": "minha placa de rede ethernet desliga sozinha quando paro de usar",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 10,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 11,
+    "cenario": "Microsoft",
+    "consulta_texto": "esqueci minha senha e minha conta de usuario foi bloqueada",
+    "categoria_esperada": "Autenticação",
+    "documento_relevante_id": 11,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 12,
+    "cenario": "Microsoft",
+    "consulta_texto": "falha na relacao de confianca entre estacao e dominio",
+    "categoria_esperada": "Autenticação",
+    "documento_relevante_id": 12,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 13,
+    "cenario": "Microsoft",
+    "consulta_texto": "nao recebo notificacao do aplicativo autenticador mfa",
+    "categoria_esperada": "Autenticação",
+    "documento_relevante_id": 13,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 14,
+    "cenario": "Microsoft",
+    "consulta_texto": "relogio do computador com diferenca de horario e erro de login",
+    "categoria_esperada": "Autenticação",
+    "documento_relevante_id": 14,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 15,
+    "cenario": "Microsoft",
+    "consulta_texto": "outlook fica pedindo senha o tempo todo",
+    "categoria_esperada": "Autenticação",
+    "documento_relevante_id": 15,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 16,
+    "cenario": "Microsoft",
+    "consulta_texto": "como forcar atualizacao das politicas de gpo",
+    "categoria_esperada": "Autenticação",
+    "documento_relevante_id": 16,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 17,
+    "cenario": "Microsoft",
+    "consulta_texto": "pin do windows hello nao disponivel apos ligar",
+    "categoria_esperada": "Autenticação",
+    "documento_relevante_id": 17,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 18,
+    "cenario": "Microsoft",
+    "consulta_texto": "leitor de cartao inteligente smart card nao reconhecido",
+    "categoria_esperada": "Autenticação",
+    "documento_relevante_id": 18,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 19,
+    "cenario": "Microsoft",
+    "consulta_texto": "auditoria de tentativas de senha incorreta no windows",
+    "categoria_esperada": "Autenticação",
+    "documento_relevante_id": 19,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 20,
+    "cenario": "Microsoft",
+    "consulta_texto": "alterei a senha no computador mas na nuvem nao atualizou",
+    "categoria_esperada": "Autenticação",
+    "documento_relevante_id": 20,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 21,
+    "cenario": "Microsoft",
+    "consulta_texto": "computador travou e deu tela azul critical process died",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 21,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 22,
+    "cenario": "Microsoft",
+    "consulta_texto": "meu computador ta muito lento com disco em 100 porcento",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 22,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 23,
+    "cenario": "Microsoft",
+    "consulta_texto": "windows update travado baixando atualizacoes",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 23,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 24,
+    "cenario": "Microsoft",
+    "consulta_texto": "windows travado na tela azul de reparo automatico",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 24,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 25,
+    "cenario": "Microsoft",
+    "consulta_texto": "como voltar o windows para uma data anterior restaurar",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 25,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 26,
+    "cenario": "Microsoft",
+    "consulta_texto": "processo interrupcoes do sistema usando muita cpu",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 26,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 27,
+    "cenario": "Microsoft",
+    "consulta_texto": "erro de boot winload.efi ausente no windows",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 27,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 28,
+    "cenario": "Microsoft",
+    "consulta_texto": "como fazer inicializacao limpa para testar programas",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 28,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 29,
+    "cenario": "Microsoft",
+    "consulta_texto": "adicionar caminho no path do sistema windows",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 29,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 30,
+    "cenario": "Microsoft",
+    "consulta_texto": "barra de tarefas travou e menu iniciar nao clica",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 30,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 31,
+    "cenario": "Ubuntu",
+    "consulta_texto": "erro could not get lock dpkg quebrado no terminal",
+    "categoria_esperada": "Gerenciamento de Pacotes",
+    "documento_relevante_id": 101,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 32,
+    "cenario": "Ubuntu",
+    "consulta_texto": "como configurar ip fixo com netplan no ubuntu",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 102,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 33,
+    "cenario": "Ubuntu",
+    "consulta_texto": "computador liga na tela grub rescue nao inicia o linux",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 103,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 34,
+    "cenario": "Ubuntu",
+    "consulta_texto": "servidor linux travando com processo usando toda a memoria e cpu",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 104,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 35,
+    "cenario": "Ubuntu",
+    "consulta_texto": "nao consigo conectar por ssh na porta 22 connection refused",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 105,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 36,
+    "cenario": "Ubuntu",
+    "consulta_texto": "disco cheio no ubuntu como liberar espaco em var log",
+    "categoria_esperada": "Armazenamento",
+    "documento_relevante_id": 106,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 37,
+    "cenario": "Ubuntu",
+    "consulta_texto": "como montar hd ou particao automaticamente no fstab",
+    "categoria_esperada": "Armazenamento",
+    "documento_relevante_id": 107,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 38,
+    "cenario": "Ubuntu",
+    "consulta_texto": "permissao negada em pasta chmod chown para usuario",
+    "categoria_esperada": "Segurança",
+    "documento_relevante_id": 108,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 39,
+    "cenario": "Ubuntu",
+    "consulta_texto": "como ativar firewall ufw e liberar portas no ubuntu",
+    "categoria_esperada": "Segurança",
+    "documento_relevante_id": 109,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 40,
+    "cenario": "Ubuntu",
+    "consulta_texto": "wifi nao aparece no notebook com ubuntu driver broadcom",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 110,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 41,
+    "cenario": "Ubuntu",
+    "consulta_texto": "como reiniciar servico e ver logs com systemctl e journalctl",
+    "categoria_esperada": "Serviços & Daemons",
+    "documento_relevante_id": 111,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 42,
+    "cenario": "Ubuntu",
+    "consulta_texto": "como colocar script para rodar sozinho todo dia no crontab",
+    "categoria_esperada": "Serviços & Daemons",
+    "documento_relevante_id": 112,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 43,
+    "cenario": "Ubuntu",
+    "consulta_texto": "esqueci a senha de root e administrador no ubuntu como recuperar",
+    "categoria_esperada": "Segurança",
+    "documento_relevante_id": 113,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 44,
+    "cenario": "Ubuntu",
+    "consulta_texto": "servidor matando processos por falta de memoria como criar swap",
+    "categoria_esperada": "Armazenamento",
+    "documento_relevante_id": 114,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 45,
+    "cenario": "Ubuntu",
+    "consulta_texto": "tela preta com placa de video nvidia no linux",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 115,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 46,
+    "cenario": "Ubuntu",
+    "consulta_texto": "erro de permissao ao rodar comando docker sem sudo",
+    "categoria_esperada": "Serviços & Daemons",
+    "documento_relevante_id": 116,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 47,
+    "cenario": "Ubuntu",
+    "consulta_texto": "kernel panic unable to mount root fs apos atualizar o ubuntu",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 117,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 48,
+    "cenario": "Ubuntu",
+    "consulta_texto": "como mudar o horario e fuso horario no linux timedatectl",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 118,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 49,
+    "cenario": "Ubuntu",
+    "consulta_texto": "como ver qual processo esta lendo e escrevendo muito no disco",
+    "categoria_esperada": "Armazenamento",
+    "documento_relevante_id": 119,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 50,
+    "cenario": "Ubuntu",
+    "consulta_texto": "como fazer login por chave ssh sem precisar digitar senha",
+    "categoria_esperada": "Segurança",
+    "documento_relevante_id": 120,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 51,
+    "cenario": "Ubuntu",
+    "consulta_texto": "erro de chave gpg expirada ao dar apt update",
+    "categoria_esperada": "Gerenciamento de Pacotes",
+    "documento_relevante_id": 121,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 52,
+    "cenario": "Ubuntu",
+    "consulta_texto": "servidor nao pinga fora da rede rota padrao sumiu",
+    "categoria_esperada": "Conectividade",
+    "documento_relevante_id": 122,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 53,
+    "cenario": "Ubuntu",
+    "consulta_texto": "erro no initramfs prompt apos desligar no botao",
+    "categoria_esperada": "Sistema Operacional",
+    "documento_relevante_id": 123,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 54,
+    "cenario": "Ubuntu",
+    "consulta_texto": "particao montou como somente leitura read only reparar com fsck",
+    "categoria_esperada": "Armazenamento",
+    "documento_relevante_id": 124,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 55,
+    "cenario": "Ubuntu",
+    "consulta_texto": "como ver quais portas e programas estao ouvindo com comando ss",
+    "categoria_esperada": "Segurança",
+    "documento_relevante_id": 125,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 56,
+    "cenario": "Ubuntu",
+    "consulta_texto": "configurar servico no systemd para reiniciar sozinho se cair",
+    "categoria_esperada": "Serviços & Daemons",
+    "documento_relevante_id": 126,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 57,
+    "cenario": "Ubuntu",
+    "consulta_texto": "disco 100 porcento ocupado mas du nao acha arquivos apagados abertos",
+    "categoria_esperada": "Armazenamento",
+    "documento_relevante_id": 127,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 58,
+    "cenario": "Ubuntu",
+    "consulta_texto": "erro no space left on device mesmo com espaco livre inodes",
+    "categoria_esperada": "Armazenamento",
+    "documento_relevante_id": 128,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 59,
+    "cenario": "Ubuntu",
+    "consulta_texto": "erro etc sudoers is world writable perdi acesso ao sudo",
+    "categoria_esperada": "Segurança",
+    "documento_relevante_id": 129,
+    "relevancia_binaria": 1
+  },
+  {
+    "consulta_id": 60,
+    "cenario": "Ubuntu",
+    "consulta_texto": "warning remote host identification has changed ssh known hosts",
+    "categoria_esperada": "Segurança",
+    "documento_relevante_id": 130,
+    "relevancia_binaria": 1
+  }
+]

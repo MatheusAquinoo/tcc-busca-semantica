@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mecanismo de Busca Semântica - Help Desk (TCC UTFPR)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --surface-color: #1e293b;
+            --surface-hover: #334155;
+            --primary: #3b82f6;
+            --primary-hover: #2563eb;
+            --accent: #10b981;
+            --warning: #f59e0b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --border-color: #334155;
+            --card-bg: rgba(30, 41, 59, 0.7);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            min-height: 100vh;
+            padding: 2rem 1rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 2.5rem;
+        }
+
+        .badge-academic {
+            display: inline-block;
+            background: rgba(59, 130, 246, 0.15);
+            color: #60a5fa;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 0.35rem 0.85rem;
+            border-radius: 9999px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(to right, #60a5fa, #34d399);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .subtitle {
+            color: var(--text-muted);
+            font-size: 1rem;
+            margin-bottom: 1rem;
+        }
+
+        .tech-tags {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .tech-pill {
+            background: #1e293b;
+            border: 1px solid #334155;
+            padding: 0.25rem 0.6rem;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: #cbd5e1;
+        }
+
+        .search-card {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            padding: 1.75rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+            margin-bottom: 2rem;
+        }
+
+        .input-group {
+            display: flex;
+            gap: 0.75rem;
+            margin-bottom: 1.25rem;
+        }
+
+        .search-input {
+            flex: 1;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 10px;
+            padding: 0.85rem 1.25rem;
+            color: white;
+            font-size: 1rem;
+            outline: none;
+            transition: all 0.2s;
+        }
+
+        .search-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+        }
+
+        .btn-search {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            padding: 0 1.75rem;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .btn-search:hover {
+            background: var(--primary-hover);
+        }
+
+        .filters-row {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+
+        .filter-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .filter-item label {
+            color: var(--text-muted);
+            font-weight: 500;
+        }
+
+        select {
+            background: #0f172a;
+            border: 1px solid #334155;
+            color: var(--text-main);
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            outline: none;
+            cursor: pointer;
+        }
+
+        .pills-title {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .examples-pills {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .pill-btn {
+            background: #0f172a;
+            border: 1px solid #334155;
+            color: #94a3b8;
+            padding: 0.3rem 0.75rem;
+            border-radius: 9999px;
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pill-btn:hover {
+            border-color: var(--primary);
+            color: #60a5fa;
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        /* Telemetry Bar */
+        .telemetry-bar {
+            display: flex;
+            gap: 1.5rem;
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid var(--border-color);
+            padding: 0.75rem 1.25rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+            font-size: 0.85rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .tele-item {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+
+        .tele-val {
+            font-weight: 700;
+            color: #38bdf8;
+        }
+
+        /* Results Grid */
+        .results-container {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .comparison-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+
+        @media (max-width: 900px) {
+            .comparison-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .col-header {
+            font-size: 1.1rem;
+            font-weight: 600;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-result {
+            background: var(--surface-color);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 1.25rem;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+
+        .card-result:hover {
+            transform: translateY(-2px);
+            border-color: #475569;
+        }
+
+        .card-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 0.6rem;
+            gap: 0.5rem;
+        }
+
+        .rank-num {
+            background: #334155;
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: #f1f5f9;
+            flex: 1;
+        }
+
+        .score-badge {
+            background: rgba(16, 185, 129, 0.15);
+            color: #34d399;
+            border: 1px solid rgba(16, 185, 129, 0.3);
+            padding: 0.2rem 0.5rem;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            white-space: nowrap;
+        }
+
+        .card-meta {
+            display: flex;
+            gap: 0.5rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.75rem;
+        }
+
+        .meta-tag {
+            padding: 0.15rem 0.45rem;
+            border-radius: 4px;
+        }
+
+        .tag-microsoft {
+            background: rgba(37, 99, 235, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(37, 99, 235, 0.3);
+        }
+
+        .tag-ubuntu {
+            background: rgba(234, 88, 12, 0.2);
+            color: #fdba74;
+            border: 1px solid rgba(234, 88, 12, 0.3);
+        }
+
+        .tag-cat {
+            background: rgba(148, 163, 184, 0.15);
+            color: #cbd5e1;
+            border: 1px solid rgba(148, 163, 184, 0.2);
+        }
+
+        .card-body {
+            font-size: 0.9rem;
+            line-height: 1.5;
+            color: #cbd5e1;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem 1rem;
+            color: var(--text-muted);
+            background: var(--surface-color);
+            border-radius: 12px;
+            border: 1px dashed var(--border-color);
+        }
+
+        .spinner {
+            border: 3px solid rgba(255, 255, 255, 0.1);
+            border-top: 3px solid var(--primary);
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 0.8s linear infinite;
+            display: inline-block;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        footer {
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid var(--border-color);
+            padding-top: 1.5rem;
+        }
+
+        footer a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="badge-academic">UTFPR • Trabalho de Conclusão de Curso (TCC 2)</div>
+            <h1>Busca Semântica para Help Desk</h1>
+            <p class="subtitle">Recuperação de Informação Inteligente com PostgreSQL + pgvector (HNSW) e Sentence-Transformers</p>
+            <div class="tech-tags">
+                <span class="tech-pill">PostgreSQL 16</span>
+                <span class="tech-pill">pgvector (HNSW)</span>
+                <span class="tech-pill">Sentence-Transformers 768d</span>
+                <span class="tech-pill">FastAPI</span>
+                <span class="tech-pill">Full-Text Search</span>
+            </div>
+        </header>
+
+        <section class="search-card">
+            <div class="input-group">
+                <input type="text" id="queryInput" class="search-input" placeholder="Digite a dúvida ou problema do usuário (ex: 'minha internet caiu', 'tela azul', 'dpkg lock')..." autofocus>
+                <button id="btnSearch" class="btn-search" onclick="executeSearch()">
+                    <span>Buscar</span>
+                </button>
+            </div>
+
+            <div class="filters-row">
+                <div class="filter-item">
+                    <label for="searchMode">Modo:</label>
+                    <select id="searchMode" onchange="toggleMode()">
+                        <option value="semantic" selected>Busca Semântica (pgvector HNSW)</option>
+                        <option value="lexical">Busca Lexical (FTS - Grupo de Controle)</option>
+                        <option value="compare">Comparar Lado a Lado (Semântica vs Lexical)</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="categoryFilter">Categoria:</label>
+                    <select id="categoryFilter">
+                        <option value="">Todas as Categorias</option>
+                        <option value="Conectividade">Conectividade</option>
+                        <option value="Autenticação">Autenticação</option>
+                        <option value="Sistema Operacional">Sistema Operacional</option>
+                        <option value="Armazenamento">Armazenamento</option>
+                        <option value="Segurança">Segurança</option>
+                        <option value="Gerenciamento de Pacotes">Gerenciamento de Pacotes</option>
+                        <option value="Serviços & Daemons">Serviços & Daemons</option>
+                        <option value="Office & Produtividade">Office & Produtividade</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="sourceFilter">Fonte:</label>
+                    <select id="sourceFilter">
+                        <option value="">Todas (Microsoft + Ubuntu)</option>
+                        <option value="Microsoft">Microsoft (FAQs)</option>
+                        <option value="Ubuntu">Ubuntu (Logs/Diálogos)</option>
+                    </select>
+                </div>
+
+                <div class="filter-item">
+                    <label for="topNFilter">Top-N:</label>
+                    <select id="topNFilter">
+                        <option value="3">Top 3</option>
+                        <option value="5" selected>Top 5</option>
+                        <option value="10">Top 10</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="pills-title">Exemplos rápidos de consultas em linguagem coloquial:</div>
+            <div class="examples-pills">
+                <button class="pill-btn" onclick="setQuery('minha internet caiu e ta com ip estranho')">minha internet caiu e ta com ip estranho</button>
+                <button class="pill-btn" onclick="setQuery('esqueci a senha do usuario no dominio')">esqueci a senha do usuario no dominio</button>
+                <button class="pill-btn" onclick="setQuery('computador travado com disco em 100%')">computador travado com disco em 100%</button>
+                <button class="pill-btn" onclick="setQuery('erro could not get lock dpkg quebrado')">erro could not get lock dpkg quebrado</button>
+                <button class="pill-btn" onclick="setQuery('como montar particao no fstab')">como montar particao no fstab</button>
+                <button class="pill-btn" onclick="setQuery('tela azul critical process died')">tela azul critical process died</button>
+            </div>
+        </section>
+
+        <!-- Area de Resultados -->
+        <main id="resultsArea">
+            <div class="empty-state">
+                <p>Insira uma consulta acima ou clique em um dos exemplos rápidos para testar a busca.</p>
+            </div>
+        </main>
+
+        <footer>
+            <p>Projeto de Conclusão de Curso • Engenharia de Software • UTFPR - Campus Dois Vizinhos</p>
+            <p>Autor: <strong>Matheus de Aquino da Silva</strong> | Orientador: <strong>Prof. Dr. Bruno Honorato</strong></p>
+            <p style="margin-top: 0.5rem;">
+                <a href="/docs" target="_blank">Documentação Swagger (API)</a> • 
+                <a href="/health" target="_blank">Status de Saúde do Banco</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.getElementById('queryInput').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') executeSearch();
+        });
+
+        function setQuery(text) {
+            document.getElementById('queryInput').value = text;
+            executeSearch();
+        }
+
+        function toggleMode() {
+            const query = document.getElementById('queryInput').value.trim();
+            if (query) executeSearch();
+        }
+
+        async function fetchSearch(endpoint, payload) {
+            const res = await fetch(endpoint, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(payload)
+            });
+            return await res.json();
+        }
+
+        async function executeSearch() {
+            const query = document.getElementById('queryInput').value.trim();
+            if (!query) return;
+
+            const mode = document.getElementById('searchMode').value;
+            const categoria = document.getElementById('categoryFilter').value || null;
+            const fonte = document.getElementById('sourceFilter').value || null;
+            const top_n = parseInt(document.getElementById('topNFilter').value);
+
+            const resultsArea = document.getElementById('resultsArea');
+            resultsArea.innerHTML = `
+                <div class="empty-state">
+                    <div class="spinner"></div>
+                    <p style="margin-top: 1rem;">Processando representações vetoriais e consultando o PostgreSQL...</p>
+                </div>
+            `;
+
+            try {
+                if (mode === 'compare') {
+                    // Executa ambas em paralelo
+                    const payload = { query, top_n, categoria, fonte };
+                    const [resSem, resLex] = await Promise.all([
+                        fetchSearch('/search/semantic', payload),
+                        fetchSearch('/search/lexical', payload)
+                    ]);
+                    renderComparison(resSem, resLex);
+                } else {
+                    const endpoint = mode === 'semantic' ? '/search/semantic' : '/search/lexical';
+                    const payload = { query, top_n, categoria, fonte };
+                    const res = await fetchSearch(endpoint, payload);
+                    renderSingle(res);
+                }
+            } catch (err) {
+                resultsArea.innerHTML = `
+                    <div class="empty-state" style="border-color: #ef4444; color: #fca5a5;">
+                        <p><strong>Erro ao executar busca:</strong> ${err.message}</p>
+                    </div>
+                `;
+            }
+        }
+
+        function renderTelemetry(t, tipo) {
+            return `
+                <div class="telemetry-bar">
+                    <div class="tele-item">
+                        <span>Motor:</span>
+                        <span class="tele-val">${tipo.toUpperCase()}</span>
+                    </div>
+                    <div class="tele-item">
+                        <span>Inferência Neural (T_emb):</span>
+                        <span class="tele-val">${t.t_emb_ms.toFixed(2)} ms</span>
+                    </div>
+                    <div class="tele-item">
+                        <span>Busca PostgreSQL (T_sql):</span>
+                        <span class="tele-val">${t.t_sql_ms.toFixed(2)} ms</span>
+                    </div>
+                    <div class="tele-item">
+                        <span>Latência Total (T_total):</span>
+                        <span class="tele-val" style="color: #34d399;">${t.t_total_ms.toFixed(2)} ms</span>
+                    </div>
+                </div>
+            `;
+        }
+
+        function renderCard(item, rank, tipo) {
+            const fonteClass = item.fonte === 'Microsoft' ? 'tag-microsoft' : 'tag-ubuntu';
+            let scoreLabel = `Score: ${(item.score * 100).toFixed(1)}%`;
+            if (tipo === 'lexical') {
+                scoreLabel = `ts_rank: ${item.score.toFixed(4)}`;
+            }
+
+            return `
+                <div class="card-result">
+                    <div class="card-top">
+                        <span class="rank-num">#${rank}</span>
+                        <h3 class="card-title">${item.titulo}</h3>
+                        <span class="score-badge">${scoreLabel}</span>
+                    </div>
+                    <div class="card-meta">
+                        <span class="meta-tag ${fonteClass}">${item.fonte}</span>
+                        ${item.categoria ? `<span class="meta-tag tag-cat">${item.categoria}</span>` : ''}
+                        ${item.distancia_cosseno !== null ? `<span class="meta-tag tag-cat">Dist: ${item.distancia_cosseno.toFixed(4)}</span>` : ''}
+                    </div>
+                    <p class="card-body">${item.conteudo}</p>
+                </div>
+            `;
+        }
+
+        function renderSingle(res) {
+            const container = document.getElementById('resultsArea');
+            let html = renderTelemetry(res.telemetria, res.tipo_busca);
+
+            if (res.resultados.length === 0) {
+                html += `
+                    <div class="empty-state">
+                        <p>Nenhum documento encontrado para a consulta informada.</p>
+                    </div>
+                `;
+            } else {
+                html += `<div class="results-container">`;
+                res.resultados.forEach((item, idx) => {
+                    html += renderCard(item, idx + 1, res.tipo_busca);
+                });
+                html += `</div>`;
+            }
+
+            container.innerHTML = html;
+        }
+
+        function renderComparison(resSem, resLex) {
+            const container = document.getElementById('resultsArea');
+
+            let html = `
+                <div class="comparison-grid">
+                    <div>
+                        <div class="col-header" style="color: #60a5fa;">
+                            <span>Busca Semântica (IA / pgvector HNSW)</span>
+                            <span style="font-size: 0.8rem; color: #38bdf8;">Total: ${resSem.telemetria.t_total_ms.toFixed(1)}ms</span>
+                        </div>
+                        ${renderTelemetry(resSem.telemetria, 'semantica')}
+                        <div class="results-container">
+                            ${resSem.resultados.length === 0 ? '<div class="empty-state">Nenhum resultado</div>' : ''}
+                            ${resSem.resultados.map((it, i) => renderCard(it, i + 1, 'semantica')).join('')}
+                        </div>
+                    </div>
+
+                    <div>
+                        <div class="col-header" style="color: #fb923c;">
+                            <span>Busca Lexical (FTS - Grupo de Controle)</span>
+                            <span style="font-size: 0.8rem; color: #fdba74;">Total: ${resLex.telemetria.t_total_ms.toFixed(1)}ms</span>
+                        </div>
+                        ${renderTelemetry(resLex.telemetria, 'lexical')}
+                        <div class="results-container">
+                            ${resLex.resultados.length === 0 ? '<div class="empty-state"><p>Nenhum resultado encontrado por palavras-chave exatas.</p><p style="font-size: 0.8rem; margin-top: 0.5rem; color: #94a3b8;">Demonstra a lacuna semântica entre termos leigos e manuais técnicos.</p></div>' : ''}
+                            ${resLex.resultados.map((it, i) => renderCard(it, i + 1, 'lexical')).join('')}
+                        </div>
+                    </div>
+                </div>
+            `;
+
+            container.innerHTML = html;
+        }
+    </script>
+</body>
+</html>
+

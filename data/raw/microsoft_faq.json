@@ -1,0 +1,1802 @@
+[
+  {
+    "id": 1,
+    "titulo": "Como resolver falhas de conectividade e IP inválido no Windows",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: O computador exibe status 'Sem Internet' ou endereço IP de autoconfiguração 169.254.x.x. Causa: Falha na concessão de concessão DHCP pelo roteador ou corrupção do cache DNS e pilha TCP/IP. Solução técnica: Abra o Prompt de Comando (CMD) como Administrador e execute: 1. ipconfig /release para liberar a concessão atual. 2. ipconfig /renew para solicitar novo endereço IP ao servidor DHCP. 3. ipconfig /flushdns para limpar o cache de resolução de nomes. 4. netsh int ip reset e netsh winsock reset para restaurar o catálogo de sockets de rede. Reinicie a estação.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 1
+    }
+  },
+  {
+    "id": 2,
+    "titulo": "Configuração e diagnóstico de conexão VPN corporativa no Windows 11",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Falha ao estabelecer túnel VPN corporativo com erro 800 ou 809. Causa: Bloqueio de portas UDP 500/4500 por firewall local ou NAT traversal desabilitado. Solução técnica: Verifique as configurações de rede em Configurações > Rede e Internet > VPN. Adicione a chave AssumeUDPEncapsulationContextOnSendRule no registro em HKLM\\SYSTEM\\CurrentControlSet\\Services\\PolicyAgent com valor DWORD 2. Garanta que o serviço 'IKE and AuthIP IPsec Keying Modules' esteja em execução.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 2
+    }
+  },
+  {
+    "id": 3,
+    "titulo": "Resolução de lentidão em downloads e latência alta no adaptador Wi-Fi",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Navegação web lenta com frequentes quedas de pacotes na rede sem fio corporativa. Causa: Interferência de canal na frequência de 2.4 GHz ou driver desatualizado da placa de rede Wi-Fi. Solução: Atualize o driver da placa no Gerenciador de Dispositivos. Altere a largura de canal nas propriedades avançadas do adaptador para 20MHz ou mude a conexão preferencial para a banda de 5 GHz.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 3
+    }
+  },
+  {
+    "id": 4,
+    "titulo": "Computador não acessa pastas compartilhadas na rede interna (Erro 0x80070035)",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Ao tentar acessar \\\\servidor\\compartilhamento o Windows retorna erro 'O caminho da rede não foi encontrado'. Causa: Protocolo SMBv1 desabilitado ou descoberta de rede desativada no perfil de rede pública. Solução: Altere o perfil de rede de Público para Privado. No Painel de Controle > Recursos do Windows, certifique-se de que o suporte a compartilhamento de arquivos SMB 2.0/3.0 está habilitado.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 4
+    }
+  },
+  {
+    "id": 5,
+    "titulo": "Falha de resolução de nomes internos via servidor DNS secundário",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Máquinas clientes conseguem pingar endereços IP externos, mas não resolvem domínios corporativos locais. Causa: Ordem incorreta de servidores DNS configurada no adaptador de rede local. Solução: Configure estaticamente o DNS primário apontando para o Domain Controller corporativo e execute ipconfig /flushdns.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 5
+    }
+  },
+  {
+    "id": 6,
+    "titulo": "Bloqueio de conexões de entrada na Área de Trabalho Remota (RDP porta 3389)",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Não é possível conectar via RDP no host remoto, recebendo mensagem de timeout. Causa: Regra de entrada do Windows Defender Firewall para Área de Trabalho Remota desativada. Solução: No Firewall do Windows com Segurança Avançada, ative a regra pré-definida 'Área de Trabalho Remota - Modo de Usuário (TCP-In)'. Verifique se o serviço TermService está ativo.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 6
+    }
+  },
+  {
+    "id": 7,
+    "titulo": "Conflito de endereço IP estático na sub-rede corporativa",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Notificação do Windows informando 'Existe um conflito de endereço IP com outro sistema na rede'. Causa: Dois dispositivos configurados manualmente com o mesmo endereço IPv4 estático. Solução: Utilize o comando arp -a para identificar o endereço MAC conflitante e reconfigure a máquina afetada para obter IP dinamicamente via DHCP.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 7
+    }
+  },
+  {
+    "id": 8,
+    "titulo": "Problemas de comunicação após alteração da MTU no adaptador de rede",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Alguns sites carregam normalmente, mas sistemas internos corporativos e uploads travam. Causa: Valor de MTU (Maximum Transmission Unit) muito alto provocando fragmentação excessiva de pacotes. Solução: Execute netsh interface ipv4 show subinterfaces para consultar e netsh interface ipv4 set subinterface 'Ethernet' mtu=1492 store=persistent.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 8
+    }
+  },
+  {
+    "id": 9,
+    "titulo": "Diagnóstico de perda de pacotes e jitter em chamadas Microsoft Teams",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Áudio robótico e vídeo congelando em reuniões do Teams. Causa: Concorrência de banda e ausência de priorização QoS para as portas UDP 3478-3481. Solução: Configure políticas de QoS de grupo (GPO) no Active Directory reservando DSCP 46 para pacotes de áudio do Teams.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 9
+    }
+  },
+  {
+    "id": 10,
+    "titulo": "Adaptador de rede Ethernet desconecta intermitentemente ao entrar em repouso",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: A rede cai após alguns minutos de inatividade do usuário. Causa: Gerenciamento de energia do Windows desligando o adaptador para economizar energia. Solução: No Gerenciador de Dispositivos > Placa de Rede > Propriedades > Gerenciamento de Energia, desmarque 'O computador pode desligar este dispositivo para economizar energia'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 10
+    }
+  },
+  {
+    "id": 11,
+    "titulo": "Procedimento para redefinição de senha e desbloqueio de conta no Active Directory",
+    "fonte": "Microsoft",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: Usuário não consegue fazer login na estação de trabalho com a mensagem 'Sua conta foi bloqueada'. Causa: Excesso de tentativas incorretas de senha que atingiram o limite da política de bloqueio do domínio. Solução técnica: O administrador deve abrir o console 'Usuários e Computadores do Active Directory' (dsa.msc), localizar a conta do colaborador, acessar Propriedades > Conta, marcar a opção 'Desbloquear conta' e selecionar 'Redefinir Senha' marcando 'O usuário deve alterar a senha no próximo logon'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "autenticação",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 11
+    }
+  },
+  {
+    "id": 12,
+    "titulo": "Erro de relação de confiança entre a estação de trabalho e o domínio primário",
+    "fonte": "Microsoft",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: Ao autenticar o Windows exibe 'A relação de confiança entre esta estação de trabalho e o domínio primário falhou'. Causa: Senha da conta de máquina no Active Directory dessincronizada com o computador cliente. Solução técnica: Faça login com uma conta de administrador local. Abra o PowerShell como Administrador e execute: Test-ComputerSecureChannel -Repair -Credential (Get-Credential). Insira credenciais de admin de domínio para restabelecer a confiança.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "autenticação",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 12
+    }
+  },
+  {
+    "id": 13,
+    "titulo": "Configuração e solução de problemas com autenticação multifator (MFA) no Entra ID",
+    "fonte": "Microsoft",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: O aplicativo Microsoft Authenticator não recebe notificações push de aprovação. Causa: Notificações do celular desativadas ou dessincronização do relógio do dispositivo com os servidores NTP. Solução: Acesse https://mysignins.microsoft.com/security-info, exclua o método antigo e reconfigure o aplicativo Authenticator escaneando o QR code.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "autenticação",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 13
+    }
+  },
+  {
+    "id": 14,
+    "titulo": "Falha de autenticação Kerberos por desvio de horário (Clock Skew)",
+    "fonte": "Microsoft",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: Usuários não conseguem autenticar em recursos de rede internos da empresa. Causa: Diferença de horário entre o relógio da estação cliente e o Domain Controller superior a 5 minutos. Solução: Ressincronize o relógio da máquina executando no CMD como Administrador: w32tm /resync /force.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "autenticação",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 14
+    }
+  },
+  {
+    "id": 15,
+    "titulo": "Credenciais do Outlook solicitadas repetidamente mesmo com a senha correta",
+    "fonte": "Microsoft",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: Janela pop-up do Outlook solicitando login a cada poucos minutos. Causa: Credenciais corrompidas salvas no Gerenciador de Credenciais do Windows. Solução: Feche o Outlook. Acesse o Painel de Controle > Gerenciador de Credenciais > Credenciais do Windows. Remova todas as entradas associadas ao MicrosoftOffice e conta corporativa. Reinicie o Outlook e informe a senha novamente.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "autenticação",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 15
+    }
+  },
+  {
+    "id": 16,
+    "titulo": "Políticas de Grupo (GPO) não são aplicadas após alteração de permissões",
+    "fonte": "Microsoft",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: Computador não recebe novas diretivas de segurança corporativas. Causa: Cache local de GPO desatualizado ou falha de leitura da pasta SYSVOL. Solução: Execute o comando gpupdate /force no terminal e verifique se há erros através do comando gpresult /h relatorio_gpo.html.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "autenticação",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 16
+    }
+  },
+  {
+    "id": 17,
+    "titulo": "PIN do Windows Hello parou de funcionar após troca de placa-mãe",
+    "fonte": "Microsoft",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: Mensagem 'Ocorreu um problema e seu PIN não está disponível' na tela de bloqueio. Causa: O chip TPM (Trusted Platform Module) foi reiniciado ou trocado, invalidando as chaves criptográficas locais. Solução: Efetue login com a senha convencional da conta, acesse Configurações > Contas > Opções de Entrada e clique em 'Remover PIN' e configure um novo.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "autenticação",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 17
+    }
+  },
+  {
+    "id": 18,
+    "titulo": "Como habilitar autenticação baseada em certificados digitais (Smart Card)",
+    "fonte": "Microsoft",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: O leitor de cartão inteligente não é reconhecido no momento do logon no Windows. Causa: Serviço de Cartão Inteligente (SCardSvr) parado ou driver minidriver do fabricante ausente. Solução: Inicie o serviço 'Smart Card' em services.msc e instale o driver oficial do leitor criptográfico.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "autenticação",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 18
+    }
+  },
+  {
+    "id": 19,
+    "titulo": "Desativação de contas inativas e auditoria de logons mal-sucedidos no Windows Server",
+    "fonte": "Microsoft",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: Falhas repetidas de auditoria com Event ID 4625 no Visualizador de Eventos. Causa: Tentativas sucessivas de força bruta contra contas desativadas ou de serviço. Solução: Configure regras de bloqueio de conta via GPO e utilize o script Search-ADAccount -AccountInactive para desabilitar usuários obsoletos.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "autenticação",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 19
+    }
+  },
+  {
+    "id": 20,
+    "titulo": "Problemas de sincronização de senhas híbridas entre Active Directory local e Microsoft 365",
+    "fonte": "Microsoft",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: Usuário altera a senha local mas o portal web da nuvem continua exigindo a senha anterior. Causa: Agente Microsoft Entra Connect (antigo Azure AD Connect) com sincronização de hash de senha travada. Solução: Abra o PowerShell no servidor de sincronização e execute Start-ADSyncSyncCycle -PolicyType Delta.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "autenticação",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 20
+    }
+  },
+  {
+    "id": 21,
+    "titulo": "Recuperação de travamento de sistema operacional e tela azul (BSOD CRITICAL_PROCESS_DIED)",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O computador reinicia subitamente apresentando tela azul com código de parada CRITICAL_PROCESS_DIED. Causa: Arquivos críticos do sistema corrompidos ou falha em drivers de dispositivos de baixo nível. Solução técnica: Inicialize o sistema em Modo de Segurança com Prompt de Comando e execute: 1. sfc /scannow para verificar e reparar a integridade de arquivos do Windows. 2. DISM /Online /Cleanup-Image /RestoreHealth para reparar a imagem do sistema usando o Windows Update como fonte. 3. Verifique os arquivos de despejo minidump em C:\\Windows\\Minidump usando a ferramenta BlueScreenView.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 21
+    }
+  },
+  {
+    "id": 22,
+    "titulo": "Alto uso de disco em 100% no Gerenciador de Tarefas do Windows 10/11",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Computador fica excessivamente lento, congelando janelas com disco rígido operando constantemente em 100%. Causa: Conflito no serviço SysMain (antigo SuperFetch) ou serviço de Pesquisa do Windows (Windows Search). Solução: Abra o services.msc, localize o serviço 'SysMain', altere o Tipo de Inicialização para 'Desativado' e clique em 'Parar'. Execute chkdsk C: /f /r para verificar integridade física de setores do disco.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 22
+    }
+  },
+  {
+    "id": 23,
+    "titulo": "Windows Update travado em 'Baixando atualizações 0%' ou apresentando erro 0x80070002",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O sistema não conclui a instalação de patches cumulativos de segurança. Causa: Arquivos temporários do catálogo de distribuição de software corrompidos. Solução técnica: Abra o CMD como Admin e pare os serviços com net stop wuauserv e net stop bits. Renomeie a pasta C:\\Windows\\SoftwareDistribution para SoftwareDistribution.old. Reinicie os serviços com net start wuauserv.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 23
+    }
+  },
+  {
+    "id": 24,
+    "titulo": "Computador travado em loop de reparo automático na inicialização",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: A máquina liga e entra direto na tela azul 'Reparo Automático não pôde reparar seu computador'. Causa: Registro de inicialização BCD (Boot Configuration Data) corrompido. Solução: Acesse Opções Avançadas > Prompt de Comando e execute: bootrec /fixmbr, bootrec /fixboot, bootrec /rebuildbcd.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 24
+    }
+  },
+  {
+    "id": 25,
+    "titulo": "Como restaurar o Windows para um ponto de restauração anterior",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O sistema apresentou instabilidade após a instalação de um software ou driver incompatível. Causa: Alterações estruturais no registro e drivers do sistema. Solução: Pressione Win + R, digite rstrui.exe e selecione um ponto de restauração anterior à data do problema ocorrido.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 25
+    }
+  },
+  {
+    "id": 26,
+    "titulo": "Memória RAM com alto consumo pelo processo 'Interrupções do Sistema'",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O processo System Interrupts consome mais de 30% da CPU permanentemente. Causa: Conflito de hardware ou driver com defeito enviando sinais de interrupção em loop. Solução: Atualize a BIOS/UEFI e os drivers do chipset da placa-mãe. Desconecte periféricos USB secundários.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 26
+    }
+  },
+  {
+    "id": 27,
+    "titulo": "Erro 'O Windows não pôde iniciar porque o arquivo winload.efi está ausente ou corrompido'",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Erro 0xc000000e na tela de boot. Causa: Partição EFI danificada ou partição de boot desconfigurada no disco GPT. Solução: Dê boot pelo pendrive de instalação, abra o CMD e reescreva a partição EFI utilizando o comando bcdboot C:\\Windows /l pt-br /s S: /f UEFI.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 27
+    }
+  },
+  {
+    "id": 28,
+    "titulo": "Configuração de inicialização limpa (Clean Boot) para isolar programas problemáticos",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Travamento esporádico sem causa aparente ao abrir aplicativos comuns. Causa: Serviços de terceiros em execução em segundo plano gerando sobrecarga. Solução: Execute msconfig, na aba Serviços marque 'Ocultar todos os serviços Microsoft' e clique em 'Desativar tudo'. Na aba Inicialização, desative itens no Gerenciador de Tarefas.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 28
+    }
+  },
+  {
+    "id": 29,
+    "titulo": "Como alterar a variável de ambiente PATH do sistema no Windows",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Comandos de ferramentas instaladas não são reconhecidos no terminal PowerShell/CMD. Causa: Binários não adicionados à variável PATH do sistema. Solução: Abra sysdm.cpl > Avançado > Variáveis de Ambiente. Na seção Variáveis do Sistema, edite 'Path' e adicione o caminho do executável.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 29
+    }
+  },
+  {
+    "id": 30,
+    "titulo": "Correção de congelamento da Barra de Tarefas e Menu Iniciar no Windows 11",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Clicar no botão Iniciar não abre o menu e a barra de tarefas não responde a cliques. Causa: Processo explorer.exe travado ou pacote StartMenuExperienceHost corrompido. Solução: No Gerenciador de Tarefas, localize o 'Windows Explorer', clique com o botão direito e selecione 'Reiniciar'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 30
+    }
+  },
+  {
+    "id": 31,
+    "titulo": "Desbloqueio de unidade protegida por BitLocker solicitando chave de recuperação no boot",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Ao ligar o notebook o sistema trava na tela azul 'Digite a chave de recuperação do BitLocker'. Causa: Alteração na sequência de boot na BIOS ou atualização de firmware que limpou o registro do TPM. Solução técnica: Localize a chave numérica de 48 dígitos na conta corporativa do Microsoft Entra ID ou em https://account.microsoft.com/devices/recoverykey. Insira a chave para liberar a partição. Para suspender a exigência temporariamente durante manutenções, execute manage-bde -protectors -disable C:.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 31
+    }
+  },
+  {
+    "id": 32,
+    "titulo": "Como liberar espaço no disco local C: utilizando a Limpeza de Disco e Storage Sense",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Alerta de pouco espaço em disco impedindo atualizações e salvamento de arquivos. Causa: Acúmulo de arquivos temporários, logs do sistema e pasta Windows.old de versões anteriores. Solução: Execute cleanmgr /sageset:1 e selecione 'Limpar arquivos do sistema' para remover instalações antigas do Windows.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 32
+    }
+  },
+  {
+    "id": 33,
+    "titulo": "Erro de partição em formato RAW no disco externo ou pendrive",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: O Windows solicita formatação ao conectar o dispositivo dizendo 'O volume não contém um sistema de arquivos reconhecido'. Causa: Tabela de partição corrompida devido à desconexão brusca do dispositivo sem ejeção segura. Solução: Abra o CMD como administrador e tente recuperar o sistema de arquivos com chkdsk E: /f. Caso persista, use o Diskpart para recriar a partição NTFS.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 33
+    }
+  },
+  {
+    "id": 34,
+    "titulo": "Como configurar e monitorar o status de saúde de SSDs com comando SMART",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Lentidão repentina na gravação de arquivos com pequenos travamentos do mouse. Causa: Desgaste de células de memória flash do SSD atingindo o limite de TBW (Total Bytes Written). Solução: Abra o PowerShell e execute wmic diskdrive get status para status preliminar ou instale o CrystalDiskInfo para analisar setores realocados.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 34
+    }
+  },
+  {
+    "id": 35,
+    "titulo": "Configuração de cotas de disco para usuários no Windows Server (FSRM)",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Usuários enchendo discos compartilhados do servidor com arquivos pesados. Causa: Ausência de limites de armazenamento configurados por diretório. Solução: Instale a função File Server Resource Manager (FSRM) e crie modelos de cota rígida (Hard Quota) limitando o consumo a 50GB por pasta de usuário.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 35
+    }
+  },
+  {
+    "id": 36,
+    "titulo": "Sincronização de arquivos travada no OneDrive for Business",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Ícone do OneDrive na barra de tarefas permanece com símbolo de sincronização infinito. Causa: Arquivo com caracteres especiais no nome ou cache local do cliente corrompido. Solução: Execute o comando %localappdata%\\Microsoft\\OneDrive\\onedrive.exe /reset para redefinir as configurações e reiniciar a sincronização.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 36
+    }
+  },
+  {
+    "id": 37,
+    "titulo": "Erro 'O arquivo ou pasta está corrompido e ilegível' no disco local",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Impossibilidade de abrir ou deletar determinada pasta de trabalho. Causa: Inconsistência na Master File Table (MFT) do NTFS. Solução: Execute chkdsk C: /scan no Prompt de Comando para escanear sem necessidade de reinicialização imediata.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 37
+    }
+  },
+  {
+    "id": 38,
+    "titulo": "Como expandir volume de disco C: utilizando espaço não alocado no Diskpart",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: A opção 'Estender Volume' no Gerenciamento de Disco aparece desabilitada em cinza. Causa: O espaço não alocado não é adjacente à partição C. Solução: Use ferramentas de particionamento para mover a partição de recuperação ou utilize o utilitário de linha de comando diskpart: select volume C; extend.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 38
+    }
+  },
+  {
+    "id": 39,
+    "titulo": "Configuração de Backup do Windows e criação de Imagem do Sistema",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Necessidade de plano de recuperação contra ransomware ou perda de hardware. Causa: Falta de rotinas automatizadas de cópia de segurança em disco secundário. Solução: Acesse o Histórico de Arquivos no Painel de Controle e configure o backup regular das pastas de perfil em unidade de rede externa.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 39
+    }
+  },
+  {
+    "id": 40,
+    "titulo": "Desfragmentação e otimização de unidades HDD e comando TRIM para SSD",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Desempenho de leitura degradado ao longo do tempo. Causa: Fragmentação em discos rígidos mecânicos ou falta de execução do comando TRIM no SSD. Solução: Execute no PowerShell defrag C: /O para enviar o comando de otimização/TRIM adequado para o tipo de mídia.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 40
+    }
+  },
+  {
+    "id": 41,
+    "titulo": "Configuração do Windows Defender e exclusão de pastas seguras de desenvolvimento",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Compilações lentas em IDEs de desenvolvimento causadas por escaneamento em tempo real do antivírus. Causa: O Microsoft Defender Antivirus analisa todos os arquivos binários intermediários gerados. Solução: No aplicativo Segurança do Windows > Proteção contra vírus e ameaças > Gerenciar configurações > Exclusões, adicione a pasta do projeto ou processo aos itens excluídos do escaneamento.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 41
+    }
+  },
+  {
+    "id": 42,
+    "titulo": "Como isolar estação infectada por malware da rede corporativa",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Comportamento anômalo na máquina com tráfego suspeito na rede e alertas de segurança. Causa: Infecção por trojan ou tentativa de movimentação lateral de ransomware. Solução: Desconecte o cabo de rede e desative o Wi-Fi imediatamente. No portal Microsoft Defender for Endpoint, use a ação 'Isolate device'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 42
+    }
+  },
+  {
+    "id": 43,
+    "titulo": "Aplicação de políticas de restrição de execução de scripts no PowerShell (ExecutionPolicy)",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Erro 'o arquivo script.ps1 não pode ser carregado porque a execução de scripts foi desabilitada neste sistema'. Causa: A política padrão do Windows é Restricted para evitar execução inadvertida de código não assinado. Solução: Para permitir scripts locais assinados, execute como Admin: Set-ExecutionPolicy RemoteSigned -Scope CurrentUser.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 43
+    }
+  },
+  {
+    "id": 44,
+    "titulo": "Configuração de controle de acesso de usuários (UAC) e privilégios mínimos",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Usuários comuns instalando softwares não autorizados ou prompts de UAC em excesso. Causa: Contas de usuário configuradas com perfil de Administrador local. Solução: Rebaixe o tipo de conta para 'Usuário Padrão' em netplwiz e configure a política de UAC para solicitar credenciais administrativas.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 44
+    }
+  },
+  {
+    "id": 45,
+    "titulo": "Auditoria e bloqueio de portas vulneráveis no Windows Defender Firewall",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Scanner de vulnerabilidade apontando portas abertas desnecessárias na estação. Causa: Regras de firewall muito permissivas criadas por softwares instalados. Solução: Revise as Regras de Entrada no Firewall do Windows e remova regras que permitam tráfego para portas sensíveis como 445 e 139 a partir da internet.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 45
+    }
+  },
+  {
+    "id": 46,
+    "titulo": "Proteção contra adulteração (Tamper Protection) no Microsoft Defender",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Antivírus desativando sozinho sem permissão do administrador. Causa: Ataque de malware tentando modificar chaves de registro do Windows Defender. Solução: Garanta que a Proteção contra Violação esteja ativada na central de Segurança do Windows ou via política Intune.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 46
+    }
+  },
+  {
+    "id": 47,
+    "titulo": "Habilitação do recurso de Isolamento de Núcleo e Integridade da Memória (HVCI)",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Notificação do Windows informando que a integridade da memória está desativada. Causa: Presença de drivers antigos incompatíveis que violam o modelo de segurança de virtualização. Solução: Identifique drivers incompatíveis pelo Gerenciador de Dispositivos e ative em Segurança do Dispositivo > Isolamento de Núcleo.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 47
+    }
+  },
+  {
+    "id": 48,
+    "titulo": "Como revogar sessões ativas e tokens de login após suspeita de comprometimento de conta",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Usuário relatou acesso não autorizado aos seus e-mails corporativos. Causa: Roubo de token de sessão ou senha vazada. Solução: O administrador deve acessar o portal Microsoft Entra, selecionar o usuário e clicar em 'Revogar Sessões', além de forçar redefinição imediata de senha.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 48
+    }
+  },
+  {
+    "id": 49,
+    "titulo": "Bloqueio de portas USB e unidades de armazenamento removíveis via GPO",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Risco de exfiltração de dados confidenciais por pendrives não homologados. Causa: Falta de restrição de mídias removíveis nas estações de trabalho. Solução: No Editor de Gerenciamento de Política de Grupo, configure 'Todas as classes de armazenamento removível: Negar todo o acesso'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 49
+    }
+  },
+  {
+    "id": 50,
+    "titulo": "Criptografia de arquivos e pastas com EFS (Encrypting File System) no NTFS",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Necessidade de proteger documentos locais mesmo em caso de acesso físico ao HD. Causa: Arquivos confidenciais armazenados em texto claro em computadores compartilhados. Solução: Clique com botão direito na pasta > Propriedades > Avançado > Marcar 'Criptografar o conteúdo para proteger os dados' e exporte o certificado de recuperação.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 50
+    }
+  },
+  {
+    "id": 51,
+    "titulo": "Outlook fecha sozinho ou trava na tela 'Carregando Perfil'",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: O Microsoft Outlook não abre, congelando na inicialização com alto uso de CPU. Causa: Arquivo de dados OST/PST corrompido ou suplemento (add-in) de terceiros travado. Solução técnica: Execute o Outlook em modo de segurança pressionando Win + R e digitando outlook.exe /safe. Acesse Arquivo > Opções > Suplementos e desmarque suplementos COM desnecessários. Se o problema persistir, repare o arquivo de dados utilizando a ferramenta SCANPST.EXE localizada na pasta do Office.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 51
+    }
+  },
+  {
+    "id": 52,
+    "titulo": "Excel apresentando mensagem 'Memória insuficiente' ao abrir planilha pesada",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: O aplicativo trava ou emite alerta de falta de recursos ao calcular fórmulas dinâmicas. Causa: Utilização da versão de 32 bits do Office limitada a 2GB de memória RAM. Solução: Desinstale o Office de 32 bits e instale o pacote Microsoft 365 na arquitetura de 64 bits para permitir endereçamento ilimitado de memória.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 52
+    }
+  },
+  {
+    "id": 53,
+    "titulo": "Impressora padrão alterando sozinha no Windows 10/11",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Documentos sendo enviados para a impressora errada ao mandar imprimir no Word. Causa: O recurso nativo do Windows que gerencia a impressora padrão baseado no último uso está ativado. Solução: Vá em Configurações > Bluetooth e Dispositivos > Impressoras e Scanners e desmarque a opção 'Deixar o Windows gerenciar minha impressora padrão'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 53
+    }
+  },
+  {
+    "id": 54,
+    "titulo": "Fila de impressão travada com documentos em status 'Excluindo...' ou 'Imprimindo'",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Nenhum documento novo é impresso e a fila não aceita cancelamento. Causa: O serviço Spooler de Impressão (spoolsv.exe) entrou em deadlock com arquivos no cache. Solução: Abra o CMD como Admin e execute: net stop spooler. Apague todos os arquivos em C:\\Windows\\System32\\spool\\PRINTERS e reinicie com net start spooler.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 54
+    }
+  },
+  {
+    "id": 55,
+    "titulo": "Erro de ativação do Microsoft Office 'Produto Não Licenciado' no Microsoft 365",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Faixa amarela no topo do Word/Excel avisando que o produto não está licenciado. Causa: Licença corporativa expirada ou credenciais do Office travadas em cache. Solução: Execute o utilitário de suporte e recuperação da Microsoft (SaRA) ou limpe as licenças antigas com o script ospp.vbs /unpkey.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 55
+    }
+  },
+  {
+    "id": 56,
+    "titulo": "Como reparar a instalação do pacote Microsoft Office 365",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Aplicativos do Office fechando inesperadamente após atualização do Windows. Causa: DLLs compartilhadas do runtime do Office danificadas. Solução: Acesse Painel de Controle > Programas e Recursos, clique com botão direito em Microsoft 365 Apps > Alterar > Selecione 'Reparo Rápido' ou 'Reparo Online'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 56
+    }
+  },
+  {
+    "id": 57,
+    "titulo": "Configuração de assinatura de e-mail automática no Microsoft Outlook",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Novos e-mails criados não incluem a assinatura padrão da empresa. Causa: Assinatura não vinculada à conta de e-mail correspondente nas preferências. Solução: No Outlook, acesse Arquivo > Opções > Email > Assinaturas. Selecione a conta e defina a assinatura para novas mensagens e respostas.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 57
+    }
+  },
+  {
+    "id": 58,
+    "titulo": "Recuperação de pasta de trabalho do Excel não salva após desligamento inesperado",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Perda de edições recentes devido a queda repentina de energia. Causa: Fechamento anômalo antes do salvamento manual. Solução: Abra o Excel, vá em Arquivo > Informações > Gerenciar Pasta de Trabalho > Recuperar Pastas de Trabalho Não Salvas.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 58
+    }
+  },
+  {
+    "id": 59,
+    "titulo": "Compartilhamento de calendário no Outlook com permissão de delegado",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Assistente não consegue agendar reuniões em nome do gestor. Causa: Ausência de permissão de representante no perfil Exchange. Solução: No Outlook, Arquivo > Configurações de Conta > Acesso de Representante. Adicione o usuário e selecione o nível de permissão 'Editor'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 59
+    }
+  },
+  {
+    "id": 60,
+    "titulo": "Configuração do Microsoft Teams para iniciar automaticamente com o Windows",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Usuário perde chamadas no início do expediente por não ter aberto o comunicador. Causa: Inicialização automática desmarcada nas preferências do aplicativo. Solução: Nas Configurações do Teams > Geral, marque 'Inicialização automática do aplicativo' ou adicione o atalho na pasta shell:startup.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 60
+    }
+  },
+  {
+    "id": 61,
+    "titulo": "Perfil de usuário temporário carregado após logon no Windows (You have been signed in with a temporary profile)",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O usuário faz login e seus arquivos da área de trabalho sumiram, recebendo o aviso de perfil temporário. Causa: Chave de registro corrompida em HKLM\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\ProfileList terminando em .bak. Solução técnica: Acesse o Registro do Windows com conta de administrador. Localize a chave com extensão .bak na lista de perfis, remova a chave temporária sem .bak e renomeie a chave .bak removendo o sufixo. Reinicie o computador.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 61
+    }
+  },
+  {
+    "id": 62,
+    "titulo": "Falha de autenticação RDP com erro CredSSP Encryption Oracle Remediation",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Erro ao conectar via Área de Trabalho Remota informando falha de correção de criptografia CredSSP. Causa: O computador cliente possui atualização de segurança mais recente que o servidor de destino desatualizado. Solução técnica: No Editor de Política de Grupo Local (gpedit.msc), navegue até Configuração do Computador > Modelos Administrativos > Sistema > Delegação de Credenciais > Correção de Criptografia do Oracle. Configure como 'Habilitado' com nível 'Vulnerável' temporariamente.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 62
+    }
+  },
+  {
+    "id": 63,
+    "titulo": "Windows Defender travando compilação do Visual Studio e dotnet build",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Compilações de projetos .NET demorando minutos a mais com alto uso de CPU pelo Antimalware Service Executable. Causa: Inspeção em tempo real de milhares de arquivos binários intermediários nas pastas obj e bin. Solução técnica: No aplicativo Segurança do Windows, adicione exclusões de processo para devenv.exe, msbuild.exe e dotnet.exe, além de excluir a pasta raiz do repositório de código-fonte.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 63
+    }
+  },
+  {
+    "id": 64,
+    "titulo": "Erro de tela azul DPC_WATCHDOG_VIOLATION no Windows 11",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Travamento completo do sistema operacional com BSOD código DPC_WATCHDOG_VIOLATION. Causa: Driver do controlador SATA/AHCI iaStorA.sys incompatível ou firmware de SSD NVMe desatualizado. Solução técnica: No Gerenciador de Dispositivos, expanda Controladores IDE ATA/ATAPI, selecione 'Atualizar driver', escolha 'Procurar drivers no computador' e selecione o 'Controlador SATA AHCI Padrão' nativo da Microsoft.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 64
+    }
+  },
+  {
+    "id": 65,
+    "titulo": "Serviço do Windows travado no status 'Parando' (Stopping) e não finaliza",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O serviço não conclui o desligamento e os botões Iniciar e Parar ficam desabilitados no services.msc. Causa: A thread principal do processo do serviço entrou em deadlock e parou de responder ao Service Control Manager (SCM). Solução técnica: Abra o CMD como Administrador e execute sc queryex nome_do_servico para identificar o PID. Em seguida force a finalização do processo com taskkill /f /pid <PID>.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 65
+    }
+  },
+  {
+    "id": 66,
+    "titulo": "Erro de ativação do Windows 0xC004C008 chave de produto já utilizada",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O Windows informa que a chave de produto não pode ser usada neste computador por atingir limite de ativações. Causa: Licença MAK corporativa esgotada ou reinstalação em placa-mãe substituída. Solução técnica: Abra o prompt de comando como Administrador e digite slui 4 para iniciar o assistente de ativação por telefone da Microsoft, ou insira a chave KMS institucional com slmgr.vbs /ipk <chave_kms> e ative com slmgr.vbs /ato.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 66
+    }
+  },
+  {
+    "id": 67,
+    "titulo": "Falha de sombra de cópia de volume VSS Writer ao executar backup corporativo (Erro 0x80042318)",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: O software de backup emite erro informando que os componentes VSS falharam ao congelar o sistema de arquivos. Causa: Gravador VSS (VSS Writer) entrou em estado instável ou com falha. Solução técnica: Execute vssadmin list writers para identificar o gravador com status 'Failed'. Reinicie os serviços associados: Volume Shadow Copy (VSS) e Serviços Criptográficos (CryptSvc) via net stop cryptsvc && net start cryptsvc.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 67
+    }
+  },
+  {
+    "id": 68,
+    "titulo": "Erro de logon interativo: O servidor RPC não está disponível no Windows",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Estação cliente não consegue validar logon no Active Directory com erro 'O servidor RPC não está disponível'. Causa: Bloqueio das portas TCP dinâmicas 49152-65535 ou serviço Chamada de Procedimento Remoto (RpcSs) parado no controlador. Solução técnica: Teste a comunicação de rede usando Test-NetConnection -ComputerName dc.empresa.local -Port 135. Certifique-se de que o serviço RPC e o Localizador RPC estejam em execução no Domain Controller.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 68
+    }
+  },
+  {
+    "id": 69,
+    "titulo": "Outlook atingiu o limite de tamanho do arquivo de dados OST de 50GB",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: O Outlook para de receber novos e-mails e exibe mensagem 'O arquivo de dados atingiu o tamanho máximo'. Causa: Caixas de correio pesadas que ultrapassaram a cota padrão de 50GB para arquivos OST/PST no Office 365. Solução técnica: Abra o regedit e navegue até HKEY_CURRENT_USER\\Software\\Microsoft\\Office\\16.0\\Outlook\\PST. Crie dois valores DWORD: MaxLargeFileSize (valor decimal 102400 para 100GB) e WarnLargeFileSize (valor decimal 97280 para 95GB).",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 69
+    }
+  },
+  {
+    "id": 70,
+    "titulo": "Erro 0x80240034 ao baixar atualização cumulativa no Windows Update",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O download da atualização trava em determinada porcentagem e acusa o código 0x80240034. Causa: Metadados corrompidos na fila do Background Intelligent Transfer Service (BITS). Solução técnica: Pare os serviços wuauserv e bits. Exclua os arquivos de fila em C:\\ProgramData\\Microsoft\\Network\\Downloader\\qmgr*.dat. Em seguida reinicie os serviços e force nova checagem pelo PowerShell com usoclient StartInteractiveScan.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 70
+    }
+  },
+  {
+    "id": 71,
+    "titulo": "Computador perde data e hora toda vez que é desligado da tomada",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Ao ligar o computador a data volta para anos anteriores (ex: 2000 ou 2015) e sites não abrem por erro de SSL. Causa: Bateria de lítio tipo moeda CR2032 da placa-mãe (responsável por manter o circuito RTC da BIOS) descarregada. Solução técnica: Efetue a troca física da bateria CR2032 na placa-mãe. Acesse o menu da BIOS/UEFI no primeiro boot para ajustar a hora correta e a ordem dos discos de inicialização.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 71
+    }
+  },
+  {
+    "id": 72,
+    "titulo": "Área de Trabalho Remota desconecta por falta de licenças de acesso para cliente (CAL RDS)",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Usuário recebe a mensagem 'A sessão remota foi desconectada porque não há licenças de acesso disponíveis'. Causa: Esgotamento do período de carência (Grace Period) de 120 dias do Remote Desktop Licensing no servidor. Solução técnica: Abra o Gerenciador de Licenciamento da Área de Trabalho Remota (licmgr.exe), ative o servidor de licenças e instale o pacote de RDS CALs por Usuário adquirido junto ao programa de licenciamento da Microsoft.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 72
+    }
+  },
+  {
+    "id": 73,
+    "titulo": "Cursor do mouse congelando em intervalos regulares (micro-stuttering) no Windows",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O ponteiro do mouse trava a cada 2 ou 3 segundos durante navegação comum ou uso de planilhas. Causa: Polling rate do mouse muito elevado (1000Hz ou 8000Hz) gerando interrupções massivas na CPU ou conflito com software RGB. Solução técnica: No software do fabricante do periférico, reduza a taxa de comunicação (Polling Rate) para 500Hz ou 250Hz. No Painel de Controle de Mouse, desmarque 'Aprimorar precisão do ponteiro'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 73
+    }
+  },
+  {
+    "id": 74,
+    "titulo": "Erro de permissão negada ao executar script .ps1 baixado da internet (Zone.Identifier)",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: O PowerShell bloqueia o script informando que ele veio de outro computador e foi bloqueado para proteger o sistema. Causa: O fluxo de dados alternativo (Alternate Data Stream) Zone.Identifier marca o arquivo como originário da zona Internet. Solução técnica: Abra o PowerShell no diretório do arquivo e execute o comando: Unblock-File -Path .\\script_desejado.ps1, removendo a marcação de segurança de origem externa.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 74
+    }
+  },
+  {
+    "id": 75,
+    "titulo": "Tela preta após retornar do modo de suspensão ou hibernação no notebook",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O computador liga as ventoinhas mas a tela permanece preta após acordar da suspensão. Causa: Recurso de Inicialização Rápida (Fast Startup) incompatível com o driver Intel Management Engine Interface (IMEI). Solução técnica: Acesse Painel de Controle > Opções de Energia > 'Escolher a função dos botões de energia'. Clique em 'Alterar configurações não disponíveis no momento' e desmarque 'Ligar inicialização rápida (recomendado)'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 75
+    }
+  },
+  {
+    "id": 76,
+    "titulo": "Falha ao mapear unidade de rede via script de logon (Nome de dispositivo local já em uso)",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: O comando net use falha com erro 85: 'O nome de dispositivo local já está em uso'. Causa: Letra de unidade (ex: Z:) retida por uma sessão de logon desconectada anteriormente. Solução técnica: Antes de mapear a unidade, adicione uma instrução de expurgo prévio: net use Z: /delete /yes. Em seguida reconecte com net use Z: \\\\servidor\\compartilhamento /persistent:no.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 76
+    }
+  },
+  {
+    "id": 77,
+    "titulo": "Sincronização do OneDrive pausada por arquivos com caracteres inválidos",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: O ícone do OneDrive exibe uma cruz vermelha avisando que não pode sincronizar determinados itens. Causa: Pastas ou arquivos locais contendo caracteres reservados pelo protocolo NTFS/SharePoint (< > : \" / \\ | ? *). Solução técnica: Identifique os arquivos na lista de erros do OneDrive e renomeie-os removendo caracteres especiais. Evite terminar nomes de pastas com espaços ou pontos.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 77
+    }
+  },
+  {
+    "id": 78,
+    "titulo": "Erro no DISM 'Os arquivos de origem não puderam ser encontrados' (Error 0x800f081f)",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O comando DISM /RestoreHealth falha em 62.3% acusando falta de arquivos fonte de componentes. Causa: O repositório local WinSxS está corrompido e o Windows Update não conseguiu baixar os pacotes equivalentes. Solução técnica: Monte a imagem ISO oficial da mesma versão do Windows (ex: unidade D:) e aponte o arquivo install.wim: DISM /Online /Cleanup-Image /RestoreHealth /Source:WIM:D:\\sources\\install.wim:1 /LimitAccess.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 78
+    }
+  },
+  {
+    "id": 79,
+    "titulo": "Impressora de rede sumindo da lista de dispositivos após reiniciar a máquina",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Usuário precisa reinstalar a impressora todo dia porque ela desaparece ao reiniciar o Windows. Causa: Falha de comunicação no isolamento do processo do driver de impressão no spooler. Solução técnica: Abra o console de Gerenciamento de Impressão (printmanagement.msc), localize o driver da impressora, clique com botão direito e selecione 'Definir Isolamento de Driver' > 'Isolado'. Garanta a instalação de drivers do tipo V4.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 79
+    }
+  },
+  {
+    "id": 80,
+    "titulo": "Erro 'Falha na inicialização do serviço cliente de Política de Grupo' ao efetuar logon",
+    "fonte": "Microsoft",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: Usuário padrão não consegue fazer login no computador com mensagem de erro do serviço gpsvc. Causa: Corrupção nas chaves de registro de registro do serviço gpsvc em HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion\\Svchost. Solução técnica: Inicialize o Windows em Modo de Segurança com conta Administrador e recrie o grupo GPSvcGroup no registro associando AuthenticationCapabilities (DWORD 0x3020) e CoInitializeSecurityParam (DWORD 1).",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "autenticação",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 80
+    }
+  },
+  {
+    "id": 81,
+    "titulo": "Pasta C:\\Windows\\Temp acumulando centenas de gigabytes de arquivos temporários cab_*",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: O disco rígido C: enche repentinamente com milhares de arquivos cab_XXXX no diretório Windows\\Temp. Causa: O utilitário Makecab falha repetidamente ao compactar arquivos de log CBS (Component Based Servicing) maiores que 2GB. Solução técnica: Abra C:\\Windows\\Logs\\CBS, localize o arquivo CbsPersist_*.log com mais de 2GB e mova-o ou delete-o. Em seguida apague com segurança todos os arquivos cab_* acumulados em C:\\Windows\\Temp.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 81
+    }
+  },
+  {
+    "id": 82,
+    "titulo": "Erro de tela azul KERNEL_SECURITY_CHECK_FAILURE durante uso intenso",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Travamento súbito do sistema com código de erro KERNEL_SECURITY_CHECK_FAILURE (0x00000139). Causa: Corrupção de estruturas de dados do kernel causada por pente de memória RAM defeituoso ou overclock instável. Solução técnica: Execute o Diagnóstico de Memória do Windows pressionando Win + R e digitando mdsched.exe. Seletione 'Reiniciar agora e verificar se há problemas'. Remova perfis XMP/DOCP instáveis na BIOS.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 82
+    }
+  },
+  {
+    "id": 83,
+    "titulo": "Certificado de segurança corporativo não confiável no navegador Edge/Chrome",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Navegador exibe tela vermelha 'Sua conexão não é particular' (NET::ERR_CERT_AUTHORITY_INVALID) em sistemas internos. Causa: A Autoridade Certificadora Raiz interna da empresa não foi distribuída para o repositório confiável do computador. Solução técnica: Abra o certmgr.msc no Windows, navegue até 'Autoridades de Certificação Raiz Confiáveis' > 'Certificados'. Importe o arquivo do certificado raiz (.cer ou .crt) corporativo marcando a opção de confiar na autoridade.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 83
+    }
+  },
+  {
+    "id": 84,
+    "titulo": "Falha ao inicializar o Hyper-V com mensagem 'O hipervisor não está em execução'",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Máquinas virtuais não iniciam no Hyper-V com erro 'Hypervisor is not running'. Causa: A tecnologia de virtualização de hardware (VT-x ou AMD-V) está desativada na BIOS ou o hipervisor não foi marcado para boot. Solução técnica: Habilite a virtualização de hardware no menu UEFI/BIOS da placa-mãe. No prompt de comando como Administrador, execute bcdedit /set hypervisorlaunchtype auto e reinicie.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 84
+    }
+  },
+  {
+    "id": 85,
+    "titulo": "Áudio não sai pelo fone de ouvido conectado na entrada P2 frontal do gabinete",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O som continua saindo pelos alto-falantes mesmo com o fone plugado na porta frontal. Causa: Detecção de conector frontal (Jack Detection) desabilitada ou desconfigurada no driver Realtek HD Audio. Solução técnica: Abra o Painel de Controle Realtek Audio Console, acesse as opções avançadas do conector e marque 'Desativar a detecção do conector do painel frontal' para forçar o chaveamento de saída.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 85
+    }
+  },
+  {
+    "id": 86,
+    "titulo": "Erro 0x80070005 (Acesso Negado) ao tentar instalar aplicativo da Microsoft Store",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: O download é concluído na Microsoft Store mas a instalação aborta com erro 0x80070005. Causa: Permissões de segurança corrompidas na pasta oculta C:\\Program Files\\WindowsApps. Solução técnica: Pressione Win + R, digite wsreset.exe e aguarde o término do reset do cache da loja. Abra o PowerShell como Admin e registre novamente os pacotes com Get-AppXPackage *WindowsStore* -AllUsers | Foreach {Add-AppxPackage -DisableDevelopmentMode -Register \"$($_.InstallLocation)\\AppXManifest.xml\"}.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 86
+    }
+  },
+  {
+    "id": 87,
+    "titulo": "Gerenciador de Tarefas não abre ao pressionar Ctrl + Shift + Esc",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O Windows emite mensagem 'O Gerenciador de Tarefas foi desativado pelo administrador'. Causa: Chave de registro restritiva criada por malware ou política de grupo (DisableTaskMgr). Solução técnica: Abra o Prompt de Comando como Administrador e execute: reg delete \"HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Policies\\System\" /v DisableTaskMgr /f.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 87
+    }
+  },
+  {
+    "id": 88,
+    "titulo": "Erro de tela preta com cursor do mouse após atualização cumulativa do Windows",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O computador conclui a reinicialização da atualização mas entra em tela preta exibindo apenas o ponteiro do mouse. Causa: Falha de inicialização do processo shell explorer.exe devido a conflito de driver de vídeo. Solução técnica: Pressione Ctrl + Shift + Esc para abrir o Gerenciador de Tarefas. Vá em Arquivo > Executar nova tarefa, digite explorer.exe e marque 'Criar esta tarefa com privilégios administrativos'. Atualize o driver gráfico em seguida.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 88
+    }
+  },
+  {
+    "id": 89,
+    "titulo": "Conexão de rede Wi-Fi corporativa 802.1X desconectando a cada 10 minutos",
+    "fonte": "Microsoft",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: O notebook autentica na rede WPA2-Enterprise com certificado ou PEAP mas desconecta regularmente em poucos minutos. Causa: O temporizador de reautenticação periódica EAPOL (Session-Timeout) no servidor RADIUS está muito curto. Solução técnica: Nas propriedades da conexão de rede sem fio corporativa > Segurança > Configurações Avançadas, habilite o modo de logon único (SSO) e marque 'Habilitar retenção de chave de par rápido (PMK Cache)'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "conectividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 89
+    }
+  },
+  {
+    "id": 90,
+    "titulo": "Área de Transferência compartilhada (Cloud Clipboard / Win + V) não sincroniza histórico",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Ao pressionar Win + V o menu de múltiplos itens copiados aparece vazio ou desativado. Causa: O serviço de histórico da Área de Transferência foi desativado nas preferências de privacidade ou via GPO. Solução técnica: Acesse Configurações > Sistema > Área de Transferência e ative a opção 'Histórico da área de transferência'. Verifique se o serviço 'Serviço de Roteamento de Mensagens Por Push do WAP' (dmwappushservice) está ativo.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 90
+    }
+  },
+  {
+    "id": 91,
+    "titulo": "Disco rígido externo não recebe letra de unidade no Windows Explorer",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: O pendrive ou HD externo emite som de conexão USB e aparece no Gerenciador de Dispositivos, mas não abre no Explorador de Arquivos. Causa: O recurso de montagem automática de novas unidades (Automount) do Windows foi desabilitado. Solução técnica: Abra o CMD como Administrador e abra o diskpart. Execute automount enable. Em seguida selecione o volume com list volume; select volume X; assign letter=G.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 91
+    }
+  },
+  {
+    "id": 92,
+    "titulo": "Erro 'Esta cópia do Windows não é original' exibido após atualização de BIOS",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Marca d'água no canto inferior direito informando 'Ativar o Windows' após atualizar a firmware da placa-mãe. Causa: A atualização de BIOS limpou a chave de ativação digital OEM gravada na tabela MSDM da ACPI. Solução técnica: No PowerShell como Administrador execute (Get-WmiObject -query 'select * from SoftwareLicensingService').OA3xOriginalProductKey para resgatar a chave original gravada no chip e reaplique-a com slmgr.vbs /ipk <chave_encontrada>.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 92
+    }
+  },
+  {
+    "id": 93,
+    "titulo": "Microsoft Teams não detecta microfone do fone de ouvido Bluetooth",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: O usuário consegue ouvir a reunião mas o microfone não capta áudio nas chamadas do Teams. Causa: O Windows configurou o dispositivo apenas como fone estéreo de saída em vez de headset de comunicação bidirecional Hands-Free. Solução técnica: Em Configurações de Som > Mais configurações de som > aba Gravação, localize o dispositivo 'Headset Hands-Free AG Audio', clique com o botão direito e marque 'Definir como Dispositivo Padrão' e 'Definir como Dispositivo de Comunicação Padrão'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 93
+    }
+  },
+  {
+    "id": 94,
+    "titulo": "Lixeira corrompida na unidade C: impedindo exclusão de arquivos (A Lixeira em C: está corrompida)",
+    "fonte": "Microsoft",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Ao tentar deletar um arquivo o sistema exibe pop-up informando que a Lixeira está corrompida e pergunta se deseja esvaziá-la. Causa: Arquivo de metadados $I ou pasta oculta $Recycle.Bin com permissões ou setores inconsistentes. Solução técnica: Abra o Prompt de Comando como Administrador e execute rd /s /q C:\\$Recycle.bin. O Windows recriará uma nova estrutura de Lixeira limpa e funcional automaticamente.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "armazenamento",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 94
+    }
+  },
+  {
+    "id": 95,
+    "titulo": "Erro 'O arquivo de dados do Outlook atingiu o tamanho máximo' ao receber novos emails",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Não é possível mover ou receber novas mensagens em contas POP3/IMAP antigas. Causa: O arquivo .pst foi criado no formato antigo ANSI (Office 97-2002) que possui limite rígido de 2GB de capacidade. Solução técnica: Crie um novo arquivo de dados do Outlook (.pst) no formato moderno Unicode (suporta até 50GB). Copie os dados das pastas antigas para o novo arquivo e torne-o o arquivo de entrega padrão.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 95
+    }
+  },
+  {
+    "id": 96,
+    "titulo": "Computador reinicia sozinho durante a noite sem aviso fechando arquivos abertos",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O colaborador deixa documentos em edição abertos e encontra o computador reiniciado na manhã seguinte. Causa: Política padrão do Windows Update que força reinicialização fora do 'Horário de Atividade' para aplicar patches. Solução técnica: No Editor de Política de Grupo (gpedit.msc), acesse Configuração do Computador > Modelos Administrativos > Componentes do Windows > Windows Update e habilite 'Não reiniciar automaticamente para atualizações agendadas se houver usuários conectados'.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 96
+    }
+  },
+  {
+    "id": 97,
+    "titulo": "Erro de certificado SSL/TLS no PowerShell ao invocar Invoke-WebRequest",
+    "fonte": "Microsoft",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Scripts de automação do PowerShell falham com erro 'A solicitação foi anulada: Não foi possível criar um canal seguro para SSL/TLS'. Causa: O Windows PowerShell 5.1 utiliza por padrão protocolos legados SSLv3/TLS 1.0 para requisições HTTPS. Solução técnica: Adicione a seguinte linha no início do script de automação para forçar o uso de TLS 1.2 moderno: [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "segurança",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 97
+    }
+  },
+  {
+    "id": 98,
+    "titulo": "Uso excessivo de CPU pelo processo WmiPrvSE.exe (Host do Provedor WMI)",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O processo WmiPrvSE consome continuamente entre 30% e 50% de uso de CPU deixando o computador lento. Causa: Aplicativo de monitoramento de terceiros fazendo consultas WMI mal otimizadas ou com vazamento de chamadas. Solução técnica: Abra o Visualizador de Eventos > Logs de Aplicativos e Serviços > Microsoft > Windows > WMI-Activity > Operational. Localize os eventos de erro 5858 e verifique o campo ClientProcessId para identificar e finalizar o aplicativo ofensor.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 98
+    }
+  },
+  {
+    "id": 99,
+    "titulo": "Menu de contexto de clique direito com lentidão de vários segundos para abrir no Explorer",
+    "fonte": "Microsoft",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Ao clicar com o botão direito do mouse sobre qualquer arquivo na Área de Trabalho a tela congela por 4 segundos. Causa: Extensão de shell adicionada por software de terceiros desinstalado incorretamente tentando consultar recursos inexistentes. Solução técnica: Baixe o utilitário gratuito ShellExView da NirSoft. Filtre as extensões de contexto que não pertencem à Microsoft e desative-as uma a uma para identificar o item causador do atraso.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "sistema operacional",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 99
+    }
+  },
+  {
+    "id": 100,
+    "titulo": "Erro 'Não foi possível carregar o arquivo ou assembly' em programas legados .NET",
+    "fonte": "Microsoft",
+    "categoria": "Office & Produtividade",
+    "conteudo": "Sintoma: Software corporativo de gestão não inicializa acusando dependência ausente do .NET Framework 3.5. Causa: As versões recentes do Windows 10 e 11 vêm apenas com .NET 4.8 e .NET 8 habilitados por padrão. Solução técnica: Abra o PowerShell como Administrador e instale o runtime legado executando: Enable-WindowsOptionalFeature -Online -FeatureName NetFx3 -All.",
+    "metadados": {
+      "versao": "Windows 10/11 / Windows Server",
+      "autor": "Suporte Corporativo Microsoft",
+      "tags": [
+        "office & produtividade",
+        "windows",
+        "microsoft",
+        "helpdesk"
+      ],
+      "doc_id": 100
+    }
+  }
+]

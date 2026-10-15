@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+*.env
+.pytest_cache/
+
+# Data caches & model caches
+.cache/
+data/cache/
+models/
+
+# Benchmark results logs
+results/*.png
+
+# IDE
+.vscode/
+.idea/
+

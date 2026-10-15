@@ -1,0 +1,1802 @@
+[
+  {
+    "id": 101,
+    "titulo": "Como reparar dependências quebradas no APT e travas do dpkg no Ubuntu",
+    "fonte": "Ubuntu",
+    "categoria": "Gerenciamento de Pacotes",
+    "conteudo": "Sintoma: Erro 'E: Could not get lock /var/lib/dpkg/lock-frontend' ou 'dpkg was interrupted'. Causa: Interrupção forçada durante atualização do sistema ou processo de atualização rodando em segundo plano. Solução técnica: Verifique se há processos do apt ativos com ps aux | grep -i apt. Se nenhum processo legítimo estiver ativo, remova os arquivos de trava com: sudo rm /var/lib/apt/lists/lock /var/cache/apt/archives/lock /var/lib/dpkg/lock*. Em seguida reconfigure pacotes pendentes e corrija dependências quebradas: 1. sudo dpkg --configure -a 2. sudo apt-get install -f 3. sudo apt update && sudo apt clean.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "gerenciamento de pacotes",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 101
+    }
+  },
+  {
+    "id": 102,
+    "titulo": "Configuração de rede estática e resolução DNS utilizando o Netplan no Ubuntu 22.04/24.04",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: O servidor Ubuntu perdeu o endereço IP após reiniciar ou não resolve nomes de domínio externos. Causa: Arquivo de configuração YAML do Netplan desconfigurado ou com indentação de espaços inválida. Solução técnica: Edite o arquivo em /etc/netplan/01-netcfg.yaml e garanta indentação estrita de 2 espaços: network: version: 2 ethernets: eth0: dhcp4: no addresses: [192.168.1.50/24] routes: - to: default via: 192.168.1.1 nameservers: addresses: [8.8.8.8, 1.1.1.1]. Em seguida teste e aplique com: sudo netplan try e sudo netplan apply.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 102
+    }
+  },
+  {
+    "id": 103,
+    "titulo": "Recuperação do gerenciador de boot GRUB ausente ou quebrado após atualização",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O computador liga e cai diretamente no prompt 'grub rescue>' ou não carrega a lista de kernels. Causa: MBR ou partição EFI corrompida durante atualização do kernel ou instalação em dual-boot. Solução: Inicialize via Live USB do Ubuntu. Abra o terminal e execute: sudo add-apt-repository ppa:yannubuntu/boot-repair, sudo apt update e sudo apt install boot-repair. Execute boot-repair e selecione 'Recommended repair' para reinstalar o GRUB na partição correta.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 103
+    }
+  },
+  {
+    "id": 104,
+    "titulo": "Como diagnosticar e resolver alta carga de CPU e uso de memória com htop e systemd-cgtop",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Sistema travando, cursor do mouse com lentidão severa e carga (load average) acima do número de núcleos de CPU. Causa: Processo desgovernado com vazamento de memória (memory leak) ou loops de threads infinitos. Solução: Utilize htop para visualizar processos por consumo de CPU/Memória. Identifique o PID problemático e execute kill -15 PID para término suave ou kill -9 PID em caso de recusa. Inspecione logs do processo via journalctl -u servico -e.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 104
+    }
+  },
+  {
+    "id": 105,
+    "titulo": "Serviço SSH falha ao iniciar na porta 22 (Connection refused / Connection timed out)",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Administrador não consegue conectar remotamente via PuTTY ou terminal ao servidor Ubuntu. Causa: O daemon sshd está parado ou o firewall UFW bloqueou a porta padrão 22. Solução técnica: No console local da máquina, verifique o status com sudo systemctl status ssh. Se o serviço estiver parado, execute sudo systemctl start ssh && sudo systemctl enable ssh. No firewall nativo, libere a porta executando sudo ufw allow 22/tcp e sudo ufw reload.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 105
+    }
+  },
+  {
+    "id": 106,
+    "titulo": "Disco cheio no Ubuntu: como identificar e limpar arquivos grandes em /var/log e cache do apt",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Erro 'No space left on device' impedindo criação de arquivos, banco de dados travando. Causa: Logs rotacionados acumulados em /var/log/journal ou cache gigante em /var/cache/apt. Solução: Execute df -h para verificar a partição afetada. Localize diretórios consumidores com sudo du -sh /* 2>/dev/null | sort -h. Limpe logs antigos do systemd com sudo journalctl --vacuum-time=3d e o cache de pacotes com sudo apt clean && sudo apt autoremove --purge.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 106
+    }
+  },
+  {
+    "id": 107,
+    "titulo": "Como configurar e montar partições automaticamente no /etc/fstab",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: O segundo disco rígido ou partição de dados não aparece após o reboot do sistema. Causa: Falta de entrada correspondente com o UUID correto no arquivo de tabela de sistemas de arquivos /etc/fstab. Solução: Identifique o UUID do volume usando sudo blkid. Crie o ponto de montagem com sudo mkdir -p /dados. Adicione a linha em /etc/fstab: UUID=xxxx-xxxx /dados ext4 defaults 0 2. Teste a sintaxe sem reiniciar com sudo mount -a.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 107
+    }
+  },
+  {
+    "id": 108,
+    "titulo": "Permissão negada (Permission denied) em pastas compartilhadas e gestão de usuários/grupos",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Desenvolvedor ou usuário comum não consegue ler ou gravar arquivos dentro de /var/www ou /opt. Causa: Proprietário (owner) ou permissões POSIX restritas sem associação do usuário ao grupo correto. Solução: Adicione o usuário ao grupo responsável com sudo usermod -aG www-data $USER. Ajuste a propriedade e permissões recursivamente com sudo chown -R $USER:www-data /var/www e sudo chmod -R 775 /var/www.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 108
+    }
+  },
+  {
+    "id": 109,
+    "titulo": "Firewall UFW no Ubuntu: regras básicas de segurança e proteção de portas abertas",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Serviços expostos indevidamente para a rede pública sofrendo tentativas de invasão. Causa: Firewall local desativado por padrão na instalação limpa do Ubuntu. Solução: Ative o firewall definindo políticas seguras: sudo ufw default deny incoming, sudo ufw default allow outgoing. Habilite portas específicas com sudo ufw allow 80/tcp, sudo ufw allow 443/tcp e ative com sudo ufw enable.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 109
+    }
+  },
+  {
+    "id": 110,
+    "titulo": "Wi-Fi não funciona no notebook com Ubuntu: instalando drivers proprietários Broadcom/Realtek",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: O menu de configurações de rede não lista nenhuma rede sem fio disponível. Causa: Chipset Wi-Fi requer firmware proprietário não incluso no kernel genérico open-source. Solução: Conecte via cabo Ethernet. Abra 'Programas e Atualizações' > aba 'Drivers Adicionais'. Selecione o driver proprietário correspondente (ex: bcmwl-kernel-source) e clique em 'Aplicar alterações', ou instale via terminal.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 110
+    }
+  },
+  {
+    "id": 111,
+    "titulo": "Gerenciamento de serviços com systemctl e visualização de logs com journalctl",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: Um serviço web (Nginx/Apache) falhou silenciosamente e não atende requisições. Causa: Erro de configuração na inicialização do daemon. Solução técnica: Verifique o estado do serviço com sudo systemctl status nginx. Para reiniciar execute sudo systemctl restart nginx. Para inspecionar os erros em tempo real execute sudo journalctl -u nginx -f -n 50.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 111
+    }
+  },
+  {
+    "id": 112,
+    "titulo": "Configuração de tarefas agendadas automáticas utilizando o Cron no Ubuntu",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: O script de backup noturno não é disparado automaticamente. Causa: Sintaxe inválida no crontab ou ausência de variáveis de ambiente no shell de execução do cron. Solução: Edite o agendador com crontab -e. Adicione horários utilizando a convenção (minuto hora dia mês dia-semana): 0 3 * * * /usr/bin/python3 /scripts/backup.py >> /var/log/backup.log 2>&1. Certifique-se de usar caminhos absolutos para binários.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 112
+    }
+  },
+  {
+    "id": 113,
+    "titulo": "Recuperação de senha de usuário root ou administrador via Modo de Recuperação (GRUB)",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: O administrador esqueceu a senha de root e do usuário sudo no servidor físico. Causa: Perda de credenciais de acesso local. Solução: Reinicie o servidor mantendo pressionada a tecla Shift para abrir o menu GRUB. Selecione 'Advanced options for Ubuntu' > 'Recovery mode' > 'root Drop to root shell prompt'. Remonte a partição raiz em modo leitura/escrita com mount -o remount,rw / e altere com passwd seu_usuario.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 113
+    }
+  },
+  {
+    "id": 114,
+    "titulo": "Configuração e ativação de memória SWAP no Ubuntu para evitar encerramento por OOM Killer",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Banco de dados ou servidor web é morto subitamente com mensagem 'Out of memory: Kill process'. Causa: Esgotamento da memória RAM física sem área de troca (swap) configurada no disco. Solução técnica: Crie um arquivo de swap de 4GB com: sudo fallocate -l 4G /swapfile. Defina permissões estritas: sudo chmod 600 /swapfile. Formate e ative: sudo mkswap /swapfile && sudo swapon /swapfile. Torne permanente adicionando em /etc/fstab: /swapfile none swap sw 0 0.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 114
+    }
+  },
+  {
+    "id": 115,
+    "titulo": "Resolução de congelamento de tela e travamento gráfico em placas NVIDIA",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Tela preta com cursor piscando ou congelamento após suspender o computador. Causa: Conflito entre o driver open-source Nouveau e os módulos do driver proprietário NVIDIA. Solução: No terminal tty (Ctrl + Alt + F3), purgue drivers antigos com sudo apt-get purge nvidia*. Instale a versão estável recomendada pelo utilitário ubuntu-drivers install e reinicie o computador.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 115
+    }
+  },
+  {
+    "id": 116,
+    "titulo": "Instalação e configuração segura do Docker CE e Docker Compose no Ubuntu",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: Erro 'permission denied while trying to connect to the Docker daemon socket'. Causa: O usuário atual não possui permissão para acessar o socket Unix /var/run/docker.sock. Solução: Crie o grupo docker se não existir e adicione seu usuário: sudo usermod -aG docker $USER. Faça logout e login novamente para aplicar a nova associação de grupos.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 116
+    }
+  },
+  {
+    "id": 117,
+    "titulo": "Kernel Panic no boot do Ubuntu após atualização com comando apt upgrade",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Máquina não inicializa, luzes de Caps Lock piscando e erro 'Kernel panic - not syncing: VFS: Unable to mount root fs'. Causa: Imagem initramfs incompleta ou incompatibilidade com o kernel Linux mais recente. Solução: No menu GRUB, escolha 'Advanced options' e selecione o kernel estável imediatamente anterior. Após inicializar com sucesso, remova o kernel com defeito e recrie o initramfs com sudo update-initramfs -u -k all.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 117
+    }
+  },
+  {
+    "id": 118,
+    "titulo": "Como alterar o fuso horário (Timezone) e sincronizar NTP com timedatectl",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Horário das mensagens de logs com defasagem de 3 horas em relação ao horário local. Causa: Fuso horário configurado como UTC e serviço de sincronização systemd-timesyncd desativado. Solução: Configure o fuso horário brasileiro com sudo timedatectl set-timezone America/Sao_Paulo. Verifique a sincronização com timedatectl status.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 118
+    }
+  },
+  {
+    "id": 119,
+    "titulo": "Diagnóstico de lentidão de disco com iostat e iotop",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: O sistema fica responsivo mas comandos de leitura/escrita travam o terminal. Causa: Processo efetuando escrita massiva saturando a fila de I/O do disco. Solução: Instale o sysstat com sudo apt install sysstat iotop. Execute sudo iotop -o para ver apenas os processos ativos consumindo I/O.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 119
+    }
+  },
+  {
+    "id": 120,
+    "titulo": "Como habilitar e configurar conexões SSH com par de chaves públicas/privadas RSA/Ed25519",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Necessidade de banir logins por senha simples para evitar ataques de força bruta no SSH. Causa: Acesso SSH configurado com PasswordAuthentication yes exposto na internet. Solução: Copie sua chave com ssh-copy-id usuario@servidor. No servidor, edite /etc/ssh/sshd_config, configure PasswordAuthentication no e PubkeyAuthentication yes. Reinicie o serviço com sudo systemctl restart ssh.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 120
+    }
+  },
+  {
+    "id": 121,
+    "titulo": "Erro 'The following signatures couldn't be verified: NO_PUBKEY' no apt update",
+    "fonte": "Ubuntu",
+    "categoria": "Gerenciamento de Pacotes",
+    "conteudo": "Sintoma: Ao atualizar repositórios o apt exibe mensagem de erro de chave pública ausente com código hexadecimal da chave. Causa: Repositório de terceiro adicionado sem importar a respectiva assinatura digital GPG. Solução técnica: Importe a chave pública utilizando o comando: sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys <CODIGO_HEXADECIMAL>, ou exporte o arquivo .gpg para o diretório /etc/apt/trusted.gpg.d/.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "gerenciamento de pacotes",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 121
+    }
+  },
+  {
+    "id": 122,
+    "titulo": "Servidor Ubuntu inacessível na rede após alteração de IP com erro 'Network is unreachable'",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Servidor não atinge internet nem outras sub-redes, emitindo 'Network is unreachable' em comandos ping ou curl. Causa: Falta de rota padrão (Default Gateway) configurada na tabela de roteamento do kernel. Solução técnica: Verifique a tabela com ip route show. Adicione a rota padrão com: sudo ip route add default via 192.168.1.1 dev eth0 e configure a seção routes no arquivo /etc/netplan/*.yaml.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 122
+    }
+  },
+  {
+    "id": 123,
+    "titulo": "Recuperação de imagem initramfs corrompida em modo de emergência (initramfs prompt)",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O boot do Ubuntu interrompe em tela preta com prompt '(initramfs)' sem carregar o sistema. Causa: Desligamento brusco corrompendo blocos da partição raiz que requer verificação manual de integridade. Solução técnica: No prompt de emergência, execute fsck /dev/sda1 -y (substituindo pela partição raiz). Após a conclusão dos reparos de nós de índice e blocos livres, digite exit ou reboot.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 123
+    }
+  },
+  {
+    "id": 124,
+    "titulo": "Partição ext4 montada como somente leitura (Read-only file system) após erro de I/O",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Impossível criar, editar arquivos ou iniciar serviços recebendo 'Read-only file system'. Causa: O driver ext4 detectou erros de consistência de metadados e protegeu o disco contra corrupção. Solução técnica: Desmonte o volume afetado com sudo umount /dados (ou remonte em leitura com mount -o remount,ro /dados). Execute o reparo profundo com sudo fsck.ext4 -fy /dev/sdb1 e remonte com sudo mount /dados.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 124
+    }
+  },
+  {
+    "id": 125,
+    "titulo": "Como rastrear qual processo está ocupando determinada porta de rede no Ubuntu (ss e lsof)",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Erro 'Address already in use' ao tentar subir uma aplicação ou container Docker. Causa: Outro serviço local já está vinculado à mesma porta TCP/UDP. Solução técnica: Execute sudo ss -tulpn | grep :8080 ou sudo lsof -i :8080 para identificar o PID do processo. Inspecione o programa com ps -p <PID> -o comm= e encerre-o com kill -15 <PID> caso necessário.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 125
+    }
+  },
+  {
+    "id": 126,
+    "titulo": "Serviço no systemd falhando com erro 'Start request repeated too quickly' (CrashLoop)",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: O serviço tenta subir continuamente, falha imediatamente e é bloqueado pelo systemd por excesso de tentativas. Causa: Erro de sintaxe no arquivo de configuração do aplicativo ou arquivo de banco de dados inacessível. Solução técnica: Inspecione a causa exata com sudo journalctl -u meu_servico.service -n 50 -e. No arquivo de unidade /etc/systemd/system/meu_servico.service ajuste RestartSec=5s para evitar rajada e recarregue com systemctl daemon-reload.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 126
+    }
+  },
+  {
+    "id": 127,
+    "titulo": "Espaço em disco 100% cheio no df -h mas du -sh não encontra arquivos grandes",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: O comando df -h acusa partição / 100% ocupada, mas a soma dos arquivos com du -sh mostra pouco espaço utilizado. Causa: Arquivos volumosos de log foram excluídos com rm enquanto um processo ainda mantinha seu descritor de arquivo aberto. Solução técnica: Localize arquivos deletados retidos em memória com: sudo lsof +L1 ou sudo lsof | grep deleted. Reinicie o serviço correspondente listado para que o kernel libere os blocos de disco.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 127
+    }
+  },
+  {
+    "id": 128,
+    "titulo": "Erro 'No space left on device' mesmo tendo espaço livre em gigabytes no disco (Inodes esgotados)",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Falha ao salvar novos arquivos acusando falta de espaço, embora df -h mostre mais de 50GB livres. Causa: Esgotamento da tabela de nós de índice (inodes) do sistema de arquivos ext4 devido a milhões de arquivos minúsculos. Solução técnica: Verifique o uso de inodes com df -i. Identifique o diretório com excesso de arquivos com: find / -xdev -printf '%h\\n' | sort | uniq -c | sort -k 1 -n | tail -20 e remova arquivos órfãos de cache/sessões.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 128
+    }
+  },
+  {
+    "id": 129,
+    "titulo": "Usuário perdeu privilégios de sudo com erro '/etc/sudoers is world writable'",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Nenhum comando com sudo funciona, exibindo erro grave informando que /etc/sudoers tem permissão de escrita para todos. Causa: Execução acidental de chmod 777 recursivo na raiz ou na pasta /etc. Solução técnica: Utilize o utilitário pkexec (PolicyKit) para restaurar as permissões sem precisar reiniciar: pkexec chmod 0440 /etc/sudoers && pkexec chown root:root /etc/sudoers.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 129
+    }
+  },
+  {
+    "id": 130,
+    "titulo": "Erro 'Host key verification failed' ao tentar conectar em servidor SSH conhecido",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: O cliente SSH recusa a conexão avisando 'WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!'. Causa: O servidor remoto foi reinstalado ou teve suas chaves criptográficas de host regeneradas, divergindo do arquivo local. Solução técnica: Remova a entrada antiga da chave no cliente utilizando o comando: ssh-keygen -f \"~/.ssh/known_hosts\" -R \"192.168.1.100\" e reconecte confirmando a nova impressão digital (fingerprint).",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 130
+    }
+  },
+  {
+    "id": 131,
+    "titulo": "Nginx falha ao reiniciar acusando erro de sintaxe nos blocos de configuração",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: O comando systemctl restart nginx falha e o site corporativo sai do ar. Causa: Falta de ponto-e-vírgula (;) ou chaves desbalanceadas nos arquivos de /etc/nginx/sites-available/. Solução técnica: Antes de reiniciar o servidor, valide sempre a integridade dos arquivos executando sudo nginx -t. O comando apontará o arquivo e a linha exata do erro de sintaxe para correção.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 131
+    }
+  },
+  {
+    "id": 132,
+    "titulo": "Configuração de rotação diária de logs corporativos pesados com Logrotate",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: Arquivos de log de aplicações personalizadas crescendo indefinidamente em /var/log/ e consumindo todo o disco. Causa: Falta de regra no utilitário de rotação logrotate para gerenciar arquivos de log de software próprio. Solução técnica: Crie o arquivo /etc/logrotate.d/minha_app contendo: /var/log/minha_app/*.log { daily missingok rotate 14 compress delaycompress notifempty create 0640 www-data adm }.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 132
+    }
+  },
+  {
+    "id": 133,
+    "titulo": "Erro 'Temporary failure in name resolution' após atualização do systemd-resolved",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: O sistema não consegue resolver nenhum domínio externo em comandos apt, curl ou ping. Causa: O link simbólico /etc/resolv.conf foi quebrado ou não aponta para o resolvedor stub local 127.0.0.53. Solução técnica: Recrie o link simbólico oficial do systemd executando: sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf && sudo systemctl restart systemd-resolved.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 133
+    }
+  },
+  {
+    "id": 134,
+    "titulo": "Aviso interativo 'needrestart' interrompendo atualizações em scripts automatizados do apt",
+    "fonte": "Ubuntu",
+    "categoria": "Gerenciamento de Pacotes",
+    "conteudo": "Sintoma: Scripts de CI/CD ou updates em lote travam esperando confirmação de reinicialização de daemons em tela azul ncurses. Causa: O pacote needrestart vem configurado em modo interativo por padrão no Ubuntu 22.04 e 24.04. Solução técnica: Edite /etc/needrestart/needrestart.conf e configure $nrconf{restart} = 'a'; (automático) ou exporte a variável de ambiente DEBIAN_FRONTEND=noninteractive nos scripts.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "gerenciamento de pacotes",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 134
+    }
+  },
+  {
+    "id": 135,
+    "titulo": "Docker não consegue criar containers com erro 'driver failed programming external connectivity'",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: O comando docker run falha ao tentar mapear portas com erro de programação de conectividade externa. Causa: A tabela de regras iptables do Docker foi purgada após reinicialização do firewall UFW ou reload do iptables. Solução técnica: Reinicie o daemon do Docker para reconstruir as regras e cadeias nativas com: sudo systemctl restart docker.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 135
+    }
+  },
+  {
+    "id": 136,
+    "titulo": "Processos zumbis (defunct) acumulando na tabela de processos do Linux",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O comando top ou ps exibe dezenas de processos marcados como [app] <defunct> ocupando IDs de processo. Causa: O processo pai não chamou a função de sistema wait() ou waitpid() para colher o código de término dos filhos. Solução técnica: Localize o processo pai responsável com ps -ef | grep defunct. Envie um sinal de término suave para o processo pai com kill -15 <PID_PAI> para que o init herde e expurgue os zumbis.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 136
+    }
+  },
+  {
+    "id": 137,
+    "titulo": "Erro 'Too many open files' em servidores web de alto tráfego no Ubuntu",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: A aplicação recusa novas conexões de rede acusando erro de limite de descritores de arquivo atingido. Causa: O limite padrão de arquivos abertos (ulimit -n) de 1024 foi atingido pelo processo de servidor. Solução técnica: Adicione em /etc/security/limits.conf as linhas: * soft nofile 65536 e * hard nofile 65536. Para serviços systemd, adicione LimitNOFILE=65536 dentro do bloco [Service] do arquivo de unidade.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 137
+    }
+  },
+  {
+    "id": 138,
+    "titulo": "Erro 'Failed to fetch' no apt por repositório com protocolo HTTPS em instalação mínima",
+    "fonte": "Ubuntu",
+    "categoria": "Gerenciamento de Pacotes",
+    "conteudo": "Sintoma: O comando apt update falha em repositórios https acusando método de transporte desconhecido. Causa: O pacote apt-transport-https e certificados da autoridade não estão instalados em ambientes mínimos ou Docker. Solução técnica: Execute sudo apt-get update && sudo apt-get install -y apt-transport-https ca-certificates.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "gerenciamento de pacotes",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 138
+    }
+  },
+  {
+    "id": 139,
+    "titulo": "Cursor piscando e tela preta ao tentar inicializar a interface gráfica GDM3",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O sistema conclui o boot mas não carrega a tela de login gráfico do GNOME, ficando em tela preta com cursor. Causa: Incompatibilidade do servidor de exibição Wayland com placas gráficas híbridas ou drivers legados. Solução técnica: Abra o terminal tty com Ctrl + Alt + F3, edite /etc/gdm3/custom.conf, descomente a linha WaylandEnable=false para forçar o uso do Xorg clássico e reinicie o serviço com sudo systemctl restart gdm3.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 139
+    }
+  },
+  {
+    "id": 140,
+    "titulo": "Como expandir um volume lógico LVM após aumentar o tamanho do disco virtual na máquina virtual",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: O disco rígido virtual foi aumentado no hipervisor mas a partição / continua com o tamanho antigo. Causa: A tabela de partições e os volumes LVM não reconhecem automaticamente o novo espaço não alocado. Solução técnica: Execute echo 1 > /sys/class/block/sda/device/rescan para reconhecer a nova capacidade. Expanda o volume físico com pvresize /dev/sda3, o volume lógico com lvextend -l +100%FREE /dev/ubuntu-vg/ubuntu-lv e o sistema de arquivos ext4 com resize2fs /dev/ubuntu-vg/ubuntu-lv.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 140
+    }
+  },
+  {
+    "id": 141,
+    "titulo": "Erro 'Certificate verification failed: The certificate is not yet valid' no terminal",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Comandos curl, wget ou git falham ao acessar qualquer endereço HTTPS com erro de certificado inválido no tempo. Causa: O relógio da máquina está completamente dessincronizado (ex: marcando anos no passado). Solução técnica: Force a sincronização do relógio do sistema via NTP executando: sudo timedatectl set-ntp true && sudo systemctl restart systemd-timesyncd. Valide a hora atual com timedatectl.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 141
+    }
+  },
+  {
+    "id": 142,
+    "titulo": "Fail2ban não bloqueia tentativas de invasão por força bruta no SSH",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: O log /var/log/auth.log mostra centenas de tentativas incorretas de senha sem banimento de nenhum IP. Causa: O backend de leitura do log no fail2ban está configurado como arquivo estático enquanto o Ubuntu 24.04 usa journald. Solução técnica: No arquivo /etc/fail2ban/jail.local, na seção [sshd], adicione backend = systemd e maxretry = 5. Reinicie o serviço com sudo systemctl restart fail2ban e consulte o status com fail2ban-client status sshd.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 142
+    }
+  },
+  {
+    "id": 143,
+    "titulo": "Como configurar interface de rede em modo Bridge para máquinas virtuais KVM/QEMU no Netplan",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Máquinas virtuais KVM criadas no Ubuntu ficam isoladas em NAT sem conseguir receber IP direto da rede local. Causa: Ausência de uma interface de ponte virtual (bridge) ligada à interface física. Solução técnica: No arquivo YAML do Netplan, declare a seção bridges: br0: interfaces: [eth0] dhcp4: true. Remova a configuração de IP direto da interface eth0 e aplique com sudo netplan apply.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 143
+    }
+  },
+  {
+    "id": 144,
+    "titulo": "Serviço Apache falhando com aviso 'Could not reliably determine the server's fully qualified domain name'",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: Ao iniciar o Apache ele emite alerta AH00558 sobre FQDN e não resolve o nome de host local. Causa: Diretiva ServerName global não definida nos arquivos de configuração do Apache2. Solução técnica: Crie o arquivo /etc/apache2/conf-available/fqdn.conf contendo a linha ServerName 127.0.0.1. Habilite a configuração com sudo a2enconf fqdn e recarregue com sudo systemctl reload apache2.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 144
+    }
+  },
+  {
+    "id": 145,
+    "titulo": "Erro 'Swapfile has holes' ao tentar ativar arquivo de swap com swapon",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: O comando swapon /swapfile falha acusando que o arquivo contém lacunas (holes). Causa: O arquivo de swap foi criado utilizando fallocate em sistema de arquivos que aloca blocos esparsos (ex: Btrfs ou XFS). Solução técnica: Remova o arquivo defeituoso e recrie utilizando o utilitário dd com blocos contínuos: sudo dd if=/dev/zero of=/swapfile bs=1M count=4096 status=progress. Defina chmod 600 /swapfile, execute mkswap /swapfile e swapon /swapfile.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 145
+    }
+  },
+  {
+    "id": 146,
+    "titulo": "Como alterar o limite de memória virtual vm.max_map_count para Elasticsearch e containers",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Containers do Elasticsearch ou SonarQube falham ao iniciar com erro 'max virtual memory areas vm.max_map_count [65530] is too low'. Causa: O limite padrão de áreas de memória virtual mapeadas pelo kernel do Linux é insuficiente para bancos de busca. Solução técnica: Altere o parâmetro em tempo de execução com sudo sysctl -w vm.max_map_count=262144. Para tornar persistente após reinicializações, adicione a linha vm.max_map_count=262144 em /etc/sysctl.conf.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 146
+    }
+  },
+  {
+    "id": 147,
+    "titulo": "Placa de rede Gigabit operando apenas em 100Mbps no switch corporativo",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Taxa de transferência de arquivos pela rede local limitada a 10MB/s em cabo de rede de alta velocidade. Causa: Falha de autonegociação da velocidade no par trançado por interferência ou cabo mal crimpado. Solução técnica: Inspecione a velocidade atual com ethtool eth0. Force a autonegociação correta executando sudo ethtool -s eth0 speed 1000 duplex full autoneg on e teste o cabo com testador de continuidade.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 147
+    }
+  },
+  {
+    "id": 148,
+    "titulo": "Scripts em tarefas do Cron falhando silenciosamente por ausência de PATH completo",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: O script executa com sucesso quando rodado manualmente pelo terminal, mas falha quando disparado pelo crontab. Causa: O ambiente de execução do cron não carrega o PATH do usuário, contendo apenas /usr/bin e /bin por padrão. Solução técnica: Defina a variável PATH explicitamente na primeira linha do arquivo crontab (crontab -e): PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin. Use sempre caminhos absolutos para binários nos comandos.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 148
+    }
+  },
+  {
+    "id": 149,
+    "titulo": "Pasta /tmp cheia travando compilações e execução de programas no Linux",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Erros de compilação ou falha de criação de sockets informando falta de espaço no diretório temporário. Causa: Acúmulo de arquivos órfãos criados por aplicações que não foram expurgados automaticamente. Solução técnica: Execute a limpeza segura dos arquivos com mais de 7 dias utilizando o systemd-tmpfiles: sudo systemd-tmpfiles --clean. Para limpeza manual forçada, execute rm -rf /tmp/* excluindo arquivos antigos.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 149
+    }
+  },
+  {
+    "id": 150,
+    "titulo": "Como restaurar o backup de um banco de dados PostgreSQL dump .sql no Ubuntu",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Necessidade de subir base de dados corporativa a partir de arquivo de backup dump gerado por pg_dump. Causa: Recuperação de desastres ou migração de infraestrutura de banco de dados. Solução técnica: Crie o banco de dados de destino com sudo -u postgres createdb nome_do_banco. Restaure o conteúdo executando sudo -u postgres psql -d nome_do_banco -f /caminho/backup.sql.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 150
+    }
+  },
+  {
+    "id": 151,
+    "titulo": "Erro 'ModuleNotFoundError' ao rodar script Python pelo cron ou como serviço systemd",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: O serviço falha ao iniciar dizendo que determinado módulo Python instalado não existe. Causa: O script foi invocado pelo interpretador Python global do sistema (/usr/bin/python3) e não pelo virtualenv onde as libs estão. Solução técnica: No arquivo de unidade do systemd ou linha do cron, aponte diretamente o executável do venv: ExecStart=/caminho/do/projeto/.venv/bin/python /caminho/do/projeto/main.py.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 151
+    }
+  },
+  {
+    "id": 152,
+    "titulo": "Como configurar sincronização contínua de arquivos entre servidores Linux com Rsync via SSH",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Necessidade de espelhar diretório de dados em servidor secundário sem transferir arquivos repetidos. Causa: Falta de automação de rotinas de cópia diferencial de segurança. Solução técnica: Utilize o utilitário rsync com compressão e preservação de permissões via SSH: rsync -avz --delete -e 'ssh -p 22' /var/www/dados/ usuario@servidor-backup:/var/www/dados/.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 152
+    }
+  },
+  {
+    "id": 153,
+    "titulo": "Erro de memória esgotada 'fork: Cannot allocate memory' ao digitar comandos no terminal",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Qualquer comando simples como ls ou ps falha com erro de alocação de memória no fork. Causa: O número total de processos/threads em execução atingiu o limite máximo de PIDs do kernel (pid_max). Solução técnica: Verifique o limite com sysctl kernel.pid_max. Encerre processos zumbis ou aplicações fora de controle via killall -9 nome_processo e aumente o limite com sysctl -w kernel.pid_max=4194304.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 153
+    }
+  },
+  {
+    "id": 154,
+    "titulo": "Bloqueio de ataque DDoS por inundação SYN com ativação de SYN Cookies no kernel Linux",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Servidor web para de responder novas requisições com logs dmesg acusando 'possible SYN flooding on port 80'. Causa: Inundação de pacotes SYN de rede esgotando a fila de conexões pendentes do TCP (SYN backlog). Solução técnica: Habilite a mitigação por cookies criptográficos de SYN executando: sudo sysctl -w net.ipv4.tcp_syncookies=1. Adicione a linha net.ipv4.tcp_syncookies = 1 em /etc/sysctl.conf para persistir.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 154
+    }
+  },
+  {
+    "id": 155,
+    "titulo": "Como recuperar partição acidentalmente deletada no Linux com TestDisk",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: O disco aparece sem tabela de partição após comando fdisk incorreto e dados não montam mais. Causa: Setor de partição MBR/GPT sobrescrito sem destruição dos dados físicos subjacentes. Solução técnica: Instale o testdisk com sudo apt install testdisk. Execute sudo testdisk, selecione o dispositivo, escolha o tipo de partição (EFI GPT ou Intel), selecione 'Analyse' > 'Quick Search' e grave a estrutura original encontrada com 'Write'.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 155
+    }
+  },
+  {
+    "id": 156,
+    "titulo": "Erro 'Job for cups.service failed' ao tentar imprimir no Ubuntu Desktop",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: Nenhuma impressora é detectada e o painel de impressão do GNOME informa que o serviço de impressão não está disponível. Causa: O daemon CUPS falhou ao carregar arquivo de configuração de impressoras /etc/cups/printers.conf corrompido. Solução técnica: Pare o serviço, mova o arquivo corrompido com sudo mv /etc/cups/printers.conf /etc/cups/printers.conf.old e reinicie o serviço com sudo systemctl restart cups.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 156
+    }
+  },
+  {
+    "id": 157,
+    "titulo": "Teclado desconfigurado trocando caracteres especiais (ex: cedilha Ç e til ~)",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Digitar teclas de acentuação gera caracteres trocados como ponto-e-vírgula no lugar da cedilha. Causa: O layout do teclado do console ou sessão gráfica está configurado no padrão americano (US) em vez de ABNT2. Solução técnica: Reconfigure o teclado pelo terminal executando sudo dpkg-reconfigure keyboard-configuration e selecione 'Generic 105-key PC' e 'Portuguese (Brazil) - Portuguese (Brazil, with dead keys)'. Ou use localectl set-x11-keymap br abnt2.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 157
+    }
+  },
+  {
+    "id": 158,
+    "titulo": "Como desativar suspensão e hibernação no Ubuntu Server para evitar travamentos de rede",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O servidor perde conectividade de rede após algumas horas de inatividade sem resposta a ping. Causa: O sistema operacional entra em modo de economia de energia e suspende os adaptadores de rede. Solução técnica: Mascare os alvos de suspensão do systemd para desativar permanentemente com: sudo systemctl mask sleep.target suspend.target hibernate.target hybrid-sleep.target.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 158
+    }
+  },
+  {
+    "id": 159,
+    "titulo": "Erro 'Client sent an HTTP request to an HTTPS server' em requisições de API",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: A chamada HTTP retorna código de status 400 Bad Request com corpo informando incompatibilidade de protocolo. Causa: A requisição foi disparada utilizando o prefixo http:// contra uma porta configurada com certificado SSL/TLS (porta 443). Solução técnica: Corrija a URL da requisição garantindo o esquema https:// ou configure no servidor web (Nginx) o redirecionamento automático de HTTP para HTTPS na porta 80: return 301 https://$host$request_uri;.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 159
+    }
+  },
+  {
+    "id": 160,
+    "titulo": "Como monitorar tráfego de rede em tempo real por processo com Nethogs",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Conexão de internet corporativa saturada sem clareza de qual processo está consumindo a banda. Causa: Falta de visibilidade de consumo de rede por processo em ferramentas genéricas como iftop. Solução técnica: Instale o Nethogs com sudo apt install nethogs. Execute com sudo nethogs eth0 para exibir uma tabela dinâmica em tempo real listando cada PID, usuário e taxa de download/upload.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 160
+    }
+  },
+  {
+    "id": 161,
+    "titulo": "Erro 'sub-process /usr/bin/dpkg returned an error code (2)' ao desinstalar pacote",
+    "fonte": "Ubuntu",
+    "categoria": "Gerenciamento de Pacotes",
+    "conteudo": "Sintoma: A desinstalação de um pacote trava com erro no script de remoção do dpkg. Causa: Scripts de gatilho prerm ou postrm do pacote com comandos quebrados ou caminhos inexistentes. Solução técnica: Acesse o diretório de metadados com cd /var/lib/dpkg/info/. Localize os arquivos do pacote com problema (ex: pacote.prerm e pacote.postrm) e renomeie-os. Conclua com sudo dpkg --remove --force-all pacote.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "gerenciamento de pacotes",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 161
+    }
+  },
+  {
+    "id": 162,
+    "titulo": "Configuração de IP virtual flutuante de alta disponibilidade com Keepalived no Ubuntu",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Necessidade de redundância de gateway ou proxy reverso onde o IP de atendimento migra automaticamente se um nó cair. Causa: Falta de configuração de protocolo VRRP (Virtual Router Redundancy Protocol). Solução técnica: Instale o keepalived com sudo apt install keepalived. Configure /etc/keepalived/keepalived.conf com vrrp_instance definindo estado MASTER no nó principal e BACKUP no nó secundário com virtual_ipaddress compartilhado.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 162
+    }
+  },
+  {
+    "id": 163,
+    "titulo": "Tela congelada ao alternar entre monitores externos no Ubuntu com Wayland",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Conectar um segundo monitor via HDMI ou DisplayPort congela a interface gráfica do sistema. Causa: Divergência na taxa de atualização (refresh rate) entre telas de resoluções diferentes no compositor Wayland. Solução técnica: Acesse Configurações > Telas e garanta que ambos os monitores estejam na mesma taxa de atualização (ex: 60Hz). Se o problema persistir, alterne para a sessão Xorg na engrenagem da tela de login.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 163
+    }
+  },
+  {
+    "id": 164,
+    "titulo": "Configuração de backup incremental com deduplicação nativa utilizando BorgBackup",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Backups diários consumindo gigabytes repetidos de espaço em disco no servidor. Causa: Ferramentas de cópia simples que não aplicam algoritmos de deduplicação em nível de bloco. Solução técnica: Instale o borgbackup com sudo apt install borgbackup. Inicialize o repositório com borg init --encryption=repokey /backup. Crie rotinas diárias com: borg create --stats --compression lz4 /backup::dia-{now} /var/www /etc.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 164
+    }
+  },
+  {
+    "id": 165,
+    "titulo": "Erro 'Repository is not signed' ao adicionar repositórios no Ubuntu 24.04 LTS",
+    "fonte": "Ubuntu",
+    "categoria": "Gerenciamento de Pacotes",
+    "conteudo": "Sintoma: O comando apt update recusa repositório informando que ele não possui arquivo de liberação assinado. Causa: Nova exigência do formato deb822 no Ubuntu 24.04 requerendo chaveiro explícito no arquivo /etc/apt/sources.list.d/. Solução técnica: Baixe a chave GPG em /etc/apt/keyrings/ e crie o arquivo .sources contendo: Types: deb, URIs: https://..., Suites: jammy, Components: main, Signed-By: /etc/apt/keyrings/chave.gpg.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "gerenciamento de pacotes",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 165
+    }
+  },
+  {
+    "id": 166,
+    "titulo": "Como auditar comandos executados por usuários root no Ubuntu com Auditd",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Exigência de conformidade de segurança para registrar histórico de comandos e acessos privilegiados de administradores. Causa: O histórico simples do bash (.bash_history) pode ser apagado ou editado pelo próprio usuário root. Solução técnica: Instale o auditd com sudo apt install auditd. Adicione regras em /etc/audit/rules.d/audit.rules: -a always,exit -F arch=b64 -S execve -F euid=0 -k root_actions e consulte os registros com ausearch -k root_actions.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 166
+    }
+  },
+  {
+    "id": 167,
+    "titulo": "Erro 'Cannot open display' ao rodar aplicativo gráfico via SSH com X11 Forwarding",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Ao tentar abrir um aplicativo gráfico no servidor remoto pelo SSH o terminal retorna 'Error: Can't open display'. Causa: O pacote xauth não está instalado no servidor ou o X11Forwarding está desabilitado no sshd_config. Solução técnica: No servidor, instale o xauth com sudo apt install xauth e garanta X11Forwarding yes em /etc/ssh/sshd_config. No cliente, conecte passando o parâmetro -X: ssh -X usuario@servidor.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 167
+    }
+  },
+  {
+    "id": 168,
+    "titulo": "Servidor DNS local BIND9 não responde consultas de máquinas clientes da LAN",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: O servidor responde a consultas locais via dig @localhost mas máquinas clientes recebem 'Connection refused'. Causa: A diretiva allow-query no arquivo de configuração do BIND permite apenas localhost por padrão de segurança. Solução técnica: Edite /etc/bind/named.conf.options e inclua a faixa da rede local: allow-query { localhost; 192.168.0.0/24; }; e allow-recursion { localhost; 192.168.0.0/24; };. Reinicie com systemctl restart named.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 168
+    }
+  },
+  {
+    "id": 169,
+    "titulo": "Erro 'No protocol specified' ao rodar aplicativo gráfico como root dentro da sessão de usuário",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Executar sudo gedit ou software gráfico com sudo acusa erro de protocolo de exibição do servidor X. Causa: Por padrão o servidor Xorg restringe acesso ao display apenas para o usuário proprietário da sessão de desktop. Solução técnica: Na sessão do usuário comum, libere o acesso ao display para o usuário local root com: xhost +si:localuser:root antes de invocar o comando administrativo.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 169
+    }
+  },
+  {
+    "id": 170,
+    "titulo": "Como inspecionar a saúde de discos rígidos e SSDs com o comando smartctl",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Suspeita de falha iminente de armazenamento com pequenos congelamentos de I/O no Linux. Causa: Desgaste físico de cabeçote ou setores defeituosos no disco magnético/flash. Solução técnica: Instale o smartmontools com sudo apt install smartmontools. Execute sudo smartctl -H /dev/sda para verificar o status de saúde geral e sudo smartctl -A /dev/sda para analisar o atributo Reallocated_Sector_Ct.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 170
+    }
+  },
+  {
+    "id": 171,
+    "titulo": "Erro 'Address already in use' ao tentar iniciar o servidor Apache na porta 80",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: O Apache2 falha ao iniciar com mensagem 'Address already in use: make_sock: could not bind to address 0.0.0.0:80'. Causa: Outro servidor web (como Nginx ou lighttpd) já está em execução ocupando a porta TCP 80. Solução técnica: Descubra o PID do processo concorrente executando sudo fuser -v 80/tcp ou sudo ss -lptn 'sport = :80'. Desative o serviço conflitante com sudo systemctl stop nginx && sudo systemctl disable nginx.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 171
+    }
+  },
+  {
+    "id": 172,
+    "titulo": "Como limitar consumo máximo de memória e CPU para serviços com Systemd Cgroups",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: Um serviço secundário entra em vazamento de memória e derruba outros daemons essenciais do servidor. Causa: Ausência de restrições de isolamento de recursos nos grupos de controle (cgroups) da unidade. Solução técnica: Abra o arquivo de unidade /etc/systemd/system/meu_servico.service e adicione no bloco [Service]: CPUQuota=50% e MemoryMax=2G. Aplique imediatamente com sudo systemctl daemon-reload && sudo systemctl restart meu_servico.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 172
+    }
+  },
+  {
+    "id": 173,
+    "titulo": "Erro 'Operation not permitted' mesmo executando comandos como root dentro de container Docker",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Comandos de rede como iptables ou montagem de volumes falham dentro do container Docker com permissão negada. Causa: Os contêineres Docker rodam por padrão sem capacidades de kernel avançadas (Linux Capabilities) por segurança. Solução técnica: Inicie o container fornecendo a capacidade pontual necessária com a flag --cap-add=NET_ADMIN ou --cap-add=SYS_ADMIN em vez de conceder privilégio total.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 173
+    }
+  },
+  {
+    "id": 174,
+    "titulo": "Como configurar túnel reverso SSH para acessar servidor atrás de NAT sem IP público",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Necessidade de acessar terminal de máquina remota instalada em cliente que não possui IP fixo ou portas abertas. Causa: Firewall de borda e NAT do provedor de internet bloqueando conexões de entrada. Solução técnica: Na máquina do cliente, execute um túnel reverso apontando para um servidor intermediário com IP público: ssh -R 2222:localhost:22 usuario@servidor_publico -N. Acesse a máquina no servidor público com ssh -p 2222 localhost.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 174
+    }
+  },
+  {
+    "id": 175,
+    "titulo": "Erro 'Signature by key uses weak algorithm (rsa1024)' ao atualizar pacotes no apt",
+    "fonte": "Ubuntu",
+    "categoria": "Gerenciamento de Pacotes",
+    "conteudo": "Sintoma: O comando apt update acusa aviso ou erro de assinatura fraca rejeitando chaves criptográficas de 1024 bits. Causa: As distribuições modernas do Ubuntu deprecam chaves RSA menores que 2048 bits por motivos de segurança criptográfica. Solução técnica: Contate o mantenedor do repositório para obter a chave RSA 4096 moderna ou migre para repositório oficial equivalente.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "gerenciamento de pacotes",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 175
+    }
+  },
+  {
+    "id": 176,
+    "titulo": "Como forçar o kernel Linux a liberar memória de Buffers e PageCache",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: A memória livre indicada no comando free -m parece quase zerada devido à retenção de caches de leitura de disco. Causa: O kernel Linux utiliza a RAM ociosa para cache de páginas até que uma aplicação exija mais memória física. Solução técnica: Para forçar a liberação imediata antes de testes de benchmarking, execute: sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 176
+    }
+  },
+  {
+    "id": 177,
+    "titulo": "Máquina Windows na mesma rede local não responde a comandos ping do Linux",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: O comando ping 192.168.1.150 retorna 100% de perda de pacotes, embora a máquina esteja ligada e navegando. Causa: O Firewall do Windows bloqueia solicitações de eco ICMPv4 de entrada por padrão na rede privada/pública. Solução técnica: No computador com Windows de destino, abra o PowerShell como Administrador e habilite o ping: netsh advfirewall firewall add rule name=\"Permitir Ping ICMPv4\" protocol=icmpv4:8,any dir=in action=allow.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 177
+    }
+  },
+  {
+    "id": 178,
+    "titulo": "Como configurar agregação de placas de rede (Bonding / LACP) no Ubuntu Server",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Necessidade de tolerância a falhas de cabos e aumento de largura de banda combinando duas portas Ethernet físicas. Causa: Interfaces separadas sem protocolo de agregação de links (IEEE 802.3ad). Solução técnica: Configure o arquivo Netplan com uma interface bond: bonds: bond0: interfaces: [eth0, eth1] parameters: mode: 802.3ad mii-monitor-interval: 100 dhcp4: true e execute netplan apply.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 178
+    }
+  },
+  {
+    "id": 179,
+    "titulo": "Erro 'Cannot allocate memory' no Redis ao tentar salvar dados com BGSAVE",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: O banco em memória Redis não consegue persistir o arquivo RDB em disco emitindo erro de fork de memória. Causa: O kernel Linux está com a política de overcommit restrita impedindo o processo filho de duplicar o mapa de memória. Solução técnica: Habilite o overcommit de memória executando sudo sysctl vm.overcommit_memory=1 e adicione a linha vm.overcommit_memory = 1 no arquivo /etc/sysctl.conf para persistir.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 179
+    }
+  },
+  {
+    "id": 180,
+    "titulo": "Como monitorar integridade de arquivos críticos do sistema contra adulteração com AIDE",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: Necessidade de auditoria contra invasões que possam ter modificado binários em /bin, /sbin ou /etc. Causa: Falta de verificação de integridade de hash de arquivos de sistema (File Integrity Monitoring). Solução técnica: Instale o AIDE com sudo apt install aide. Inicialize o banco de hashes com sudo aideinit. Copie a base com sudo cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db e execute auditorias com sudo aide --check.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 180
+    }
+  },
+  {
+    "id": 181,
+    "titulo": "Erro 'Permission denied (publickey)' ao clonar repositório Git corporativo via SSH",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: O comando git clone git@gitlab.empresa.local:... falha imediatamente com permissão negada por chave pública. Causa: A chave privada SSH não foi carregada no agente de autenticação da sessão ativa. Solução técnica: Inicie o ssh-agent com eval $(ssh-agent -s) e adicione a chave privada com ssh-add ~/.ssh/id_ed25519. Verifique com ssh-add -l se a chave consta carregada na memória.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 181
+    }
+  },
+  {
+    "id": 182,
+    "titulo": "Configuração de proxy reverso Nginx com certificado SSL gratuito Let's Encrypt (Certbot)",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: Necessidade de publicar aplicação HTTP local na internet de forma segura com criptografia HTTPS automática. Causa: Ausência de certificado digital SSL assinado e homologado por navegadores. Solução técnica: Instale o Certbot com sudo apt install certbot python3-certbot-nginx. Gere e configure os certificados automaticamente no Nginx executando: sudo certbot --nginx -d meu-site.empresa.com.br.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 182
+    }
+  },
+  {
+    "id": 183,
+    "titulo": "Erro 'Cannot create directory /home/usuario: Permission denied' ao criar novos usuários",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O comando useradd -m falha ao tentar criar o diretório de perfil pessoal do usuário. Causa: As permissões do diretório pai /home foram alteradas inadvertidamente retirando direito de escrita do root. Solução técnica: Restaure as permissões corretas de sistema com sudo chown root:root /home e sudo chmod 755 /home. Em seguida crie o usuário normalmente com sudo useradd -m -s /bin/bash novo_usuario.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 183
+    }
+  },
+  {
+    "id": 184,
+    "titulo": "Como configurar cotas de disco por usuário no sistema de arquivos ext4",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Usuários compartilhando servidores de arquivos enchem a partição de dados sem nenhum limite de consumo. Causa: Ausência de cotas ativadas no ponto de montagem do sistema de arquivos. Solução técnica: No arquivo /etc/fstab, adicione a opção usrquota nas opções de montagem da partição. Remonte a partição, inicialize os arquivos de cota com sudo quotacheck -cugm /dados e defina o limite do usuário com sudo edquota -u usuario.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 184
+    }
+  },
+  {
+    "id": 185,
+    "titulo": "Kernel Panic após upgrade de driver de terceiros (Fatal exception in interrupt)",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: O computador não inicializa após atualização de driver e exibe mensagem de pânico de kernel no console. Causa: Módulo DKMS de terceiro incompatível com a versão mais recente do kernel Linux instalada. Solução técnica: Reinicie e selecione o kernel estável anterior no menu GRUB. Após o boot com sucesso, identifique o módulo defeituoso com dkms status e remova-o com sudo dkms remove modulo/versao --all.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 185
+    }
+  },
+  {
+    "id": 186,
+    "titulo": "Como alterar a MTU no Netplan para resolver fragmentação de pacotes em túneis GRE/VPN",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Conexões através de túneis corporativos perdem pacotes e páginas grandes não carregam completamente. Causa: O cabeçalho adicional do encapsulamento da VPN excede o tamanho máximo de quadro padrão de 1500 bytes. Solução técnica: No arquivo de configuração do Netplan (/etc/netplan/*.yaml), adicione a diretiva mtu: 1420 dentro da seção da interface de rede correspondente e aplique com sudo netplan apply.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 186
+    }
+  },
+  {
+    "id": 187,
+    "titulo": "Erro 'System has not been booted with systemd as init system' dentro de container Docker",
+    "fonte": "Ubuntu",
+    "categoria": "Serviços & Daemons",
+    "conteudo": "Sintoma: Ao tentar rodar systemctl start nginx dentro de um container Docker padrão ele falha com erro de init system. Causa: Imagens Docker comuns não executam o systemd como PID 1 para economizar recursos e manter isolamento. Solução técnica: Inicie o serviço diretamente pelo script de serviço com service nginx start ou invoque o binário diretamente no ENTRYPOINT do container: nginx -g 'daemon off;'.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "serviços & daemons",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 187
+    }
+  },
+  {
+    "id": 188,
+    "titulo": "Como configurar encaminhamento de pacotes IPv4 (IP Forwarding) para roteador Linux",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: O servidor possui duas placas de rede mas não repassa pacotes entre a rede interna e a internet. Causa: O recurso de encaminhamento de pacotes do kernel Linux (IP Forwarding) está desativado por padrão de segurança. Solução técnica: Habilite em tempo de execução com sudo sysctl -w net.ipv4.ip_forward=1. Descomente a linha net.ipv4.ip_forward=1 em /etc/sysctl.conf para manter persistente e configure regras de NAT no iptables.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 188
+    }
+  },
+  {
+    "id": 189,
+    "titulo": "Erro 'GnuTLS recv error (-110)' ao clonar repositórios Git pesados",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: O clone de repositórios grandes trava em 80% do download dos objetos com erro de conexão encerrada. Causa: Timeout de buffer HTTP no transporte do Git em conexões com alta latência. Solução técnica: Aumente o tamanho do buffer de transferência do Git executando: git config --global http.postBuffer 524288000 e clone inicialmente com profundidade rasa: git clone --depth 1 <URL>.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 189
+    }
+  },
+  {
+    "id": 190,
+    "titulo": "Como monitorar temperatura de CPU e rotação de ventoinhas no Ubuntu com lm-sensors",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Servidor desligando sozinho repentinamente durante picos de processamento em dias quentes. Causa: Superaquecimento da CPU atingindo o limite térmico (Thermal Throttling / Critical Temperature). Solução técnica: Instale o lm-sensors com sudo apt install lm-sensors. Execute sudo sensors-detect respondendo 'YES' às perguntas. Monitore as temperaturas em tempo real com o comando sensors ou watch -n 1 sensors.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 190
+    }
+  },
+  {
+    "id": 191,
+    "titulo": "Sessão SSH desconecta frequentemente após alguns minutos de inatividade (Broken pipe)",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: O terminal remoto congela e desconecta exibindo 'client_loop: send disconnect: Broken pipe'. Causa: Roteadores ou firewalls intermediários descartam estados de conexão TCP sem tráfego ativo após timeout. Solução técnica: No cliente SSH, adicione em ~/.ssh/config: Host * ServerAliveInterval 60 ServerAliveCountMax 3. Isso enviará pacotes de sinal de vida nulos a cada 60 segundos mantendo o túnel aberto.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 191
+    }
+  },
+  {
+    "id": 192,
+    "titulo": "Como configurar espelhamento de tráfego de rede (Port Mirroring) com Tc no Linux",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Necessidade de enviar cópia de todos os pacotes de uma interface para servidor de análise de segurança (IDS/Snort). Causa: Ausência de switch gerenciável para espelhamento físico de portas. Solução técnica: Utilize o subsistema Traffic Control (tc) do Linux: sudo tc qdisc add dev eth0 ingress e sudo tc filter add dev eth0 parent ffff: protocol all u32 match u32 0 0 action mirred egress mirror dev eth1.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 192
+    }
+  },
+  {
+    "id": 193,
+    "titulo": "Erro no apt avisando que o repositório não possui arquivo Release (Release file is missing)",
+    "fonte": "Ubuntu",
+    "categoria": "Gerenciamento de Pacotes",
+    "conteudo": "Sintoma: O comando apt update falha em servidores legados com versões antigas do Ubuntu (ex: 18.04 ou 20.10). Causa: A versão da distribuição atingiu o status de End of Life (EOL) e os pacotes foram movidos para os servidores de arquivo histórico. Solução técnica: Edite /etc/apt/sources.list e substitua as ocorrências de archive.ubuntu.com por old-releases.ubuntu.com.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "gerenciamento de pacotes",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 193
+    }
+  },
+  {
+    "id": 194,
+    "titulo": "Como configurar autenticação centralizada de usuários Linux no Active Directory corporativo com SSSD",
+    "fonte": "Ubuntu",
+    "categoria": "Autenticação",
+    "conteudo": "Sintoma: Necessidade de permitir que colaboradores façam login no Ubuntu utilizando as mesmas credenciais do domínio Windows. Causa: Gerenciamento manual e descentralizado de senhas locais em cada máquina Linux. Solução técnica: Instale o SSSD com sudo apt install sssd realmd adcli. Junte a máquina ao domínio com sudo realm join --user=administrador empresa.local e configure a criação automática de /home no PAM.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "autenticação",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 194
+    }
+  },
+  {
+    "id": 195,
+    "titulo": "Erro 'Disk /dev/sda contains a GPT signatures, but write failed' ao formatar disco",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Utilitários de particionamento falham ao tentar gravar nova tabela de partição MBR em disco reutilizado. Causa: Assinaturas de tabela GPT residuais gravadas no final do disco causando conflito estrutural. Solução técnica: Limpe completamente todas as assinaturas antigas executando: sudo wipefs -a /dev/sda ou utilize sudo sgdisk --zap-all /dev/sda antes de criar a nova partição.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 195
+    }
+  },
+  {
+    "id": 196,
+    "titulo": "Como configurar failover rápido de servidores DNS no resolv.conf do Linux",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Quando o DNS primário cai a navegação web fica travando por 10 segundos antes de tentar o secundário. Causa: O tempo limite padrão de consulta do resolvedor do Linux é muito elevado (5 segundos por tentativa). Solução técnica: Adicione diretivas otimizadas no arquivo /etc/resolv.conf: options timeout:1 attempts:2 rotate. Isso forçará a tentativa no DNS secundário em apenas 1 segundo.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 196
+    }
+  },
+  {
+    "id": 197,
+    "titulo": "Erro 'su: Authentication failure' ao tentar alternar para usuário root no Ubuntu recém-instalado",
+    "fonte": "Ubuntu",
+    "categoria": "Segurança",
+    "conteudo": "Sintoma: O administrador digita su - e recebe falha de autenticação mesmo digitando a senha correta de seu usuário. Causa: A conta de root vem bloqueada sem senha definida por padrão no Ubuntu, sendo obrigatório o uso do sudo. Solução técnica: Utilize o comando sudo -i ou sudo su - informando a senha de seu próprio usuário com privilégio de admin. Para definir uma senha para o root se estritamente necessário, execute sudo passwd root.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "segurança",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 197
+    }
+  },
+  {
+    "id": 198,
+    "titulo": "Como desativar suporte ao protocolo IPv6 no Ubuntu temporariamente ou permanentemente",
+    "fonte": "Ubuntu",
+    "categoria": "Conectividade",
+    "conteudo": "Sintoma: Lentidão em consultas DNS e conexões de rede em ambientes corporativos que não suportam roteamento IPv6. Causa: O sistema tenta conexão preferencial por IPv6 e aguarda timeout antes de recorrer ao IPv4. Solução técnica: Adicione em /etc/sysctl.conf as linhas: net.ipv6.conf.all.disable_ipv6 = 1 e net.ipv6.conf.default.disable_ipv6 = 1. Aplique imediatamente sem reiniciar com sudo sysctl -p.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "conectividade",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 198
+    }
+  },
+  {
+    "id": 199,
+    "titulo": "Erro 'No space left on device' durante compilação com GCC usando arquivos em /dev/shm",
+    "fonte": "Ubuntu",
+    "categoria": "Armazenamento",
+    "conteudo": "Sintoma: Compilações de software em C/C++ ou instâncias de bancos de dados em memória abortam por falta de espaço no /dev/shm. Causa: O sistema de arquivos de memória compartilhada /dev/shm (tmpfs) atingiu o limite padrão de 50% da RAM física. Solução técnica: Remonte o volume temporário com tamanho expandido executando: sudo mount -o remount,size=8G /dev/shm.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "armazenamento",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 199
+    }
+  },
+  {
+    "id": 200,
+    "titulo": "Como restaurar o arquivo de senhas /etc/passwd corrompido ou acidentalmente apagado",
+    "fonte": "Ubuntu",
+    "categoria": "Sistema Operacional",
+    "conteudo": "Sintoma: Nenhum login funciona e o terminal não reconhece usuários com erro 'whoami: cannot find name for user ID'. Causa: Edição manual com falha ou exclusão acidental do arquivo fundamental de contas /etc/passwd. Solução técnica: O sistema operacional mantém cópias de segurança automáticas. Inicialize em Modo de Recuperação e restaure com: sudo cp /etc/passwd- /etc/passwd && sudo chmod 644 /etc/passwd && sudo chown root:root /etc/passwd.",
+    "metadados": {
+      "versao": "Ubuntu 22.04/24.04 LTS",
+      "autor": "Suporte Técnico Linux / DevOps",
+      "tags": [
+        "sistema operacional",
+        "ubuntu",
+        "linux",
+        "sysadmin"
+      ],
+      "doc_id": 200
+    }
+  }
+]

@@ -1,0 +1,7 @@
+Cenário,Abordagem,Precisão@5,Revocação@5,MRR,T_total (ms)
+Cenário Microsoft,lexical,0.0000,0.0000,0.0000,53.17
+Cenário Microsoft,semantica,0.1733,0.8667,0.7139,50.48
+Cenário Microsoft,semantica_prefilter,0.1867,0.9333,0.7972,50.37
+Cenário Ubuntu,lexical,0.0000,0.0000,0.0000,47.62
+Cenário Ubuntu,semantica,0.1800,0.9000,0.7861,47.33
+Cenário Ubuntu,semantica_prefilter,0.1800,0.9000,0.8222,49.83
