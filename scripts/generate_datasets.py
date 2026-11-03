@@ -1224,13 +1224,25 @@ for tid, title, cat, content in ub_docs_raw:
         }
     })
 
+import csv
+
 with open("data/raw/microsoft_faq.json", "w", encoding="utf-8") as f:
     json.dump(microsoft_docs, f, indent=2, ensure_ascii=False)
 
 with open("data/raw/ubuntu_logs.json", "w", encoding="utf-8") as f:
     json.dump(ubuntu_docs, f, indent=2, ensure_ascii=False)
 
-print(f"Salvos com sucesso: {len(microsoft_docs)} documentos Microsoft e {len(ubuntu_docs)} documentos Ubuntu (TOTAL: 200 DOCUMENTOS ÚNICOS).")
+# Exportação também em formato CSV conforme especificado no RF01 (Seção 2.1.1)
+for csv_path, docs_list in [("data/raw/microsoft_faq.csv", microsoft_docs), ("data/raw/ubuntu_logs.csv", ubuntu_docs)]:
+    with open(csv_path, "w", encoding="utf-8", newline="") as f:
+        writer = csv.DictWriter(f, fieldnames=["id", "titulo", "fonte", "categoria", "conteudo", "metadados"])
+        writer.writeheader()
+        for d in docs_list:
+            row = dict(d)
+            row["metadados"] = json.dumps(d["metadados"], ensure_ascii=False)
+            writer.writerow(row)
+
+print(f"Salvos com sucesso em JSON e CSV: {len(microsoft_docs)} documentos Microsoft e {len(ubuntu_docs)} documentos Ubuntu (TOTAL: 200 DOCUMENTOS ÚNICOS).")
 
 # =====================================================================
 # MATRIZ DE PADRÃO-OURO (GROUND TRUTH) - 60 CONSULTAS ROTULADAS
@@ -1319,4 +1331,9 @@ for q in queries_data:
 with open("data/ground_truth.json", "w", encoding="utf-8") as f:
     json.dump(ground_truth, f, indent=2, ensure_ascii=False)
 
-print(f"Salvo ground_truth.json contendo {len(ground_truth)} consultas rotuladas.")
+with open("data/ground_truth.csv", "w", encoding="utf-8", newline="") as f:
+    writer = csv.DictWriter(f, fieldnames=["consulta_id", "cenario", "consulta_texto", "categoria_esperada", "documento_relevante_id", "relevancia_binaria"])
+    writer.writeheader()
+    writer.writerows(ground_truth)
+
+print(f"Salvo ground_truth.json e ground_truth.csv contendo {len(ground_truth)} consultas rotuladas.")

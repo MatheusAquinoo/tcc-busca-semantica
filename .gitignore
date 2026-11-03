@@ -20,3 +20,9 @@ results/*.png
 .vscode/
 .idea/
 
+# TCC 1 PDF e Template LaTeX TCC 2
+tcc1/
+Template-Relatório-Técnico-BES-UTFPR/
+Template-Relat*
+
+

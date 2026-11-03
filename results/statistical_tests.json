@@ -1,0 +1,25 @@
+{
+  "semantica_vs_lexical_disjuntivo": {
+    "t_statistic": 4.7757,
+    "p_value_ttest": 1.2247089920456023e-05,
+    "wilcoxon_statistic": 66.5,
+    "p_value_wilcoxon": 6.223643070256143e-05
+  },
+  "hibrida_vs_lexical_disjuntivo": {
+    "t_statistic": 5.2027,
+    "p_value_ttest": 2.592981535002222e-06,
+    "wilcoxon_statistic": 49.0,
+    "p_value_wilcoxon": 1.6522128807582356e-05
+  },
+  "hibrida_vs_semantica_pura": {
+    "t_statistic": 1.8765,
+    "p_value_ttest": 0.06553271696646908,
+    "wilcoxon_statistic": 0.0,
+    "p_value_wilcoxon": 0.06559969214707187
+  },
+  "docker_telemetry": {
+    "cpu_perc": "0.08%",
+    "mem_usage": "44.96MiB / 15.34GiB",
+    "mem_perc": "0.29%"
+  }
+}

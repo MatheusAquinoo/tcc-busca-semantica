@@ -1,0 +1,11 @@
+{
+  "total_documentos": 200,
+  "total_chunks": 455,
+  "media_chunks_por_documento": 2.27,
+  "max_chars": 260,
+  "overlap": 50,
+  "t_prep_segundos": 0.0033,
+  "t_emb_batch_segundos": 8.6468,
+  "t_db_persist_segundos": 0.6614,
+  "t_idx_total_segundos": 9.3116
+}

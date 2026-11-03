@@ -2,1500 +2,2255 @@
   {
     "consulta_id":1,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"minha internet nao funciona e aparece rede nao identificada",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":1,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":63.78,
-    "t_total_ms":63.78
+    "t_sql_ms":18.6,
+    "t_total_ms":18.6
+  },
+  {
+    "consulta_id":1,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"minha internet nao funciona e aparece rede nao identificada",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":1,
+    "docs_recuperados":[
+      2,
+      188,
+      4,
+      42,
+      158
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":34.57,
+    "t_total_ms":34.57
   },
   {
     "consulta_id":1,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"minha internet nao funciona e aparece rede nao identificada",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":1,
     "docs_recuperados":[
       122,
       1,
       102,
-      3,
-      6
+      76,
+      4
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":0.5,
-    "t_emb_ms":37.59,
-    "t_sql_ms":50.49,
-    "t_total_ms":88.08
+    "t_emb_ms":16.15,
+    "t_sql_ms":2.88,
+    "t_total_ms":19.03
   },
   {
     "consulta_id":1,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"minha internet nao funciona e aparece rede nao identificada",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":1,
     "docs_recuperados":[
       122,
       1,
       102,
-      3,
-      6
+      76,
+      4
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":0.5,
-    "t_emb_ms":24.9,
-    "t_sql_ms":31.32,
-    "t_total_ms":56.22
+    "t_emb_ms":14.58,
+    "t_sql_ms":2.04,
+    "t_total_ms":16.62
   },
   {
     "consulta_id":2,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"como conectar na vpn da empresa no windows",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":2,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":49.99,
-    "t_total_ms":49.99
+    "t_sql_ms":16.15,
+    "t_total_ms":16.15
+  },
+  {
+    "consulta_id":2,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"como conectar na vpn da empresa no windows",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":2,
+    "docs_recuperados":[
+      21,
+      46,
+      2,
+      6,
+      15
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.3333333333,
+    "t_emb_ms":0.0,
+    "t_sql_ms":31.09,
+    "t_total_ms":31.09
   },
   {
     "consulta_id":2,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"como conectar na vpn da empresa no windows",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":2,
     "docs_recuperados":[
-      4,
-      7,
       2,
-      174,
-      5
+      4,
+      177,
+      1,
+      143
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":0.3333333333,
-    "t_emb_ms":23.54,
-    "t_sql_ms":32.77,
-    "t_total_ms":56.31
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.91,
+    "t_sql_ms":2.77,
+    "t_total_ms":17.68
   },
   {
     "consulta_id":2,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"como conectar na vpn da empresa no windows",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":2,
     "docs_recuperados":[
-      4,
-      7,
       2,
-      174,
-      5
+      4,
+      177,
+      1,
+      143
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":0.3333333333,
-    "t_emb_ms":23.02,
-    "t_sql_ms":36.73,
-    "t_total_ms":59.75
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.64,
+    "t_sql_ms":1.91,
+    "t_total_ms":15.55
   },
   {
     "consulta_id":3,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"o wifi esta muito lento e caindo toda hora",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":3,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":56.11,
-    "t_total_ms":56.11
+    "t_sql_ms":16.37,
+    "t_total_ms":16.37
+  },
+  {
+    "consulta_id":3,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"o wifi esta muito lento e caindo toda hora",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":3,
+    "docs_recuperados":[
+      15,
+      49,
+      71,
+      81,
+      98
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":41.64,
+    "t_total_ms":41.64
   },
   {
     "consulta_id":3,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"o wifi esta muito lento e caindo toda hora",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":3,
     "docs_recuperados":[
       3,
-      122,
+      89,
+      10,
       110,
-      160,
-      10
+      160
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.92,
-    "t_sql_ms":26.49,
-    "t_total_ms":47.41
+    "t_emb_ms":12.51,
+    "t_sql_ms":2.63,
+    "t_total_ms":15.14
   },
   {
     "consulta_id":3,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"o wifi esta muito lento e caindo toda hora",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":3,
     "docs_recuperados":[
       3,
-      122,
+      89,
+      10,
       110,
-      160,
-      10
+      160
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":22.8,
-    "t_sql_ms":37.6,
-    "t_total_ms":60.4
+    "t_emb_ms":15.2,
+    "t_sql_ms":2.05,
+    "t_total_ms":17.25
   },
   {
     "consulta_id":4,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"nao consigo acessar a pasta compartilhada no servidor",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":4,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":59.96,
-    "t_total_ms":59.96
+    "t_sql_ms":17.61,
+    "t_total_ms":17.61
+  },
+  {
+    "consulta_id":4,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"nao consigo acessar a pasta compartilhada no servidor",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":4,
+    "docs_recuperados":[
+      4,
+      113,
+      169,
+      174,
+      58
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":22.05,
+    "t_total_ms":22.05
   },
   {
     "consulta_id":4,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"nao consigo acessar a pasta compartilhada no servidor",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":4,
     "docs_recuperados":[
       4,
-      20,
-      174,
+      108,
       171,
-      168
+      168,
+      144
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":23.65,
-    "t_sql_ms":42.78,
-    "t_total_ms":66.43
+    "t_emb_ms":13.93,
+    "t_sql_ms":2.78,
+    "t_total_ms":16.71
   },
   {
     "consulta_id":4,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"nao consigo acessar a pasta compartilhada no servidor",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":4,
     "docs_recuperados":[
       4,
-      174,
       168,
       1,
-      5
+      174,
+      68
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":22.07,
-    "t_sql_ms":35.98,
-    "t_total_ms":58.05
+    "t_emb_ms":14.08,
+    "t_sql_ms":1.96,
+    "t_total_ms":16.04
   },
   {
     "consulta_id":5,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"problema para resolver nomes dns internos",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":5,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":49.09,
-    "t_total_ms":49.09
+    "t_sql_ms":17.46,
+    "t_total_ms":17.46
+  },
+  {
+    "consulta_id":5,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"problema para resolver nomes dns internos",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":5,
+    "docs_recuperados":[
+      5,
+      83,
+      102,
+      144,
+      150
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":25.93,
+    "t_total_ms":25.93
   },
   {
     "consulta_id":5,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"problema para resolver nomes dns internos",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":5,
     "docs_recuperados":[
-      76,
-      102,
-      5,
-      183,
-      200
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":0.3333333333,
-    "t_emb_ms":23.26,
-    "t_sql_ms":30.17,
-    "t_total_ms":53.43
-  },
-  {
-    "consulta_id":5,
-    "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"problema para resolver nomes dns internos",
-    "doc_esperado":5,
-    "docs_recuperados":[
-      76,
-      102,
       5,
       133,
-      9
+      157,
+      136,
+      76
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":0.3333333333,
-    "t_emb_ms":22.39,
-    "t_sql_ms":40.61,
-    "t_total_ms":63.0
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.52,
+    "t_sql_ms":2.88,
+    "t_total_ms":16.4
+  },
+  {
+    "consulta_id":5,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"problema para resolver nomes dns internos",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":5,
+    "docs_recuperados":[
+      5,
+      133,
+      76,
+      102,
+      1
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":12.26,
+    "t_sql_ms":1.79,
+    "t_total_ms":14.05
   },
   {
     "consulta_id":6,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"nao consigo conectar na area de trabalho remota rdp",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":6,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":52.08,
-    "t_total_ms":52.08
+    "t_sql_ms":17.15,
+    "t_total_ms":17.15
   },
   {
     "consulta_id":6,
     "cenario":"Microsoft",
-    "modo":"semantica",
+    "modo":"lexical_disjuntivo",
     "consulta":"nao consigo conectar na area de trabalho remota rdp",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":6,
     "docs_recuperados":[
       6,
-      72,
-      122,
-      174,
-      68
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":21.94,
-    "t_sql_ms":37.56,
-    "t_total_ms":59.5
-  },
-  {
-    "consulta_id":6,
-    "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"nao consigo conectar na area de trabalho remota rdp",
-    "doc_esperado":6,
-    "docs_recuperados":[
-      6,
-      72,
-      122,
-      174,
-      68
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":26.46,
-    "t_sql_ms":48.99,
-    "t_total_ms":75.45
-  },
-  {
-    "consulta_id":7,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"aviso de conflito de endereco ip no computador",
-    "doc_esperado":7,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":69.95,
-    "t_total_ms":69.95
-  },
-  {
-    "consulta_id":7,
-    "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"aviso de conflito de endereco ip no computador",
-    "doc_esperado":7,
-    "docs_recuperados":[
-      7,
-      42,
-      1,
-      21,
-      82
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":21.41,
-    "t_sql_ms":28.8,
-    "t_total_ms":50.21
-  },
-  {
-    "consulta_id":7,
-    "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"aviso de conflito de endereco ip no computador",
-    "doc_esperado":7,
-    "docs_recuperados":[
-      7,
-      1,
       62,
-      177,
-      122
+      72,
+      58,
+      49
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.39,
-    "t_sql_ms":25.16,
-    "t_total_ms":46.55
-  },
-  {
-    "consulta_id":8,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"sites internos travando e conexao fragmentando pacotes",
-    "doc_esperado":8,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":69.48,
-    "t_total_ms":69.48
+    "t_sql_ms":39.43,
+    "t_total_ms":39.43
   },
   {
-    "consulta_id":8,
+    "consulta_id":6,
     "cenario":"Microsoft",
     "modo":"semantica",
-    "consulta":"sites internos travando e conexao fragmentando pacotes",
-    "doc_esperado":8,
+    "consulta":"nao consigo conectar na area de trabalho remota rdp",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":6,
     "docs_recuperados":[
-      8,
-      186,
-      152,
-      160,
+      6,
+      72,
+      122,
+      68,
       168
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":22.4,
-    "t_sql_ms":39.35,
-    "t_total_ms":61.75
+    "t_emb_ms":13.06,
+    "t_sql_ms":2.7,
+    "t_total_ms":15.76
   },
   {
-    "consulta_id":8,
+    "consulta_id":6,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
-    "consulta":"sites internos travando e conexao fragmentando pacotes",
-    "doc_esperado":8,
+    "consulta":"nao consigo conectar na area de trabalho remota rdp",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":6,
     "docs_recuperados":[
-      8,
-      186,
-      160,
-      168,
-      188
+      6,
+      72,
+      122,
+      68,
+      168
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":23.63,
-    "t_sql_ms":38.41,
-    "t_total_ms":62.04
+    "t_emb_ms":11.46,
+    "t_sql_ms":2.03,
+    "t_total_ms":13.49
   },
   {
-    "consulta_id":9,
+    "consulta_id":7,
     "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"chamada do microsoft teams com audio falhando e cortando",
-    "doc_esperado":9,
+    "modo":"lexical_estrito",
+    "consulta":"aviso de conflito de endereco ip no computador",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":7,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":49.19,
-    "t_total_ms":49.19
+    "t_sql_ms":16.07,
+    "t_total_ms":16.07
   },
   {
-    "consulta_id":9,
+    "consulta_id":7,
     "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"chamada do microsoft teams com audio falhando e cortando",
-    "doc_esperado":9,
+    "modo":"lexical_disjuntivo",
+    "consulta":"aviso de conflito de endereco ip no computador",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":7,
     "docs_recuperados":[
-      93,
-      9,
-      85,
-      55,
-      53
+      1,
+      7,
+      88,
+      102,
+      5
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":0.5,
-    "t_emb_ms":23.86,
-    "t_sql_ms":26.35,
-    "t_total_ms":50.21
+    "t_emb_ms":0.0,
+    "t_sql_ms":36.01,
+    "t_total_ms":36.01
+  },
+  {
+    "consulta_id":7,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"aviso de conflito de endereco ip no computador",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":7,
+    "docs_recuperados":[
+      1,
+      7,
+      42,
+      24,
+      82
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":15.9,
+    "t_sql_ms":2.59,
+    "t_total_ms":18.49
+  },
+  {
+    "consulta_id":7,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"aviso de conflito de endereco ip no computador",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":7,
+    "docs_recuperados":[
+      1,
+      7,
+      177,
+      68,
+      4
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":12.12,
+    "t_sql_ms":1.77,
+    "t_total_ms":13.89
+  },
+  {
+    "consulta_id":8,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"sites internos travando e conexao fragmentando pacotes",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":8,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.62,
+    "t_total_ms":16.62
+  },
+  {
+    "consulta_id":8,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"sites internos travando e conexao fragmentando pacotes",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":8,
+    "docs_recuperados":[
+      8,
+      188,
+      161,
+      30,
+      134
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":32.36,
+    "t_total_ms":32.36
+  },
+  {
+    "consulta_id":8,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"sites internos travando e conexao fragmentando pacotes",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":8,
+    "docs_recuperados":[
+      186,
+      8,
+      172,
+      152,
+      63
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":14.19,
+    "t_sql_ms":2.47,
+    "t_total_ms":16.66
+  },
+  {
+    "consulta_id":8,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"sites internos travando e conexao fragmentando pacotes",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":8,
+    "docs_recuperados":[
+      186,
+      8,
+      9,
+      188,
+      178
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":13.64,
+    "t_sql_ms":1.84,
+    "t_total_ms":15.48
+  },
+  {
+    "consulta_id":9,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"chamada do microsoft teams com audio falhando e cortando",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":9,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.85,
+    "t_total_ms":16.85
+  },
+  {
+    "consulta_id":9,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"chamada do microsoft teams com audio falhando e cortando",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":9,
+    "docs_recuperados":[
+      98,
+      85,
+      93,
+      66,
+      70
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":34.73,
+    "t_total_ms":34.73
+  },
+  {
+    "consulta_id":9,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"chamada do microsoft teams com audio falhando e cortando",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":9,
+    "docs_recuperados":[
+      9,
+      93,
+      60,
+      85,
+      56
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.88,
+    "t_sql_ms":2.59,
+    "t_total_ms":16.47
   },
   {
     "consulta_id":9,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"chamada do microsoft teams com audio falhando e cortando",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":9,
     "docs_recuperados":[
       9,
       72,
-      7,
-      76,
-      10
+      1,
+      8,
+      177
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.85,
-    "t_sql_ms":26.77,
-    "t_total_ms":48.62
+    "t_emb_ms":14.19,
+    "t_sql_ms":1.96,
+    "t_total_ms":16.15
   },
   {
     "consulta_id":10,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"minha placa de rede ethernet desliga sozinha quando paro de usar",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":10,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":56.1,
-    "t_total_ms":56.1
+    "t_sql_ms":16.21,
+    "t_total_ms":16.21
+  },
+  {
+    "consulta_id":10,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"minha placa de rede ethernet desliga sozinha quando paro de usar",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":10,
+    "docs_recuperados":[
+      4,
+      10,
+      3,
+      147,
+      188
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":0.0,
+    "t_sql_ms":42.76,
+    "t_total_ms":42.76
   },
   {
     "consulta_id":10,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"minha placa de rede ethernet desliga sozinha quando paro de usar",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":10,
     "docs_recuperados":[
       10,
       158,
-      26,
-      75,
-      1
+      79,
+      71,
+      89
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.79,
-    "t_sql_ms":28.99,
-    "t_total_ms":50.78
+    "t_emb_ms":14.58,
+    "t_sql_ms":2.76,
+    "t_total_ms":17.34
   },
   {
     "consulta_id":10,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"minha placa de rede ethernet desliga sozinha quando paro de usar",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":10,
     "docs_recuperados":[
       10,
-      1,
       89,
-      3,
-      6
+      198,
+      147,
+      72
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.91,
-    "t_sql_ms":37.38,
-    "t_total_ms":58.29
+    "t_emb_ms":12.41,
+    "t_sql_ms":1.83,
+    "t_total_ms":14.24
   },
   {
     "consulta_id":11,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"esqueci minha senha e minha conta de usuario foi bloqueada",
+    "categoria_esperada":"Autenticação",
     "doc_esperado":11,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":65.65,
-    "t_total_ms":65.65
+    "t_sql_ms":16.73,
+    "t_total_ms":16.73
+  },
+  {
+    "consulta_id":11,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"esqueci minha senha e minha conta de usuario foi bloqueada",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":11,
+    "docs_recuperados":[
+      197,
+      11,
+      17,
+      20,
+      12
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":0.0,
+    "t_sql_ms":40.91,
+    "t_total_ms":40.91
   },
   {
     "consulta_id":11,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"esqueci minha senha e minha conta de usuario foi bloqueada",
+    "categoria_esperada":"Autenticação",
     "doc_esperado":11,
     "docs_recuperados":[
       11,
+      200,
       48,
-      197,
       113,
-      17
+      15
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":18.63,
-    "t_sql_ms":27.4,
-    "t_total_ms":46.03
+    "t_emb_ms":14.07,
+    "t_sql_ms":2.37,
+    "t_total_ms":16.44
   },
   {
     "consulta_id":11,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"esqueci minha senha e minha conta de usuario foi bloqueada",
+    "categoria_esperada":"Autenticação",
     "doc_esperado":11,
     "docs_recuperados":[
       11,
+      15,
       17,
+      19,
+      12
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":12.41,
+    "t_sql_ms":1.68,
+    "t_total_ms":14.09
+  },
+  {
+    "consulta_id":12,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"falha na relacao de confianca entre estacao e dominio",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":12,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":17.16,
+    "t_total_ms":17.16
+  },
+  {
+    "consulta_id":12,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"falha na relacao de confianca entre estacao e dominio",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":12,
+    "docs_recuperados":[
+      12,
+      21,
+      178,
+      126,
+      128
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":39.59,
+    "t_total_ms":39.59
+  },
+  {
+    "consulta_id":12,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"falha na relacao de confianca entre estacao e dominio",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":12,
+    "docs_recuperados":[
+      12,
+      44,
+      83,
+      59,
+      62
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.8,
+    "t_sql_ms":2.34,
+    "t_total_ms":17.14
+  },
+  {
+    "consulta_id":12,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"falha na relacao de confianca entre estacao e dominio",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":12,
+    "docs_recuperados":[
+      12,
+      14,
+      16,
+      13,
+      194
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":11.8,
+    "t_sql_ms":1.42,
+    "t_total_ms":13.22
+  },
+  {
+    "consulta_id":13,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"nao recebo notificacao do aplicativo autenticador mfa",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":13,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.28,
+    "t_total_ms":16.28
+  },
+  {
+    "consulta_id":13,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"nao recebo notificacao do aplicativo autenticador mfa",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":13,
+    "docs_recuperados":[
+      60,
+      13,
+      197,
+      28,
+      41
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":0.0,
+    "t_sql_ms":19.05,
+    "t_total_ms":19.05
+  },
+  {
+    "consulta_id":13,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"nao recebo notificacao do aplicativo autenticador mfa",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":13,
+    "docs_recuperados":[
+      13,
+      18,
+      141,
+      48,
+      80
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.72,
+    "t_sql_ms":2.64,
+    "t_total_ms":16.36
+  },
+  {
+    "consulta_id":13,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"nao recebo notificacao do aplicativo autenticador mfa",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":13,
+    "docs_recuperados":[
+      13,
+      18,
+      80,
+      14,
+      11
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":12.91,
+    "t_sql_ms":1.46,
+    "t_total_ms":14.37
+  },
+  {
+    "consulta_id":14,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"relogio do computador com diferenca de horario e erro de login",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":14,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":17.26,
+    "t_total_ms":17.26
+  },
+  {
+    "consulta_id":14,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"relogio do computador com diferenca de horario e erro de login",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":14,
+    "docs_recuperados":[
+      80,
+      62,
+      12,
+      200,
+      71
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":41.75,
+    "t_total_ms":41.75
+  },
+  {
+    "consulta_id":14,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"relogio do computador com diferenca de horario e erro de login",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":14,
+    "docs_recuperados":[
+      14,
+      48,
+      61,
+      71,
+      11
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.84,
+    "t_sql_ms":2.39,
+    "t_total_ms":17.23
+  },
+  {
+    "consulta_id":14,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"relogio do computador com diferenca de horario e erro de login",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":14,
+    "docs_recuperados":[
+      14,
+      11,
+      15,
+      80,
+      19
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":12.32,
+    "t_sql_ms":1.49,
+    "t_total_ms":13.81
+  },
+  {
+    "consulta_id":15,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"outlook fica pedindo senha o tempo todo",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":15,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.49,
+    "t_total_ms":16.49
+  },
+  {
+    "consulta_id":15,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"outlook fica pedindo senha o tempo todo",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":15,
+    "docs_recuperados":[
+      15,
+      20,
+      196,
+      197,
+      81
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":37.41,
+    "t_total_ms":37.41
+  },
+  {
+    "consulta_id":15,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"outlook fica pedindo senha o tempo todo",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":15,
+    "docs_recuperados":[
+      15,
+      48,
+      11,
+      200,
+      57
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":11.87,
+    "t_sql_ms":2.33,
+    "t_total_ms":14.2
+  },
+  {
+    "consulta_id":15,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"outlook fica pedindo senha o tempo todo",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":15,
+    "docs_recuperados":[
+      15,
+      11,
+      20,
+      19,
+      194
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.2,
+    "t_sql_ms":1.49,
+    "t_total_ms":15.69
+  },
+  {
+    "consulta_id":16,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"como forcar atualizacao das politicas de gpo",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":16,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":18.61,
+    "t_total_ms":18.61
+  },
+  {
+    "consulta_id":16,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"como forcar atualizacao das politicas de gpo",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":16,
+    "docs_recuperados":[
+      9,
+      90,
+      16,
+      19,
+      150
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.3333333333,
+    "t_emb_ms":0.0,
+    "t_sql_ms":37.89,
+    "t_total_ms":37.89
+  },
+  {
+    "consulta_id":16,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"como forcar atualizacao das politicas de gpo",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":16,
+    "docs_recuperados":[
+      16,
+      49,
+      101,
+      9,
+      96
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.51,
+    "t_sql_ms":2.96,
+    "t_total_ms":17.47
+  },
+  {
+    "consulta_id":16,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"como forcar atualizacao das politicas de gpo",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":16,
+    "docs_recuperados":[
+      16,
+      19,
+      80,
+      20,
+      11
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.71,
+    "t_sql_ms":1.45,
+    "t_total_ms":15.16
+  },
+  {
+    "consulta_id":17,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"pin do windows hello nao disponivel apos ligar",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":17,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.83,
+    "t_total_ms":16.83
+  },
+  {
+    "consulta_id":17,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"pin do windows hello nao disponivel apos ligar",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":17,
+    "docs_recuperados":[
+      15,
+      21,
+      22,
+      46,
+      81
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":20.9,
+    "t_total_ms":20.9
+  },
+  {
+    "consulta_id":17,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"pin do windows hello nao disponivel apos ligar",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":17,
+    "docs_recuperados":[
+      17,
+      66,
+      87,
+      80,
+      64
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.53,
+    "t_sql_ms":2.4,
+    "t_total_ms":15.93
+  },
+  {
+    "consulta_id":17,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"pin do windows hello nao disponivel apos ligar",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":17,
+    "docs_recuperados":[
+      17,
+      80,
+      13,
+      18,
+      19
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.59,
+    "t_sql_ms":1.56,
+    "t_total_ms":15.15
+  },
+  {
+    "consulta_id":18,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"leitor de cartao inteligente smart card nao reconhecido",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":18,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":19.25,
+    "t_total_ms":19.25
+  },
+  {
+    "consulta_id":18,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"leitor de cartao inteligente smart card nao reconhecido",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":18,
+    "docs_recuperados":[
+      18,
+      150,
+      29,
+      33,
+      4
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":39.09,
+    "t_total_ms":39.09
+  },
+  {
+    "consulta_id":18,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"leitor de cartao inteligente smart card nao reconhecido",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":18,
+    "docs_recuperados":[
+      18,
+      13,
+      17,
+      66,
+      48
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.25,
+    "t_sql_ms":2.57,
+    "t_total_ms":16.82
+  },
+  {
+    "consulta_id":18,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"leitor de cartao inteligente smart card nao reconhecido",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":18,
+    "docs_recuperados":[
+      18,
+      13,
+      17,
+      15,
+      16
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":11.29,
+    "t_sql_ms":1.54,
+    "t_total_ms":12.83
+  },
+  {
+    "consulta_id":19,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"auditoria de tentativas de senha incorreta no windows",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":19,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.8,
+    "t_total_ms":16.8
+  },
+  {
+    "consulta_id":19,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"auditoria de tentativas de senha incorreta no windows",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":19,
+    "docs_recuperados":[
+      11,
+      142,
       15,
       20,
       19
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":21.03,
-    "t_sql_ms":33.02,
-    "t_total_ms":54.05
+    "reciprocal_rank":0.2,
+    "t_emb_ms":0.0,
+    "t_sql_ms":38.12,
+    "t_total_ms":38.12
   },
   {
-    "consulta_id":12,
+    "consulta_id":19,
     "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"falha na relacao de confianca entre estacao e dominio",
-    "doc_esperado":12,
+    "modo":"semantica",
+    "consulta":"auditoria de tentativas de senha incorreta no windows",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":19,
     "docs_recuperados":[
-
+      15,
+      48,
+      12,
+      200,
+      61
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":64.82,
-    "t_total_ms":64.82
+    "t_emb_ms":12.58,
+    "t_sql_ms":2.41,
+    "t_total_ms":14.99
   },
   {
-    "consulta_id":12,
-    "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"falha na relacao de confianca entre estacao e dominio",
-    "doc_esperado":12,
-    "docs_recuperados":[
-      12,
-      62,
-      83,
-      59,
-      194
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":21.13,
-    "t_sql_ms":26.08,
-    "t_total_ms":47.21
-  },
-  {
-    "consulta_id":12,
+    "consulta_id":19,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
-    "consulta":"falha na relacao de confianca entre estacao e dominio",
-    "doc_esperado":12,
+    "consulta":"auditoria de tentativas de senha incorreta no windows",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":19,
     "docs_recuperados":[
+      15,
       12,
-      194,
-      14,
       17,
-      20
+      19,
+      11
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":20.27,
-    "t_sql_ms":36.84,
-    "t_total_ms":57.11
+    "reciprocal_rank":0.25,
+    "t_emb_ms":11.24,
+    "t_sql_ms":1.48,
+    "t_total_ms":12.72
   },
   {
-    "consulta_id":13,
+    "consulta_id":20,
     "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"nao recebo notificacao do aplicativo autenticador mfa",
-    "doc_esperado":13,
+    "modo":"lexical_estrito",
+    "consulta":"alterei a senha no computador mas na nuvem nao atualizou",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":20,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":54.94,
-    "t_total_ms":54.94
+    "t_sql_ms":17.3,
+    "t_total_ms":17.3
   },
   {
-    "consulta_id":13,
+    "consulta_id":20,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"alterei a senha no computador mas na nuvem nao atualizou",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":20,
+    "docs_recuperados":[
+      20,
+      11,
+      31,
+      12,
+      88
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":25.39,
+    "t_total_ms":25.39
+  },
+  {
+    "consulta_id":20,
     "cenario":"Microsoft",
     "modo":"semantica",
-    "consulta":"nao recebo notificacao do aplicativo autenticador mfa",
-    "doc_esperado":13,
+    "consulta":"alterei a senha no computador mas na nuvem nao atualizou",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":20,
     "docs_recuperados":[
-      13,
+      200,
       11,
-      14,
-      57,
+      15,
+      113,
       17
     ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":19.47,
-    "t_sql_ms":21.8,
-    "t_total_ms":41.27
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":15.33,
+    "t_sql_ms":2.62,
+    "t_total_ms":17.95
   },
   {
-    "consulta_id":13,
+    "consulta_id":20,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
-    "consulta":"nao recebo notificacao do aplicativo autenticador mfa",
-    "doc_esperado":13,
+    "consulta":"alterei a senha no computador mas na nuvem nao atualizou",
+    "categoria_esperada":"Autenticação",
+    "doc_esperado":20,
     "docs_recuperados":[
-      13,
       11,
-      14,
+      15,
       17,
-      18
+      20,
+      194
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":20.1,
-    "t_sql_ms":20.48,
-    "t_total_ms":40.58
+    "reciprocal_rank":0.25,
+    "t_emb_ms":12.85,
+    "t_sql_ms":1.45,
+    "t_total_ms":14.3
   },
   {
-    "consulta_id":14,
+    "consulta_id":21,
     "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"relogio do computador com diferenca de horario e erro de login",
-    "doc_esperado":14,
+    "modo":"lexical_estrito",
+    "consulta":"computador travou e deu tela azul critical process died",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":21,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":62.56,
-    "t_total_ms":62.56
+    "t_sql_ms":17.13,
+    "t_total_ms":17.13
   },
   {
-    "consulta_id":14,
+    "consulta_id":21,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"computador travou e deu tela azul critical process died",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":21,
+    "docs_recuperados":[
+      21,
+      24,
+      134,
+      31,
+      88
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":33.96,
+    "t_total_ms":33.96
+  },
+  {
+    "consulta_id":21,
     "cenario":"Microsoft",
     "modo":"semantica",
-    "consulta":"relogio do computador com diferenca de horario e erro de login",
-    "doc_esperado":14,
+    "consulta":"computador travou e deu tela azul critical process died",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":21,
     "docs_recuperados":[
-      14,
-      11,
-      48,
+      21,
+      24,
+      82,
+      64,
+      75
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":16.04,
+    "t_sql_ms":2.81,
+    "t_total_ms":18.85
+  },
+  {
+    "consulta_id":21,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"computador travou e deu tela azul critical process died",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":21,
+    "docs_recuperados":[
+      21,
+      24,
+      82,
+      64,
+      75
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.81,
+    "t_sql_ms":1.71,
+    "t_total_ms":15.52
+  },
+  {
+    "consulta_id":22,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"meu computador ta muito lento com disco em 100 porcento",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":22,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.89,
+    "t_total_ms":16.89
+  },
+  {
+    "consulta_id":22,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"meu computador ta muito lento com disco em 100 porcento",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":22,
+    "docs_recuperados":[
+      22,
+      98,
+      195,
+      50,
+      124
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":36.15,
+    "t_total_ms":36.15
+  },
+  {
+    "consulta_id":22,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"meu computador ta muito lento com disco em 100 porcento",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":22,
+    "docs_recuperados":[
+      22,
+      147,
+      119,
+      26,
+      104
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.41,
+    "t_sql_ms":2.45,
+    "t_total_ms":16.86
+  },
+  {
+    "consulta_id":22,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"meu computador ta muito lento com disco em 100 porcento",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":22,
+    "docs_recuperados":[
+      22,
+      26,
+      104,
+      98,
+      73
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.31,
+    "t_sql_ms":1.65,
+    "t_total_ms":15.96
+  },
+  {
+    "consulta_id":23,
+    "cenario":"Microsoft",
+    "modo":"lexical_estrito",
+    "consulta":"windows update travado baixando atualizacoes",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":23,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.48,
+    "t_total_ms":16.48
+  },
+  {
+    "consulta_id":23,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"windows update travado baixando atualizacoes",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":23,
+    "docs_recuperados":[
+      21,
+      96,
+      78,
       15,
+      22
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":20.04,
+    "t_total_ms":20.04
+  },
+  {
+    "consulta_id":23,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"windows update travado baixando atualizacoes",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":23,
+    "docs_recuperados":[
+      23,
+      70,
+      56,
+      21,
+      25
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.48,
+    "t_sql_ms":2.57,
+    "t_total_ms":16.05
+  },
+  {
+    "consulta_id":23,
+    "cenario":"Microsoft",
+    "modo":"semantica_prefilter",
+    "consulta":"windows update travado baixando atualizacoes",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":23,
+    "docs_recuperados":[
+      23,
+      70,
+      21,
+      25,
       96
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":24.34,
-    "t_sql_ms":24.55,
-    "t_total_ms":48.89
+    "t_emb_ms":12.24,
+    "t_sql_ms":1.72,
+    "t_total_ms":13.96
   },
   {
-    "consulta_id":14,
+    "consulta_id":24,
     "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"relogio do computador com diferenca de horario e erro de login",
-    "doc_esperado":14,
-    "docs_recuperados":[
-      14,
-      11,
-      15,
-      20,
-      17
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":23.17,
-    "t_sql_ms":26.88,
-    "t_total_ms":50.05
-  },
-  {
-    "consulta_id":15,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"outlook fica pedindo senha o tempo todo",
-    "doc_esperado":15,
+    "modo":"lexical_estrito",
+    "consulta":"windows travado na tela azul de reparo automatico",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":24,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":66.37,
-    "t_total_ms":66.37
+    "t_sql_ms":17.08,
+    "t_total_ms":17.08
   },
   {
-    "consulta_id":15,
+    "consulta_id":24,
     "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"outlook fica pedindo senha o tempo todo",
-    "doc_esperado":15,
+    "modo":"lexical_disjuntivo",
+    "consulta":"windows travado na tela azul de reparo automatico",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":24,
     "docs_recuperados":[
-      15,
-      48,
-      11,
-      197,
-      20
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":22.22,
-    "t_sql_ms":25.52,
-    "t_total_ms":47.74
-  },
-  {
-    "consulta_id":15,
-    "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"outlook fica pedindo senha o tempo todo",
-    "doc_esperado":15,
-    "docs_recuperados":[
-      15,
-      11,
-      20,
-      19,
-      194
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":22.49,
-    "t_sql_ms":20.27,
-    "t_total_ms":42.76
-  },
-  {
-    "consulta_id":16,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"como forcar atualizacao das politicas de gpo",
-    "doc_esperado":16,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":40.21,
-    "t_total_ms":40.21
-  },
-  {
-    "consulta_id":16,
-    "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"como forcar atualizacao das politicas de gpo",
-    "doc_esperado":16,
-    "docs_recuperados":[
-      16,
+      31,
+      24,
+      21,
       96,
-      19,
-      193,
-      121
+      134
     ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":0.0,
+    "t_sql_ms":39.18,
+    "t_total_ms":39.18
+  },
+  {
+    "consulta_id":24,
+    "cenario":"Microsoft",
+    "modo":"semantica",
+    "consulta":"windows travado na tela azul de reparo automatico",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":24,
+    "docs_recuperados":[
+      24,
+      25,
+      21,
+      64,
+      92
+    ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.36,
-    "t_sql_ms":22.69,
-    "t_total_ms":44.05
+    "t_emb_ms":13.1,
+    "t_sql_ms":2.39,
+    "t_total_ms":15.49
   },
   {
-    "consulta_id":16,
+    "consulta_id":24,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
-    "consulta":"como forcar atualizacao das politicas de gpo",
-    "doc_esperado":16,
+    "consulta":"windows travado na tela azul de reparo automatico",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":24,
     "docs_recuperados":[
-      16,
-      19,
-      80,
-      20,
-      14
+      24,
+      25,
+      21,
+      64,
+      92
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.09,
-    "t_sql_ms":17.5,
-    "t_total_ms":38.59
+    "t_emb_ms":12.14,
+    "t_sql_ms":1.62,
+    "t_total_ms":13.76
   },
   {
-    "consulta_id":17,
+    "consulta_id":25,
     "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"pin do windows hello nao disponivel apos ligar",
-    "doc_esperado":17,
+    "modo":"lexical_estrito",
+    "consulta":"como voltar o windows para uma data anterior restaurar",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":25,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":45.25,
-    "t_total_ms":45.25
+    "t_sql_ms":17.86,
+    "t_total_ms":17.86
   },
   {
-    "consulta_id":17,
+    "consulta_id":25,
     "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"pin do windows hello nao disponivel apos ligar",
-    "doc_esperado":17,
+    "modo":"lexical_disjuntivo",
+    "consulta":"como voltar o windows para uma data anterior restaurar",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":25,
     "docs_recuperados":[
-      92,
-      66,
-      31,
-      17,
-      80
+      71,
+      22,
+      15,
+      21,
+      81
     ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":0.25,
-    "t_emb_ms":22.29,
-    "t_sql_ms":36.67,
-    "t_total_ms":58.96
-  },
-  {
-    "consulta_id":17,
-    "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"pin do windows hello nao disponivel apos ligar",
-    "doc_esperado":17,
-    "docs_recuperados":[
-      17,
-      80,
-      18,
-      12,
-      15
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":23.01,
-    "t_sql_ms":22.47,
-    "t_total_ms":45.48
-  },
-  {
-    "consulta_id":18,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"leitor de cartao inteligente smart card nao reconhecido",
-    "doc_esperado":18,
-    "docs_recuperados":[
-
-    ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":47.55,
-    "t_total_ms":47.55
+    "t_sql_ms":39.61,
+    "t_total_ms":39.61
   },
   {
-    "consulta_id":18,
+    "consulta_id":25,
     "cenario":"Microsoft",
     "modo":"semantica",
-    "consulta":"leitor de cartao inteligente smart card nao reconhecido",
-    "doc_esperado":18,
+    "consulta":"como voltar o windows para uma data anterior restaurar",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":25,
     "docs_recuperados":[
-      18,
-      13,
-      17,
-      31,
+      25,
+      96,
+      30,
+      21,
       66
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.51,
-    "t_sql_ms":21.91,
-    "t_total_ms":42.42
+    "t_emb_ms":12.64,
+    "t_sql_ms":2.48,
+    "t_total_ms":15.12
   },
   {
-    "consulta_id":18,
+    "consulta_id":25,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
-    "consulta":"leitor de cartao inteligente smart card nao reconhecido",
-    "doc_esperado":18,
+    "consulta":"como voltar o windows para uma data anterior restaurar",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":25,
     "docs_recuperados":[
-      18,
-      13,
-      17,
-      19,
-      11
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":20.31,
-    "t_sql_ms":20.32,
-    "t_total_ms":40.63
-  },
-  {
-    "consulta_id":19,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"auditoria de tentativas de senha incorreta no windows",
-    "doc_esperado":19,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":48.64,
-    "t_total_ms":48.64
-  },
-  {
-    "consulta_id":19,
-    "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"auditoria de tentativas de senha incorreta no windows",
-    "doc_esperado":19,
-    "docs_recuperados":[
-      48,
-      12,
-      15,
-      20,
-      11
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":20.12,
-    "t_sql_ms":23.09,
-    "t_total_ms":43.21
-  },
-  {
-    "consulta_id":19,
-    "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"auditoria de tentativas de senha incorreta no windows",
-    "doc_esperado":19,
-    "docs_recuperados":[
-      12,
-      15,
-      20,
-      11,
-      80
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":17.8,
-    "t_sql_ms":22.69,
-    "t_total_ms":40.49
-  },
-  {
-    "consulta_id":20,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"alterei a senha no computador mas na nuvem nao atualizou",
-    "doc_esperado":20,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":49.92,
-    "t_total_ms":49.92
-  },
-  {
-    "consulta_id":20,
-    "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"alterei a senha no computador mas na nuvem nao atualizou",
-    "doc_esperado":20,
-    "docs_recuperados":[
-      11,
-      20,
-      48,
-      113,
-      31
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":0.5,
-    "t_emb_ms":22.03,
-    "t_sql_ms":22.18,
-    "t_total_ms":44.21
-  },
-  {
-    "consulta_id":20,
-    "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"alterei a senha no computador mas na nuvem nao atualizou",
-    "doc_esperado":20,
-    "docs_recuperados":[
-      11,
-      20,
-      15,
-      194,
-      17
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":0.5,
-    "t_emb_ms":20.06,
-    "t_sql_ms":35.15,
-    "t_total_ms":55.21
-  },
-  {
-    "consulta_id":21,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"computador travou e deu tela azul critical process died",
-    "doc_esperado":21,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":38.69,
-    "t_total_ms":38.69
-  },
-  {
-    "consulta_id":21,
-    "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"computador travou e deu tela azul critical process died",
-    "doc_esperado":21,
-    "docs_recuperados":[
+      25,
+      96,
+      30,
       21,
-      24,
-      26,
-      123,
-      82
+      66
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.66,
-    "t_sql_ms":19.78,
-    "t_total_ms":40.44
+    "t_emb_ms":11.93,
+    "t_sql_ms":1.79,
+    "t_total_ms":13.72
   },
   {
-    "consulta_id":21,
+    "consulta_id":26,
     "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"computador travou e deu tela azul critical process died",
-    "doc_esperado":21,
-    "docs_recuperados":[
-      21,
-      24,
-      26,
-      123,
-      82
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":21.54,
-    "t_sql_ms":21.59,
-    "t_total_ms":43.13
-  },
-  {
-    "consulta_id":22,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"meu computador ta muito lento com disco em 100 porcento",
-    "doc_esperado":22,
+    "modo":"lexical_estrito",
+    "consulta":"processo interrupcoes do sistema usando muita cpu",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":26,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":50.66,
-    "t_total_ms":50.66
+    "t_sql_ms":17.55,
+    "t_total_ms":17.55
   },
   {
-    "consulta_id":22,
+    "consulta_id":26,
     "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"meu computador ta muito lento com disco em 100 porcento",
-    "doc_esperado":22,
+    "modo":"lexical_disjuntivo",
+    "consulta":"processo interrupcoes do sistema usando muita cpu",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":26,
     "docs_recuperados":[
-      22,
-      34,
+      136,
+      21,
       104,
-      35,
+      25,
       26
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":21.61,
-    "t_sql_ms":23.75,
-    "t_total_ms":45.36
-  },
-  {
-    "consulta_id":22,
-    "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"meu computador ta muito lento com disco em 100 porcento",
-    "doc_esperado":22,
-    "docs_recuperados":[
-      22,
-      104,
-      26,
-      73,
-      98
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":18.81,
-    "t_sql_ms":34.77,
-    "t_total_ms":53.58
-  },
-  {
-    "consulta_id":23,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"windows update travado baixando atualizacoes",
-    "doc_esperado":23,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
+    "reciprocal_rank":0.2,
     "t_emb_ms":0.0,
-    "t_sql_ms":61.25,
-    "t_total_ms":61.25
-  },
-  {
-    "consulta_id":23,
-    "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"windows update travado baixando atualizacoes",
-    "doc_esperado":23,
-    "docs_recuperados":[
-      96,
-      78,
-      32,
-      21,
-      51
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":19.92,
-    "t_sql_ms":22.53,
-    "t_total_ms":42.45
-  },
-  {
-    "consulta_id":23,
-    "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"windows update travado baixando atualizacoes",
-    "doc_esperado":23,
-    "docs_recuperados":[
-      96,
-      78,
-      21,
-      23,
-      70
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":0.25,
-    "t_emb_ms":19.97,
-    "t_sql_ms":19.1,
-    "t_total_ms":39.07
-  },
-  {
-    "consulta_id":24,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"windows travado na tela azul de reparo automatico",
-    "doc_esperado":24,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":37.44,
-    "t_total_ms":37.44
-  },
-  {
-    "consulta_id":24,
-    "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"windows travado na tela azul de reparo automatico",
-    "doc_esperado":24,
-    "docs_recuperados":[
-      21,
-      24,
-      96,
-      92,
-      79
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":0.5,
-    "t_emb_ms":21.53,
-    "t_sql_ms":30.89,
-    "t_total_ms":52.42
-  },
-  {
-    "consulta_id":24,
-    "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"windows travado na tela azul de reparo automatico",
-    "doc_esperado":24,
-    "docs_recuperados":[
-      21,
-      24,
-      96,
-      92,
-      87
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":0.5,
-    "t_emb_ms":21.08,
-    "t_sql_ms":36.68,
-    "t_total_ms":57.76
-  },
-  {
-    "consulta_id":25,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"como voltar o windows para uma data anterior restaurar",
-    "doc_esperado":25,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":52.04,
-    "t_total_ms":52.04
-  },
-  {
-    "consulta_id":25,
-    "cenario":"Microsoft",
-    "modo":"semantica",
-    "consulta":"como voltar o windows para uma data anterior restaurar",
-    "doc_esperado":25,
-    "docs_recuperados":[
-      96,
-      90,
-      87,
-      32,
-      79
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":20.16,
-    "t_sql_ms":37.53,
-    "t_total_ms":57.69
-  },
-  {
-    "consulta_id":25,
-    "cenario":"Microsoft",
-    "modo":"semantica_prefilter",
-    "consulta":"como voltar o windows para uma data anterior restaurar",
-    "doc_esperado":25,
-    "docs_recuperados":[
-      96,
-      87,
-      21,
-      92,
-      66
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":19.9,
-    "t_sql_ms":23.64,
-    "t_total_ms":43.54
-  },
-  {
-    "consulta_id":26,
-    "cenario":"Microsoft",
-    "modo":"lexical",
-    "consulta":"processo interrupcoes do sistema usando muita cpu",
-    "doc_esperado":26,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":40.93,
-    "t_total_ms":40.93
+    "t_sql_ms":21.62,
+    "t_total_ms":21.62
   },
   {
     "consulta_id":26,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"processo interrupcoes do sistema usando muita cpu",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":26,
     "docs_recuperados":[
       26,
-      104,
-      98,
       172,
-      63
+      104,
+      98,
+      136
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":19.73,
-    "t_sql_ms":22.02,
-    "t_total_ms":41.75
+    "t_emb_ms":14.5,
+    "t_sql_ms":2.46,
+    "t_total_ms":16.96
   },
   {
     "consulta_id":26,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"processo interrupcoes do sistema usando muita cpu",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":26,
     "docs_recuperados":[
       26,
       104,
       98,
-      158,
-      153
+      136,
+      24
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.64,
-    "t_sql_ms":23.33,
-    "t_total_ms":43.97
+    "t_emb_ms":11.9,
+    "t_sql_ms":1.87,
+    "t_total_ms":13.77
   },
   {
     "consulta_id":27,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"erro de boot winload.efi ausente no windows",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":27,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":45.92,
-    "t_total_ms":45.92
+    "t_sql_ms":16.26,
+    "t_total_ms":16.26
+  },
+  {
+    "consulta_id":27,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"erro de boot winload.efi ausente no windows",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":27,
+    "docs_recuperados":[
+      27,
+      22,
+      80,
+      96,
+      121
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":36.19,
+    "t_total_ms":36.19
   },
   {
     "consulta_id":27,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"erro de boot winload.efi ausente no windows",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":27,
     "docs_recuperados":[
       27,
       103,
       24,
-      51,
-      117
+      117,
+      91
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.45,
-    "t_sql_ms":22.1,
-    "t_total_ms":42.55
+    "t_emb_ms":14.38,
+    "t_sql_ms":3.0,
+    "t_total_ms":17.38
   },
   {
     "consulta_id":27,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"erro de boot winload.efi ausente no windows",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":27,
     "docs_recuperados":[
       27,
@@ -1504,1342 +2259,2014 @@
       117,
       78
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.23,
-    "t_sql_ms":21.05,
-    "t_total_ms":42.28
+    "t_emb_ms":14.11,
+    "t_sql_ms":1.76,
+    "t_total_ms":15.87
   },
   {
     "consulta_id":28,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"como fazer inicializacao limpa para testar programas",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":28,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":53.0,
-    "t_total_ms":53.0
+    "t_sql_ms":16.83,
+    "t_total_ms":16.83
+  },
+  {
+    "consulta_id":28,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"como fazer inicializacao limpa para testar programas",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":28,
+    "docs_recuperados":[
+      1,
+      94,
+      109,
+      125,
+      68
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":26.03,
+    "t_total_ms":26.03
   },
   {
     "consulta_id":28,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"como fazer inicializacao limpa para testar programas",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":28,
     "docs_recuperados":[
-      102,
+      28,
+      134,
       60,
-      41,
-      63,
-      30
+      176,
+      149
     ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":20.32,
-    "t_sql_ms":31.84,
-    "t_total_ms":52.16
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.71,
+    "t_sql_ms":2.36,
+    "t_total_ms":17.07
   },
   {
     "consulta_id":28,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"como fazer inicializacao limpa para testar programas",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":28,
     "docs_recuperados":[
-      30,
       28,
-      21,
-      70,
-      23
+      176,
+      30,
+      22,
+      98
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":0.5,
-    "t_emb_ms":20.44,
-    "t_sql_ms":20.02,
-    "t_total_ms":40.46
+    "reciprocal_rank":1.0,
+    "t_emb_ms":11.69,
+    "t_sql_ms":1.67,
+    "t_total_ms":13.36
   },
   {
     "consulta_id":29,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"adicionar caminho no path do sistema windows",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":29,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":46.63,
-    "t_total_ms":46.63
+    "t_sql_ms":18.32,
+    "t_total_ms":18.32
+  },
+  {
+    "consulta_id":29,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"adicionar caminho no path do sistema windows",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":29,
+    "docs_recuperados":[
+      29,
+      21,
+      4,
+      7,
+      15
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":21.9,
+    "t_total_ms":21.9
   },
   {
     "consulta_id":29,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"adicionar caminho no path do sistema windows",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":29,
     "docs_recuperados":[
-      4,
       29,
       91,
-      33,
-      183
+      184,
+      169,
+      25
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":0.5,
-    "t_emb_ms":20.77,
-    "t_sql_ms":20.34,
-    "t_total_ms":41.11
+    "reciprocal_rank":1.0,
+    "t_emb_ms":12.79,
+    "t_sql_ms":2.37,
+    "t_total_ms":15.16
   },
   {
     "consulta_id":29,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"adicionar caminho no path do sistema windows",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":29,
     "docs_recuperados":[
       29,
+      169,
+      25,
       183,
-      21,
-      87,
-      30
+      27
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":19.24,
-    "t_sql_ms":26.06,
-    "t_total_ms":45.3
+    "t_emb_ms":11.61,
+    "t_sql_ms":1.77,
+    "t_total_ms":13.38
   },
   {
     "consulta_id":30,
     "cenario":"Microsoft",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"barra de tarefas travou e menu iniciar nao clica",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":30,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":46.98,
-    "t_total_ms":46.98
+    "t_sql_ms":17.17,
+    "t_total_ms":17.17
+  },
+  {
+    "consulta_id":30,
+    "cenario":"Microsoft",
+    "modo":"lexical_disjuntivo",
+    "consulta":"barra de tarefas travou e menu iniciar nao clica",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":30,
+    "docs_recuperados":[
+      30,
+      88,
+      36,
+      48,
+      65
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":42.73,
+    "t_total_ms":42.73
   },
   {
     "consulta_id":30,
     "cenario":"Microsoft",
     "modo":"semantica",
     "consulta":"barra de tarefas travou e menu iniciar nao clica",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":30,
     "docs_recuperados":[
       30,
-      88,
-      60,
+      99,
       75,
-      28
+      87,
+      88
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.17,
-    "t_sql_ms":30.15,
-    "t_total_ms":50.32
+    "t_emb_ms":15.4,
+    "t_sql_ms":2.35,
+    "t_total_ms":17.75
   },
   {
     "consulta_id":30,
     "cenario":"Microsoft",
     "modo":"semantica_prefilter",
     "consulta":"barra de tarefas travou e menu iniciar nao clica",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":30,
     "docs_recuperados":[
       30,
-      88,
+      99,
       75,
-      28,
-      99
+      87,
+      88
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.19,
-    "t_sql_ms":28.56,
-    "t_total_ms":48.75
+    "t_emb_ms":12.25,
+    "t_sql_ms":1.61,
+    "t_total_ms":13.86
   },
   {
     "consulta_id":31,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"erro could not get lock dpkg quebrado no terminal",
+    "categoria_esperada":"Gerenciamento de Pacotes",
     "doc_esperado":101,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":37.19,
-    "t_total_ms":37.19
+    "t_sql_ms":18.55,
+    "t_total_ms":18.55
   },
   {
     "consulta_id":31,
     "cenario":"Ubuntu",
-    "modo":"semantica",
+    "modo":"lexical_disjuntivo",
     "consulta":"erro could not get lock dpkg quebrado no terminal",
+    "categoria_esperada":"Gerenciamento de Pacotes",
     "doc_esperado":101,
     "docs_recuperados":[
       101,
       161,
-      185,
-      165,
-      31
+      117,
+      115,
+      138
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.68,
-    "t_sql_ms":33.33,
-    "t_total_ms":55.01
+    "t_emb_ms":0.0,
+    "t_sql_ms":21.2,
+    "t_total_ms":21.2
+  },
+  {
+    "consulta_id":31,
+    "cenario":"Ubuntu",
+    "modo":"semantica",
+    "consulta":"erro could not get lock dpkg quebrado no terminal",
+    "categoria_esperada":"Gerenciamento de Pacotes",
+    "doc_esperado":101,
+    "docs_recuperados":[
+      101,
+      161,
+      187,
+      165,
+      195
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.79,
+    "t_sql_ms":2.54,
+    "t_total_ms":17.33
   },
   {
     "consulta_id":31,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"erro could not get lock dpkg quebrado no terminal",
+    "categoria_esperada":"Gerenciamento de Pacotes",
     "doc_esperado":101,
     "docs_recuperados":[
       101,
       161,
       165,
       121,
-      134
+      193
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.83,
-    "t_sql_ms":37.54,
-    "t_total_ms":59.37
+    "t_emb_ms":14.09,
+    "t_sql_ms":1.49,
+    "t_total_ms":15.58
   },
   {
     "consulta_id":32,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"como configurar ip fixo com netplan no ubuntu",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":102,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":52.63,
-    "t_total_ms":52.63
+    "t_sql_ms":16.59,
+    "t_total_ms":16.59
+  },
+  {
+    "consulta_id":32,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"como configurar ip fixo com netplan no ubuntu",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":102,
+    "docs_recuperados":[
+      102,
+      122,
+      143,
+      142,
+      178
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":33.82,
+    "t_total_ms":33.82
   },
   {
     "consulta_id":32,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"como configurar ip fixo com netplan no ubuntu",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":102,
     "docs_recuperados":[
       102,
-      178,
       122,
-      110,
+      178,
+      143,
       188
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":19.82,
-    "t_sql_ms":24.17,
-    "t_total_ms":43.99
+    "t_emb_ms":11.98,
+    "t_sql_ms":2.43,
+    "t_total_ms":14.41
   },
   {
     "consulta_id":32,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"como configurar ip fixo com netplan no ubuntu",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":102,
     "docs_recuperados":[
       102,
-      178,
       122,
-      110,
+      178,
+      143,
       188
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.03,
-    "t_sql_ms":30.48,
-    "t_total_ms":51.51
+    "t_emb_ms":13.02,
+    "t_sql_ms":1.87,
+    "t_total_ms":14.89
   },
   {
     "consulta_id":33,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"computador liga na tela grub rescue nao inicia o linux",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":103,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":50.59,
-    "t_total_ms":50.59
+    "t_sql_ms":22.79,
+    "t_total_ms":22.79
+  },
+  {
+    "consulta_id":33,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"computador liga na tela grub rescue nao inicia o linux",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":103,
+    "docs_recuperados":[
+      103,
+      75,
+      24,
+      31,
+      117
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":42.39,
+    "t_total_ms":42.39
   },
   {
     "consulta_id":33,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"computador liga na tela grub rescue nao inicia o linux",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":103,
     "docs_recuperados":[
       103,
-      24,
       117,
-      27,
-      123
+      24,
+      185,
+      27
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.86,
-    "t_sql_ms":30.7,
-    "t_total_ms":51.56
+    "t_emb_ms":16.39,
+    "t_sql_ms":2.43,
+    "t_total_ms":18.82
   },
   {
     "consulta_id":33,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"computador liga na tela grub rescue nao inicia o linux",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":103,
     "docs_recuperados":[
       103,
-      24,
       117,
-      27,
-      123
+      24,
+      185,
+      27
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":22.02,
-    "t_sql_ms":29.57,
-    "t_total_ms":51.59
+    "t_emb_ms":16.92,
+    "t_sql_ms":2.09,
+    "t_total_ms":19.01
   },
   {
     "consulta_id":34,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"servidor linux travando com processo usando toda a memoria e cpu",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":104,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":41.67,
-    "t_total_ms":41.67
+    "t_sql_ms":16.88,
+    "t_total_ms":16.88
+  },
+  {
+    "consulta_id":34,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"servidor linux travando com processo usando toda a memoria e cpu",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":104,
+    "docs_recuperados":[
+      104,
+      101,
+      136,
+      120,
+      153
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":40.0,
+    "t_total_ms":40.0
   },
   {
     "consulta_id":34,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"servidor linux travando com processo usando toda a memoria e cpu",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":104,
     "docs_recuperados":[
       172,
-      104,
       26,
+      104,
       176,
-      114
+      98
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":0.5,
-    "t_emb_ms":22.16,
-    "t_sql_ms":22.78,
-    "t_total_ms":44.94
+    "reciprocal_rank":0.3333333333,
+    "t_emb_ms":14.53,
+    "t_sql_ms":2.47,
+    "t_total_ms":17.0
   },
   {
     "consulta_id":34,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"servidor linux travando com processo usando toda a memoria e cpu",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":104,
     "docs_recuperados":[
-      104,
       26,
+      104,
       176,
-      153,
-      98
+      98,
+      153
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":19.45,
-    "t_sql_ms":33.84,
-    "t_total_ms":53.29
+    "reciprocal_rank":0.5,
+    "t_emb_ms":12.04,
+    "t_sql_ms":1.62,
+    "t_total_ms":13.66
   },
   {
     "consulta_id":35,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"nao consigo conectar por ssh na porta 22 connection refused",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":105,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":51.18,
-    "t_total_ms":51.18
+    "t_sql_ms":17.06,
+    "t_total_ms":17.06
+  },
+  {
+    "consulta_id":35,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"nao consigo conectar por ssh na porta 22 connection refused",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":105,
+    "docs_recuperados":[
+      105,
+      181,
+      120,
+      152,
+      159
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":25.61,
+    "t_total_ms":25.61
   },
   {
     "consulta_id":35,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"nao consigo conectar por ssh na porta 22 connection refused",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":105,
     "docs_recuperados":[
       105,
       130,
       174,
-      122,
-      191
+      120,
+      6
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.2,
-    "t_sql_ms":21.82,
-    "t_total_ms":43.02
+    "t_emb_ms":14.24,
+    "t_sql_ms":2.5,
+    "t_total_ms":16.74
   },
   {
     "consulta_id":35,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"nao consigo conectar por ssh na porta 22 connection refused",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":105,
     "docs_recuperados":[
       105,
       174,
+      6,
       122,
-      191,
-      167
+      191
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.59,
-    "t_sql_ms":20.44,
-    "t_total_ms":42.03
+    "t_emb_ms":13.02,
+    "t_sql_ms":1.67,
+    "t_total_ms":14.69
   },
   {
     "consulta_id":36,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"disco cheio no ubuntu como liberar espaco em var log",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":106,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":44.47,
-    "t_total_ms":44.47
+    "t_sql_ms":17.34,
+    "t_total_ms":17.34
   },
   {
     "consulta_id":36,
     "cenario":"Ubuntu",
-    "modo":"semantica",
+    "modo":"lexical_disjuntivo",
     "consulta":"disco cheio no ubuntu como liberar espaco em var log",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":106,
     "docs_recuperados":[
       132,
-      106,
-      127,
-      184,
-      32
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":0.5,
-    "t_emb_ms":21.87,
-    "t_sql_ms":23.32,
-    "t_total_ms":45.19
-  },
-  {
-    "consulta_id":36,
-    "cenario":"Ubuntu",
-    "modo":"semantica_prefilter",
-    "consulta":"disco cheio no ubuntu como liberar espaco em var log",
-    "doc_esperado":106,
-    "docs_recuperados":[
-      106,
-      127,
-      184,
+      142,
       32,
+      164,
       195
     ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":23.52,
-    "t_sql_ms":34.94,
-    "t_total_ms":58.46
-  },
-  {
-    "consulta_id":37,
-    "cenario":"Ubuntu",
-    "modo":"lexical",
-    "consulta":"como montar hd ou particao automaticamente no fstab",
-    "doc_esperado":107,
-    "docs_recuperados":[
-
-    ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":53.78,
-    "t_total_ms":53.78
+    "t_sql_ms":28.69,
+    "t_total_ms":28.69
+  },
+  {
+    "consulta_id":36,
+    "cenario":"Ubuntu",
+    "modo":"semantica",
+    "consulta":"disco cheio no ubuntu como liberar espaco em var log",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":106,
+    "docs_recuperados":[
+      106,
+      132,
+      127,
+      32,
+      184
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.52,
+    "t_sql_ms":2.44,
+    "t_total_ms":16.96
+  },
+  {
+    "consulta_id":36,
+    "cenario":"Ubuntu",
+    "modo":"semantica_prefilter",
+    "consulta":"disco cheio no ubuntu como liberar espaco em var log",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":106,
+    "docs_recuperados":[
+      106,
+      127,
+      32,
+      184,
+      195
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":11.41,
+    "t_sql_ms":1.57,
+    "t_total_ms":12.98
+  },
+  {
+    "consulta_id":37,
+    "cenario":"Ubuntu",
+    "modo":"lexical_estrito",
+    "consulta":"como montar hd ou particao automaticamente no fstab",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":107,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.47,
+    "t_total_ms":16.47
+  },
+  {
+    "consulta_id":37,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"como montar hd ou particao automaticamente no fstab",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":107,
+    "docs_recuperados":[
+      94,
+      85,
+      91,
+      112,
+      149
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":30.15,
+    "t_total_ms":30.15
   },
   {
     "consulta_id":37,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"como montar hd ou particao automaticamente no fstab",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":107,
     "docs_recuperados":[
-      155,
-      91,
-      33,
+      107,
       184,
+      35,
+      39,
       124
     ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":23.61,
-    "t_sql_ms":22.03,
-    "t_total_ms":45.64
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":16.35,
+    "t_sql_ms":2.8,
+    "t_total_ms":19.15
   },
   {
     "consulta_id":37,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"como montar hd ou particao automaticamente no fstab",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":107,
     "docs_recuperados":[
-      155,
-      91,
-      33,
+      107,
       184,
+      35,
+      39,
       124
     ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":22.51,
-    "t_sql_ms":33.94,
-    "t_total_ms":56.45
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.79,
+    "t_sql_ms":1.7,
+    "t_total_ms":16.49
   },
   {
     "consulta_id":38,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"permissao negada em pasta chmod chown para usuario",
+    "categoria_esperada":"Segurança",
     "doc_esperado":108,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":46.96,
-    "t_total_ms":46.96
+    "t_sql_ms":16.84,
+    "t_total_ms":16.84
+  },
+  {
+    "consulta_id":38,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"permissao negada em pasta chmod chown para usuario",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":108,
+    "docs_recuperados":[
+      129,
+      183,
+      58,
+      63,
+      200
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":32.67,
+    "t_total_ms":32.67
   },
   {
     "consulta_id":38,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"permissao negada em pasta chmod chown para usuario",
+    "categoria_esperada":"Segurança",
     "doc_esperado":108,
     "docs_recuperados":[
-      129,
       108,
+      129,
       183,
       173,
-      177
+      54
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":0.5,
-    "t_emb_ms":23.79,
-    "t_sql_ms":23.77,
-    "t_total_ms":47.56
+    "reciprocal_rank":1.0,
+    "t_emb_ms":15.54,
+    "t_sql_ms":2.55,
+    "t_total_ms":18.09
   },
   {
     "consulta_id":38,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"permissao negada em pasta chmod chown para usuario",
+    "categoria_esperada":"Segurança",
     "doc_esperado":108,
     "docs_recuperados":[
-      129,
       108,
+      129,
       173,
-      83,
-      49
+      44,
+      74
     ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":12.51,
+    "t_sql_ms":1.68,
+    "t_total_ms":14.19
+  },
+  {
+    "consulta_id":39,
+    "cenario":"Ubuntu",
+    "modo":"lexical_estrito",
+    "consulta":"como ativar firewall ufw e liberar portas no ubuntu",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":109,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.38,
+    "t_total_ms":16.38
+  },
+  {
+    "consulta_id":39,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"como ativar firewall ufw e liberar portas no ubuntu",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":109,
+    "docs_recuperados":[
+      109,
+      105,
+      6,
+      135,
+      45
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":31.76,
+    "t_total_ms":31.76
+  },
+  {
+    "consulta_id":39,
+    "cenario":"Ubuntu",
+    "modo":"semantica",
+    "consulta":"como ativar firewall ufw e liberar portas no ubuntu",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":109,
+    "docs_recuperados":[
+      109,
+      45,
+      6,
+      105,
+      174
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.91,
+    "t_sql_ms":2.42,
+    "t_total_ms":16.33
+  },
+  {
+    "consulta_id":39,
+    "cenario":"Ubuntu",
+    "modo":"semantica_prefilter",
+    "consulta":"como ativar firewall ufw e liberar portas no ubuntu",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":109,
+    "docs_recuperados":[
+      109,
+      45,
+      44,
+      42,
+      41
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":15.22,
+    "t_sql_ms":1.62,
+    "t_total_ms":16.84
+  },
+  {
+    "consulta_id":40,
+    "cenario":"Ubuntu",
+    "modo":"lexical_estrito",
+    "consulta":"wifi nao aparece no notebook com ubuntu driver broadcom",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":110,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.54,
+    "t_total_ms":16.54
+  },
+  {
+    "consulta_id":40,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"wifi nao aparece no notebook com ubuntu driver broadcom",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":110,
+    "docs_recuperados":[
+      79,
+      115,
+      3,
+      18,
+      26
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":29.62,
+    "t_total_ms":29.62
+  },
+  {
+    "consulta_id":40,
+    "cenario":"Ubuntu",
+    "modo":"semantica",
+    "consulta":"wifi nao aparece no notebook com ubuntu driver broadcom",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":110,
+    "docs_recuperados":[
+      110,
+      3,
+      122,
+      89,
+      178
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":12.53,
+    "t_sql_ms":2.44,
+    "t_total_ms":14.97
+  },
+  {
+    "consulta_id":40,
+    "cenario":"Ubuntu",
+    "modo":"semantica_prefilter",
+    "consulta":"wifi nao aparece no notebook com ubuntu driver broadcom",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":110,
+    "docs_recuperados":[
+      110,
+      3,
+      122,
+      89,
+      178
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":11.87,
+    "t_sql_ms":1.57,
+    "t_total_ms":13.44
+  },
+  {
+    "consulta_id":41,
+    "cenario":"Ubuntu",
+    "modo":"lexical_estrito",
+    "consulta":"como reiniciar servico e ver logs com systemctl e journalctl",
+    "categoria_esperada":"Serviços & Daemons",
+    "doc_esperado":111,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":17.43,
+    "t_total_ms":17.43
+  },
+  {
+    "consulta_id":41,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"como reiniciar servico e ver logs com systemctl e journalctl",
+    "categoria_esperada":"Serviços & Daemons",
+    "doc_esperado":111,
+    "docs_recuperados":[
+      111,
+      172,
+      105,
+      156,
+      139
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":38.32,
+    "t_total_ms":38.32
+  },
+  {
+    "consulta_id":41,
+    "cenario":"Ubuntu",
+    "modo":"semantica",
+    "consulta":"como reiniciar servico e ver logs com systemctl e journalctl",
+    "categoria_esperada":"Serviços & Daemons",
+    "doc_esperado":111,
+    "docs_recuperados":[
+      111,
+      126,
+      132,
+      135,
+      168
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.96,
+    "t_sql_ms":2.5,
+    "t_total_ms":16.46
+  },
+  {
+    "consulta_id":41,
+    "cenario":"Ubuntu",
+    "modo":"semantica_prefilter",
+    "consulta":"como reiniciar servico e ver logs com systemctl e journalctl",
+    "categoria_esperada":"Serviços & Daemons",
+    "doc_esperado":111,
+    "docs_recuperados":[
+      111,
+      126,
+      132,
+      135,
+      187
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.57,
+    "t_sql_ms":1.64,
+    "t_total_ms":16.21
+  },
+  {
+    "consulta_id":42,
+    "cenario":"Ubuntu",
+    "modo":"lexical_estrito",
+    "consulta":"como colocar script para rodar sozinho todo dia no crontab",
+    "categoria_esperada":"Serviços & Daemons",
+    "doc_esperado":112,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":17.82,
+    "t_total_ms":17.82
+  },
+  {
+    "consulta_id":42,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"como colocar script para rodar sozinho todo dia no crontab",
+    "categoria_esperada":"Serviços & Daemons",
+    "doc_esperado":112,
+    "docs_recuperados":[
+      112,
+      148,
+      79,
+      49,
+      74
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":28.84,
+    "t_total_ms":28.84
+  },
+  {
+    "consulta_id":42,
+    "cenario":"Ubuntu",
+    "modo":"semantica",
+    "consulta":"como colocar script para rodar sozinho todo dia no crontab",
+    "categoria_esperada":"Serviços & Daemons",
+    "doc_esperado":112,
+    "docs_recuperados":[
+      112,
+      148,
+      96,
+      134,
+      43
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.31,
+    "t_sql_ms":2.48,
+    "t_total_ms":16.79
+  },
+  {
+    "consulta_id":42,
+    "cenario":"Ubuntu",
+    "modo":"semantica_prefilter",
+    "consulta":"como colocar script para rodar sozinho todo dia no crontab",
+    "categoria_esperada":"Serviços & Daemons",
+    "doc_esperado":112,
+    "docs_recuperados":[
+      112,
+      148,
+      132,
+      116,
+      111
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.03,
+    "t_sql_ms":1.51,
+    "t_total_ms":14.54
+  },
+  {
+    "consulta_id":43,
+    "cenario":"Ubuntu",
+    "modo":"lexical_estrito",
+    "consulta":"esqueci a senha de root e administrador no ubuntu como recuperar",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":113,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":17.26,
+    "t_total_ms":17.26
+  },
+  {
+    "consulta_id":43,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"esqueci a senha de root e administrador no ubuntu como recuperar",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":113,
+    "docs_recuperados":[
+      197,
+      113,
+      183,
+      20,
+      169
+    ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":0.5,
-    "t_emb_ms":21.99,
-    "t_sql_ms":22.61,
-    "t_total_ms":44.6
-  },
-  {
-    "consulta_id":39,
-    "cenario":"Ubuntu",
-    "modo":"lexical",
-    "consulta":"como ativar firewall ufw e liberar portas no ubuntu",
-    "doc_esperado":109,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":51.43,
-    "t_total_ms":51.43
+    "t_sql_ms":39.34,
+    "t_total_ms":39.34
   },
   {
-    "consulta_id":39,
+    "consulta_id":43,
     "cenario":"Ubuntu",
     "modo":"semantica",
-    "consulta":"como ativar firewall ufw e liberar portas no ubuntu",
-    "doc_esperado":109,
+    "consulta":"esqueci a senha de root e administrador no ubuntu como recuperar",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":113,
     "docs_recuperados":[
-      109,
-      45,
-      105,
-      6,
-      192
+      113,
+      200,
+      197,
+      183,
+      129
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":19.62,
-    "t_sql_ms":19.69,
-    "t_total_ms":39.31
+    "t_emb_ms":13.94,
+    "t_sql_ms":2.42,
+    "t_total_ms":16.36
   },
   {
-    "consulta_id":39,
+    "consulta_id":43,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
-    "consulta":"como ativar firewall ufw e liberar portas no ubuntu",
-    "doc_esperado":109,
+    "consulta":"esqueci a senha de root e administrador no ubuntu como recuperar",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":113,
     "docs_recuperados":[
-      109,
-      45,
-      46,
-      120,
+      113,
+      197,
+      129,
+      166,
       130
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.89,
-    "t_sql_ms":31.5,
-    "t_total_ms":52.39
+    "t_emb_ms":13.0,
+    "t_sql_ms":1.68,
+    "t_total_ms":14.68
   },
   {
-    "consulta_id":40,
+    "consulta_id":44,
     "cenario":"Ubuntu",
-    "modo":"lexical",
-    "consulta":"wifi nao aparece no notebook com ubuntu driver broadcom",
-    "doc_esperado":110,
+    "modo":"lexical_estrito",
+    "consulta":"servidor matando processos por falta de memoria como criar swap",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":114,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":38.73,
-    "t_total_ms":38.73
+    "t_sql_ms":17.92,
+    "t_total_ms":17.92
   },
   {
-    "consulta_id":40,
+    "consulta_id":44,
     "cenario":"Ubuntu",
-    "modo":"semantica",
-    "consulta":"wifi nao aparece no notebook com ubuntu driver broadcom",
-    "doc_esperado":110,
+    "modo":"lexical_disjuntivo",
+    "consulta":"servidor matando processos por falta de memoria como criar swap",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":114,
     "docs_recuperados":[
-      110,
-      3,
-      122,
-      178,
-      143
+      160,
+      136,
+      137,
+      114,
+      72
     ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":20.97,
-    "t_sql_ms":22.76,
-    "t_total_ms":43.73
-  },
-  {
-    "consulta_id":40,
-    "cenario":"Ubuntu",
-    "modo":"semantica_prefilter",
-    "consulta":"wifi nao aparece no notebook com ubuntu driver broadcom",
-    "doc_esperado":110,
-    "docs_recuperados":[
-      110,
-      3,
-      122,
-      178,
-      143
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":20.31,
-    "t_sql_ms":21.7,
-    "t_total_ms":42.01
-  },
-  {
-    "consulta_id":41,
-    "cenario":"Ubuntu",
-    "modo":"lexical",
-    "consulta":"como reiniciar servico e ver logs com systemctl e journalctl",
-    "doc_esperado":111,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":45.86,
-    "t_total_ms":45.86
-  },
-  {
-    "consulta_id":41,
-    "cenario":"Ubuntu",
-    "modo":"semantica",
-    "consulta":"como reiniciar servico e ver logs com systemctl e journalctl",
-    "doc_esperado":111,
-    "docs_recuperados":[
-      126,
-      142,
-      132,
-      111,
-      131
-    ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":0.25,
-    "t_emb_ms":22.57,
-    "t_sql_ms":29.03,
-    "t_total_ms":51.6
-  },
-  {
-    "consulta_id":41,
-    "cenario":"Ubuntu",
-    "modo":"semantica_prefilter",
-    "consulta":"como reiniciar servico e ver logs com systemctl e journalctl",
-    "doc_esperado":111,
-    "docs_recuperados":[
-      126,
-      132,
-      111,
-      131,
-      187
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":0.3333333333,
-    "t_emb_ms":20.79,
-    "t_sql_ms":33.01,
-    "t_total_ms":53.8
-  },
-  {
-    "consulta_id":42,
-    "cenario":"Ubuntu",
-    "modo":"lexical",
-    "consulta":"como colocar script para rodar sozinho todo dia no crontab",
-    "doc_esperado":112,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":50.74,
-    "t_total_ms":50.74
-  },
-  {
-    "consulta_id":42,
-    "cenario":"Ubuntu",
-    "modo":"semantica",
-    "consulta":"como colocar script para rodar sozinho todo dia no crontab",
-    "doc_esperado":112,
-    "docs_recuperados":[
-      112,
-      148,
-      43,
-      134,
-      96
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":20.24,
-    "t_sql_ms":35.51,
-    "t_total_ms":55.75
-  },
-  {
-    "consulta_id":42,
-    "cenario":"Ubuntu",
-    "modo":"semantica_prefilter",
-    "consulta":"como colocar script para rodar sozinho todo dia no crontab",
-    "doc_esperado":112,
-    "docs_recuperados":[
-      112,
-      148,
-      132,
-      187,
-      179
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":20.72,
-    "t_sql_ms":23.61,
-    "t_total_ms":44.33
-  },
-  {
-    "consulta_id":43,
-    "cenario":"Ubuntu",
-    "modo":"lexical",
-    "consulta":"esqueci a senha de root e administrador no ubuntu como recuperar",
-    "doc_esperado":113,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":56.41,
-    "t_total_ms":56.41
-  },
-  {
-    "consulta_id":43,
-    "cenario":"Ubuntu",
-    "modo":"semantica",
-    "consulta":"esqueci a senha de root e administrador no ubuntu como recuperar",
-    "doc_esperado":113,
-    "docs_recuperados":[
-      113,
-      197,
-      200,
-      183,
-      11
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":20.64,
-    "t_sql_ms":22.26,
-    "t_total_ms":42.9
-  },
-  {
-    "consulta_id":43,
-    "cenario":"Ubuntu",
-    "modo":"semantica_prefilter",
-    "consulta":"esqueci a senha de root e administrador no ubuntu como recuperar",
-    "doc_esperado":113,
-    "docs_recuperados":[
-      113,
-      197,
-      166,
-      129,
-      48
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":20.24,
-    "t_sql_ms":43.37,
-    "t_total_ms":63.61
-  },
-  {
-    "consulta_id":44,
-    "cenario":"Ubuntu",
-    "modo":"lexical",
-    "consulta":"servidor matando processos por falta de memoria como criar swap",
-    "doc_esperado":114,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":56.26,
-    "t_total_ms":56.26
+    "t_sql_ms":39.06,
+    "t_total_ms":39.06
   },
   {
     "consulta_id":44,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"servidor matando processos por falta de memoria como criar swap",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":114,
     "docs_recuperados":[
       114,
+      26,
       172,
       104,
-      176,
-      179
+      176
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":22.9,
-    "t_sql_ms":21.12,
-    "t_total_ms":44.02
+    "t_emb_ms":15.25,
+    "t_sql_ms":2.38,
+    "t_total_ms":17.63
   },
   {
     "consulta_id":44,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"servidor matando processos por falta de memoria como criar swap",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":114,
     "docs_recuperados":[
       114,
       145,
-      199,
+      149,
       35,
-      149
+      164
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":18.63,
-    "t_sql_ms":33.87,
-    "t_total_ms":52.5
+    "t_emb_ms":12.18,
+    "t_sql_ms":1.75,
+    "t_total_ms":13.93
   },
   {
     "consulta_id":45,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"tela preta com placa de video nvidia no linux",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":115,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":37.15,
-    "t_total_ms":37.15
+    "t_sql_ms":16.48,
+    "t_total_ms":16.48
+  },
+  {
+    "consulta_id":45,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"tela preta com placa de video nvidia no linux",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":115,
+    "docs_recuperados":[
+      139,
+      115,
+      3,
+      188,
+      88
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":0.0,
+    "t_sql_ms":38.61,
+    "t_total_ms":38.61
   },
   {
     "consulta_id":45,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"tela preta com placa de video nvidia no linux",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":115,
     "docs_recuperados":[
-      115,
       88,
-      163,
       75,
+      115,
+      163,
       64
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":19.88,
-    "t_sql_ms":42.19,
-    "t_total_ms":62.07
+    "reciprocal_rank":0.3333333333,
+    "t_emb_ms":16.72,
+    "t_sql_ms":2.64,
+    "t_total_ms":19.36
   },
   {
     "consulta_id":45,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"tela preta com placa de video nvidia no linux",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":115,
     "docs_recuperados":[
-      115,
       88,
-      163,
       75,
+      115,
+      163,
       64
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":21.27,
-    "t_sql_ms":20.33,
-    "t_total_ms":41.6
+    "reciprocal_rank":0.3333333333,
+    "t_emb_ms":13.32,
+    "t_sql_ms":1.65,
+    "t_total_ms":14.97
   },
   {
     "consulta_id":46,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"erro de permissao ao rodar comando docker sem sudo",
+    "categoria_esperada":"Serviços & Daemons",
     "doc_esperado":116,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":53.42,
-    "t_total_ms":53.42
+    "t_sql_ms":17.17,
+    "t_total_ms":17.17
+  },
+  {
+    "consulta_id":46,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"erro de permissao ao rodar comando docker sem sudo",
+    "categoria_esperada":"Serviços & Daemons",
+    "doc_esperado":116,
+    "docs_recuperados":[
+      197,
+      114,
+      135,
+      187,
+      106
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":41.11,
+    "t_total_ms":41.11
   },
   {
     "consulta_id":46,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"erro de permissao ao rodar comando docker sem sudo",
+    "categoria_esperada":"Serviços & Daemons",
     "doc_esperado":116,
     "docs_recuperados":[
+      173,
       116,
       135,
-      173,
       129,
-      29
+      187
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":20.09,
-    "t_sql_ms":41.49,
-    "t_total_ms":61.58
+    "reciprocal_rank":0.5,
+    "t_emb_ms":14.82,
+    "t_sql_ms":2.79,
+    "t_total_ms":17.61
   },
   {
     "consulta_id":46,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"erro de permissao ao rodar comando docker sem sudo",
+    "categoria_esperada":"Serviços & Daemons",
     "doc_esperado":116,
     "docs_recuperados":[
       116,
       135,
       187,
-      156,
-      172
+      148,
+      151
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.13,
-    "t_sql_ms":30.14,
-    "t_total_ms":51.27
+    "t_emb_ms":14.11,
+    "t_sql_ms":1.49,
+    "t_total_ms":15.6
   },
   {
     "consulta_id":47,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"kernel panic unable to mount root fs apos atualizar o ubuntu",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":117,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":39.11,
-    "t_total_ms":39.11
+    "t_sql_ms":17.03,
+    "t_total_ms":17.03
+  },
+  {
+    "consulta_id":47,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"kernel panic unable to mount root fs apos atualizar o ubuntu",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":117,
+    "docs_recuperados":[
+      117,
+      113,
+      197,
+      103,
+      183
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":39.27,
+    "t_total_ms":39.27
   },
   {
     "consulta_id":47,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"kernel panic unable to mount root fs apos atualizar o ubuntu",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":117,
     "docs_recuperados":[
       117,
       185,
       103,
       123,
-      82
+      107
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":24.24,
-    "t_sql_ms":33.91,
-    "t_total_ms":58.15
+    "t_emb_ms":16.45,
+    "t_sql_ms":3.09,
+    "t_total_ms":19.54
   },
   {
     "consulta_id":47,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"kernel panic unable to mount root fs apos atualizar o ubuntu",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":117,
     "docs_recuperados":[
       117,
       185,
       103,
       123,
-      82
+      84
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.87,
-    "t_sql_ms":22.08,
-    "t_total_ms":43.95
+    "t_emb_ms":14.65,
+    "t_sql_ms":1.96,
+    "t_total_ms":16.61
   },
   {
     "consulta_id":48,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"como mudar o horario e fuso horario no linux timedatectl",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":118,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":48.68,
-    "t_total_ms":48.68
+    "t_sql_ms":18.31,
+    "t_total_ms":18.31
   },
   {
     "consulta_id":48,
     "cenario":"Ubuntu",
-    "modo":"semantica",
+    "modo":"lexical_disjuntivo",
     "consulta":"como mudar o horario e fuso horario no linux timedatectl",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":118,
     "docs_recuperados":[
       118,
-      141,
-      14,
-      112,
-      71
+      117,
+      185,
+      179,
+      141
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":22.36,
-    "t_sql_ms":23.23,
-    "t_total_ms":45.59
+    "t_emb_ms":0.0,
+    "t_sql_ms":41.56,
+    "t_total_ms":41.56
+  },
+  {
+    "consulta_id":48,
+    "cenario":"Ubuntu",
+    "modo":"semantica",
+    "consulta":"como mudar o horario e fuso horario no linux timedatectl",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":118,
+    "docs_recuperados":[
+      118,
+      71,
+      112,
+      14,
+      141
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":18.48,
+    "t_sql_ms":2.6,
+    "t_total_ms":21.08
   },
   {
     "consulta_id":48,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"como mudar o horario e fuso horario no linux timedatectl",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":118,
     "docs_recuperados":[
       118,
       71,
       96,
-      158,
+      29,
       163
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":22.0,
-    "t_sql_ms":34.76,
-    "t_total_ms":56.76
+    "t_emb_ms":17.54,
+    "t_sql_ms":1.73,
+    "t_total_ms":19.27
   },
   {
     "consulta_id":49,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"como ver qual processo esta lendo e escrevendo muito no disco",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":119,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":53.77,
-    "t_total_ms":53.77
+    "t_sql_ms":20.25,
+    "t_total_ms":20.25
+  },
+  {
+    "consulta_id":49,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"como ver qual processo esta lendo e escrevendo muito no disco",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":119,
+    "docs_recuperados":[
+      136,
+      160,
+      153,
+      101,
+      119
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.2,
+    "t_emb_ms":0.0,
+    "t_sql_ms":36.62,
+    "t_total_ms":36.62
   },
   {
     "consulta_id":49,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"como ver qual processo esta lendo e escrevendo muito no disco",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":119,
     "docs_recuperados":[
-      119,
-      49,
-      53,
-      40,
-      98
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":21.71,
-    "t_sql_ms":24.67,
-    "t_total_ms":46.38
-  },
-  {
-    "consulta_id":49,
-    "cenario":"Ubuntu",
-    "modo":"semantica_prefilter",
-    "consulta":"como ver qual processo esta lendo e escrevendo muito no disco",
-    "doc_esperado":119,
-    "docs_recuperados":[
-      119,
-      40,
       34,
-      91,
-      35
+      119,
+      170,
+      53,
+      160
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":20.7,
-    "t_sql_ms":24.31,
-    "t_total_ms":45.01
+    "reciprocal_rank":0.5,
+    "t_emb_ms":12.87,
+    "t_sql_ms":2.5,
+    "t_total_ms":15.37
+  },
+  {
+    "consulta_id":49,
+    "cenario":"Ubuntu",
+    "modo":"semantica_prefilter",
+    "consulta":"como ver qual processo esta lendo e escrevendo muito no disco",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":119,
+    "docs_recuperados":[
+      34,
+      119,
+      170,
+      40,
+      67
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":13.96,
+    "t_sql_ms":1.68,
+    "t_total_ms":15.64
   },
   {
     "consulta_id":50,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"como fazer login por chave ssh sem precisar digitar senha",
+    "categoria_esperada":"Segurança",
     "doc_esperado":120,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":47.81,
-    "t_total_ms":47.81
+    "t_sql_ms":18.39,
+    "t_total_ms":18.39
+  },
+  {
+    "consulta_id":50,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"como fazer login por chave ssh sem precisar digitar senha",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":120,
+    "docs_recuperados":[
+      181,
+      120,
+      197,
+      61,
+      11
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":0.0,
+    "t_sql_ms":28.75,
+    "t_total_ms":28.75
   },
   {
     "consulta_id":50,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"como fazer login por chave ssh sem precisar digitar senha",
-    "doc_esperado":120,
-    "docs_recuperados":[
-      120,
-      130,
-      11,
-      181,
-      194
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":22.1,
-    "t_sql_ms":22.15,
-    "t_total_ms":44.25
-  },
-  {
-    "consulta_id":50,
-    "cenario":"Ubuntu",
-    "modo":"semantica_prefilter",
-    "consulta":"como fazer login por chave ssh sem precisar digitar senha",
+    "categoria_esperada":"Segurança",
     "doc_esperado":120,
     "docs_recuperados":[
       120,
       130,
       181,
-      197,
+      194,
       48
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":22.44,
-    "t_sql_ms":21.56,
-    "t_total_ms":44.0
+    "t_emb_ms":16.4,
+    "t_sql_ms":2.6,
+    "t_total_ms":19.0
+  },
+  {
+    "consulta_id":50,
+    "cenario":"Ubuntu",
+    "modo":"semantica_prefilter",
+    "consulta":"como fazer login por chave ssh sem precisar digitar senha",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":120,
+    "docs_recuperados":[
+      120,
+      130,
+      181,
+      48,
+      197
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":17.37,
+    "t_sql_ms":1.69,
+    "t_total_ms":19.06
   },
   {
     "consulta_id":51,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"erro de chave gpg expirada ao dar apt update",
+    "categoria_esperada":"Gerenciamento de Pacotes",
     "doc_esperado":121,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":38.26,
-    "t_total_ms":38.26
+    "t_sql_ms":19.47,
+    "t_total_ms":19.47
+  },
+  {
+    "consulta_id":51,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"erro de chave gpg expirada ao dar apt update",
+    "categoria_esperada":"Gerenciamento de Pacotes",
+    "doc_esperado":121,
+    "docs_recuperados":[
+      121,
+      175,
+      101,
+      103,
+      138
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":39.0,
+    "t_total_ms":39.0
   },
   {
     "consulta_id":51,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"erro de chave gpg expirada ao dar apt update",
+    "categoria_esperada":"Gerenciamento de Pacotes",
     "doc_esperado":121,
     "docs_recuperados":[
       121,
       165,
-      16,
       175,
-      80
+      16,
+      101
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.85,
-    "t_sql_ms":23.07,
-    "t_total_ms":43.92
+    "t_emb_ms":13.43,
+    "t_sql_ms":2.46,
+    "t_total_ms":15.89
   },
   {
     "consulta_id":51,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"erro de chave gpg expirada ao dar apt update",
+    "categoria_esperada":"Gerenciamento de Pacotes",
     "doc_esperado":121,
     "docs_recuperados":[
       121,
@@ -2848,515 +4275,768 @@
       101,
       193
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":21.68,
-    "t_sql_ms":30.85,
-    "t_total_ms":52.53
+    "t_emb_ms":11.87,
+    "t_sql_ms":1.42,
+    "t_total_ms":13.29
   },
   {
     "consulta_id":52,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"servidor nao pinga fora da rede rota padrao sumiu",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":122,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":46.54,
-    "t_total_ms":46.54
+    "t_sql_ms":16.99,
+    "t_total_ms":16.99
+  },
+  {
+    "consulta_id":52,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"servidor nao pinga fora da rede rota padrao sumiu",
+    "categoria_esperada":"Conectividade",
+    "doc_esperado":122,
+    "docs_recuperados":[
+      4,
+      122,
+      158,
+      188,
+      5
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":0.0,
+    "t_sql_ms":24.79,
+    "t_total_ms":24.79
   },
   {
     "consulta_id":52,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"servidor nao pinga fora da rede rota padrao sumiu",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":122,
     "docs_recuperados":[
       122,
-      191,
       158,
-      188,
+      168,
+      1,
       6
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.19,
-    "t_sql_ms":21.58,
-    "t_total_ms":41.77
+    "t_emb_ms":12.76,
+    "t_sql_ms":2.45,
+    "t_total_ms":15.21
   },
   {
     "consulta_id":52,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"servidor nao pinga fora da rede rota padrao sumiu",
+    "categoria_esperada":"Conectividade",
     "doc_esperado":122,
     "docs_recuperados":[
       122,
-      191,
-      188,
+      168,
+      1,
       6,
-      1
+      4
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.16,
-    "t_sql_ms":21.89,
-    "t_total_ms":42.05
+    "t_emb_ms":11.47,
+    "t_sql_ms":1.63,
+    "t_total_ms":13.1
   },
   {
     "consulta_id":53,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"erro no initramfs prompt apos desligar no botao",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":123,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":45.7,
-    "t_total_ms":45.7
+    "t_sql_ms":17.13,
+    "t_total_ms":17.13
+  },
+  {
+    "consulta_id":53,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"erro no initramfs prompt apos desligar no botao",
+    "categoria_esperada":"Sistema Operacional",
+    "doc_esperado":123,
+    "docs_recuperados":[
+      123,
+      117,
+      10,
+      1,
+      2
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":20.0,
+    "t_total_ms":20.0
   },
   {
     "consulta_id":53,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"erro no initramfs prompt apos desligar no botao",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":123,
     "docs_recuperados":[
-      75,
-      117,
       123,
-      60,
+      134,
+      30,
+      75,
       24
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":0.3333333333,
-    "t_emb_ms":21.42,
-    "t_sql_ms":20.73,
-    "t_total_ms":42.15
+    "reciprocal_rank":1.0,
+    "t_emb_ms":15.1,
+    "t_sql_ms":2.75,
+    "t_total_ms":17.85
   },
   {
     "consulta_id":53,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"erro no initramfs prompt apos desligar no botao",
+    "categoria_esperada":"Sistema Operacional",
     "doc_esperado":123,
     "docs_recuperados":[
-      75,
-      117,
       123,
+      30,
+      75,
       24,
-      30
+      117
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":0.3333333333,
-    "t_emb_ms":21.52,
-    "t_sql_ms":21.64,
-    "t_total_ms":43.16
+    "reciprocal_rank":1.0,
+    "t_emb_ms":14.02,
+    "t_sql_ms":1.74,
+    "t_total_ms":15.76
   },
   {
     "consulta_id":54,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"particao montou como somente leitura read only reparar com fsck",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":124,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":52.87,
-    "t_total_ms":52.87
+    "t_sql_ms":16.4,
+    "t_total_ms":16.4
+  },
+  {
+    "consulta_id":54,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"particao montou como somente leitura read only reparar com fsck",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":124,
+    "docs_recuperados":[
+      124,
+      21,
+      24,
+      56,
+      123
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":32.78,
+    "t_total_ms":32.78
   },
   {
     "consulta_id":54,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"particao montou como somente leitura read only reparar com fsck",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":124,
     "docs_recuperados":[
       124,
-      155,
-      145,
-      133,
-      184
+      123,
+      129,
+      94,
+      195
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":23.85,
-    "t_sql_ms":21.81,
-    "t_total_ms":45.66
+    "t_emb_ms":12.76,
+    "t_sql_ms":2.41,
+    "t_total_ms":15.17
   },
   {
     "consulta_id":54,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"particao montou como somente leitura read only reparar com fsck",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":124,
     "docs_recuperados":[
       124,
-      155,
+      94,
+      195,
       145,
-      184,
       37
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":23.27,
-    "t_sql_ms":31.82,
-    "t_total_ms":55.09
+    "t_emb_ms":11.61,
+    "t_sql_ms":1.59,
+    "t_total_ms":13.2
   },
   {
     "consulta_id":55,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"como ver quais portas e programas estao ouvindo com comando ss",
+    "categoria_esperada":"Segurança",
     "doc_esperado":125,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":46.7,
-    "t_total_ms":46.7
+    "t_sql_ms":17.87,
+    "t_total_ms":17.87
+  },
+  {
+    "consulta_id":55,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"como ver quais portas e programas estao ouvindo com comando ss",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":125,
+    "docs_recuperados":[
+      125,
+      135,
+      159,
+      16,
+      171
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":39.23,
+    "t_total_ms":39.23
   },
   {
     "consulta_id":55,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"como ver quais portas e programas estao ouvindo com comando ss",
+    "categoria_esperada":"Segurança",
     "doc_esperado":125,
     "docs_recuperados":[
+      125,
       45,
-      93,
-      60,
-      87,
-      46
+      34,
+      98,
+      96
     ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":22.21,
-    "t_sql_ms":36.12,
-    "t_total_ms":58.33
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.79,
+    "t_sql_ms":2.59,
+    "t_total_ms":16.38
   },
   {
     "consulta_id":55,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"como ver quais portas e programas estao ouvindo com comando ss",
+    "categoria_esperada":"Segurança",
     "doc_esperado":125,
     "docs_recuperados":[
+      125,
       45,
-      46,
+      166,
       42,
-      74,
-      109
+      41
     ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":23.64,
-    "t_sql_ms":20.46,
-    "t_total_ms":44.1
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":11.86,
+    "t_sql_ms":1.58,
+    "t_total_ms":13.44
   },
   {
     "consulta_id":56,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"configurar servico no systemd para reiniciar sozinho se cair",
+    "categoria_esperada":"Serviços & Daemons",
     "doc_esperado":126,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":56.51,
-    "t_total_ms":56.51
+    "t_sql_ms":17.78,
+    "t_total_ms":17.78
+  },
+  {
+    "consulta_id":56,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"configurar servico no systemd para reiniciar sozinho se cair",
+    "categoria_esperada":"Serviços & Daemons",
+    "doc_esperado":126,
+    "docs_recuperados":[
+      137,
+      96,
+      111,
+      133,
+      149
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":29.15,
+    "t_total_ms":29.15
   },
   {
     "consulta_id":56,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"configurar servico no systemd para reiniciar sozinho se cair",
+    "categoria_esperada":"Serviços & Daemons",
     "doc_esperado":126,
     "docs_recuperados":[
       126,
-      158,
-      172,
-      65,
-      105
+      168,
+      96,
+      111,
+      158
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":24.51,
-    "t_sql_ms":20.45,
-    "t_total_ms":44.96
+    "t_emb_ms":13.5,
+    "t_sql_ms":2.42,
+    "t_total_ms":15.92
   },
   {
     "consulta_id":56,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"configurar servico no systemd para reiniciar sozinho se cair",
+    "categoria_esperada":"Serviços & Daemons",
     "doc_esperado":126,
     "docs_recuperados":[
       126,
-      172,
       111,
       187,
+      172,
       135
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":27.43,
-    "t_sql_ms":28.23,
-    "t_total_ms":55.66
+    "t_emb_ms":12.16,
+    "t_sql_ms":1.57,
+    "t_total_ms":13.73
   },
   {
     "consulta_id":57,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"disco 100 porcento ocupado mas du nao acha arquivos apagados abertos",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":127,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":48.43,
-    "t_total_ms":48.43
+    "t_sql_ms":16.89,
+    "t_total_ms":16.89
   },
   {
     "consulta_id":57,
     "cenario":"Ubuntu",
-    "modo":"semantica",
+    "modo":"lexical_disjuntivo",
     "consulta":"disco 100 porcento ocupado mas du nao acha arquivos apagados abertos",
-    "doc_esperado":127,
-    "docs_recuperados":[
-      127,
-      128,
-      32,
-      124,
-      37
-    ],
-    "precision_at_5":0.2,
-    "recall_at_5":1.0,
-    "reciprocal_rank":1.0,
-    "t_emb_ms":21.64,
-    "t_sql_ms":21.06,
-    "t_total_ms":42.7
-  },
-  {
-    "consulta_id":57,
-    "cenario":"Ubuntu",
-    "modo":"semantica_prefilter",
-    "consulta":"disco 100 porcento ocupado mas du nao acha arquivos apagados abertos",
+    "categoria_esperada":"Armazenamento",
     "doc_esperado":127,
     "docs_recuperados":[
       127,
-      128,
       32,
-      124,
-      37
+      81,
+      95,
+      107
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":28.27,
-    "t_sql_ms":38.14,
-    "t_total_ms":66.41
-  },
-  {
-    "consulta_id":58,
-    "cenario":"Ubuntu",
-    "modo":"lexical",
-    "consulta":"erro no space left on device mesmo com espaco livre inodes",
-    "doc_esperado":128,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":47.85,
-    "t_total_ms":47.85
+    "t_sql_ms":26.81,
+    "t_total_ms":26.81
   },
   {
-    "consulta_id":58,
+    "consulta_id":57,
     "cenario":"Ubuntu",
     "modo":"semantica",
-    "consulta":"erro no space left on device mesmo com espaco livre inodes",
-    "doc_esperado":128,
+    "consulta":"disco 100 porcento ocupado mas du nao acha arquivos apagados abertos",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":127,
     "docs_recuperados":[
+      128,
+      127,
       106,
-      145,
-      77,
-      38,
-      36
+      32,
+      37
     ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":20.94,
-    "t_sql_ms":21.02,
-    "t_total_ms":41.96
-  },
-  {
-    "consulta_id":58,
-    "cenario":"Ubuntu",
-    "modo":"semantica_prefilter",
-    "consulta":"erro no space left on device mesmo com espaco livre inodes",
-    "doc_esperado":128,
-    "docs_recuperados":[
-      106,
-      145,
-      77,
-      38,
-      36
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":20.72,
-    "t_sql_ms":22.84,
-    "t_total_ms":43.56
-  },
-  {
-    "consulta_id":59,
-    "cenario":"Ubuntu",
-    "modo":"lexical",
-    "consulta":"erro etc sudoers is world writable perdi acesso ao sudo",
-    "doc_esperado":129,
-    "docs_recuperados":[
-
-    ],
-    "precision_at_5":0.0,
-    "recall_at_5":0.0,
-    "reciprocal_rank":0.0,
-    "t_emb_ms":0.0,
-    "t_sql_ms":39.39,
-    "t_total_ms":39.39
-  },
-  {
-    "consulta_id":59,
-    "cenario":"Ubuntu",
-    "modo":"semantica",
-    "consulta":"erro etc sudoers is world writable perdi acesso ao sudo",
-    "doc_esperado":129,
-    "docs_recuperados":[
-      108,
-      129,
-      133,
-      70,
-      83
-    ],
+    "hit_at_1":0.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":0.5,
-    "t_emb_ms":20.57,
-    "t_sql_ms":22.39,
-    "t_total_ms":42.96
+    "t_emb_ms":13.19,
+    "t_sql_ms":2.6,
+    "t_total_ms":15.79
+  },
+  {
+    "consulta_id":57,
+    "cenario":"Ubuntu",
+    "modo":"semantica_prefilter",
+    "consulta":"disco 100 porcento ocupado mas du nao acha arquivos apagados abertos",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":127,
+    "docs_recuperados":[
+      128,
+      127,
+      106,
+      32,
+      37
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":12.74,
+    "t_sql_ms":1.7,
+    "t_total_ms":14.44
+  },
+  {
+    "consulta_id":58,
+    "cenario":"Ubuntu",
+    "modo":"lexical_estrito",
+    "consulta":"erro no space left on device mesmo com espaco livre inodes",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":128,
+    "docs_recuperados":[
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.43,
+    "t_total_ms":16.43
+  },
+  {
+    "consulta_id":58,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"erro no space left on device mesmo com espaco livre inodes",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":128,
+    "docs_recuperados":[
+      106,
+      128,
+      102,
+      161,
+      189
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":0.5,
+    "t_emb_ms":0.0,
+    "t_sql_ms":31.74,
+    "t_total_ms":31.74
+  },
+  {
+    "consulta_id":58,
+    "cenario":"Ubuntu",
+    "modo":"semantica",
+    "consulta":"erro no space left on device mesmo com espaco livre inodes",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":128,
+    "docs_recuperados":[
+      128,
+      199,
+      106,
+      145,
+      195
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":17.82,
+    "t_sql_ms":2.49,
+    "t_total_ms":20.31
+  },
+  {
+    "consulta_id":58,
+    "cenario":"Ubuntu",
+    "modo":"semantica_prefilter",
+    "consulta":"erro no space left on device mesmo com espaco livre inodes",
+    "categoria_esperada":"Armazenamento",
+    "doc_esperado":128,
+    "docs_recuperados":[
+      128,
+      199,
+      106,
+      145,
+      195
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":12.6,
+    "t_sql_ms":1.71,
+    "t_total_ms":14.31
   },
   {
     "consulta_id":59,
     "cenario":"Ubuntu",
-    "modo":"semantica_prefilter",
+    "modo":"lexical_estrito",
     "consulta":"erro etc sudoers is world writable perdi acesso ao sudo",
+    "categoria_esperada":"Segurança",
     "doc_esperado":129,
     "docs_recuperados":[
-      108,
-      129,
-      83,
+
+    ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":16.05,
+    "t_total_ms":16.05
+  },
+  {
+    "consulta_id":59,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"erro etc sudoers is world writable perdi acesso ao sudo",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":129,
+    "docs_recuperados":[
+      169,
+      101,
+      106,
       109,
-      197
+      114
     ],
+    "hit_at_1":0.0,
+    "precision_at_5":0.0,
+    "recall_at_5":0.0,
+    "reciprocal_rank":0.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":27.59,
+    "t_total_ms":27.59
+  },
+  {
+    "consulta_id":59,
+    "cenario":"Ubuntu",
+    "modo":"semantica",
+    "consulta":"erro etc sudoers is world writable perdi acesso ao sudo",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":129,
+    "docs_recuperados":[
+      129,
+      121,
+      133,
+      141,
+      98
+    ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
-    "reciprocal_rank":0.5,
-    "t_emb_ms":20.6,
-    "t_sql_ms":21.88,
-    "t_total_ms":42.48
+    "reciprocal_rank":1.0,
+    "t_emb_ms":12.88,
+    "t_sql_ms":2.5,
+    "t_total_ms":15.38
+  },
+  {
+    "consulta_id":59,
+    "cenario":"Ubuntu",
+    "modo":"semantica_prefilter",
+    "consulta":"erro etc sudoers is world writable perdi acesso ao sudo",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":129,
+    "docs_recuperados":[
+      129,
+      141,
+      108,
+      180,
+      74
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":13.51,
+    "t_sql_ms":1.6,
+    "t_total_ms":15.11
   },
   {
     "consulta_id":60,
     "cenario":"Ubuntu",
-    "modo":"lexical",
+    "modo":"lexical_estrito",
     "consulta":"warning remote host identification has changed ssh known hosts",
+    "categoria_esperada":"Segurança",
     "doc_esperado":130,
     "docs_recuperados":[
 
     ],
+    "hit_at_1":0.0,
     "precision_at_5":0.0,
     "recall_at_5":0.0,
     "reciprocal_rank":0.0,
     "t_emb_ms":0.0,
-    "t_sql_ms":48.65,
-    "t_total_ms":48.65
+    "t_sql_ms":16.98,
+    "t_total_ms":16.98
+  },
+  {
+    "consulta_id":60,
+    "cenario":"Ubuntu",
+    "modo":"lexical_disjuntivo",
+    "consulta":"warning remote host identification has changed ssh known hosts",
+    "categoria_esperada":"Segurança",
+    "doc_esperado":130,
+    "docs_recuperados":[
+      130,
+      181,
+      105,
+      120,
+      6
+    ],
+    "hit_at_1":1.0,
+    "precision_at_5":0.2,
+    "recall_at_5":1.0,
+    "reciprocal_rank":1.0,
+    "t_emb_ms":0.0,
+    "t_sql_ms":18.47,
+    "t_total_ms":18.47
   },
   {
     "consulta_id":60,
     "cenario":"Ubuntu",
     "modo":"semantica",
     "consulta":"warning remote host identification has changed ssh known hosts",
+    "categoria_esperada":"Segurança",
     "doc_esperado":130,
     "docs_recuperados":[
       130,
       174,
+      105,
       120,
-      152,
-      6
+      168
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.52,
-    "t_sql_ms":22.65,
-    "t_total_ms":43.17
+    "t_emb_ms":11.84,
+    "t_sql_ms":2.63,
+    "t_total_ms":14.47
   },
   {
     "consulta_id":60,
     "cenario":"Ubuntu",
     "modo":"semantica_prefilter",
     "consulta":"warning remote host identification has changed ssh known hosts",
+    "categoria_esperada":"Segurança",
     "doc_esperado":130,
     "docs_recuperados":[
       130,
       120,
-      109,
-      181,
-      125
+      125,
+      142,
+      181
     ],
+    "hit_at_1":1.0,
     "precision_at_5":0.2,
     "recall_at_5":1.0,
     "reciprocal_rank":1.0,
-    "t_emb_ms":20.01,
-    "t_sql_ms":21.19,
-    "t_total_ms":41.2
+    "t_emb_ms":11.29,
+    "t_sql_ms":1.57,
+    "t_total_ms":12.86
   }
 ]

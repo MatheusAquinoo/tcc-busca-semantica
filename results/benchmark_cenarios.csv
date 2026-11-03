@@ -1,7 +1,9 @@
-Cenário,Abordagem,Precisão@5,Revocação@5,MRR,T_total (ms)
-Cenário Microsoft,lexical,0.0000,0.0000,0.0000,53.17
-Cenário Microsoft,semantica,0.1733,0.8667,0.7139,50.48
-Cenário Microsoft,semantica_prefilter,0.1867,0.9333,0.7972,50.37
-Cenário Ubuntu,lexical,0.0000,0.0000,0.0000,47.62
-Cenário Ubuntu,semantica,0.1800,0.9000,0.7861,47.33
-Cenário Ubuntu,semantica_prefilter,0.1800,0.9000,0.8222,49.83
+Cenário,Abordagem,Hits@1,Precisão@5,Revocação@5,MRR,T_sql (ms),T_total (ms)
+Cenário Microsoft,lexical_estrito,0.0000,0.0000,0.0000,0.0000,17.11,17.11
+Cenário Microsoft,lexical_disjuntivo,0.4333,0.1467,0.7333,0.5522,33.27,33.27
+Cenário Microsoft,semantica,0.8333,0.1867,0.9333,0.8833,2.58,16.70
+Cenário Microsoft,semantica_prefilter,0.8333,0.2000,1.0000,0.9000,1.71,14.58
+Cenário Ubuntu,lexical_estrito,0.0000,0.0000,0.0000,0.0000,17.52,17.52
+Cenário Ubuntu,lexical_disjuntivo,0.5333,0.1533,0.7667,0.6317,32.57,32.57
+Cenário Ubuntu,semantica,0.8333,0.2000,1.0000,0.9056,2.54,17.05
+Cenário Ubuntu,semantica_prefilter,0.8667,0.2000,1.0000,0.9278,1.66,15.05

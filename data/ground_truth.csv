@@ -1,0 +1,61 @@
+consulta_id,cenario,consulta_texto,categoria_esperada,documento_relevante_id,relevancia_binaria
+1,Microsoft,minha internet nao funciona e aparece rede nao identificada,Conectividade,1,1
+2,Microsoft,como conectar na vpn da empresa no windows,Conectividade,2,1
+3,Microsoft,o wifi esta muito lento e caindo toda hora,Conectividade,3,1
+4,Microsoft,nao consigo acessar a pasta compartilhada no servidor,Conectividade,4,1
+5,Microsoft,problema para resolver nomes dns internos,Conectividade,5,1
+6,Microsoft,nao consigo conectar na area de trabalho remota rdp,Conectividade,6,1
+7,Microsoft,aviso de conflito de endereco ip no computador,Conectividade,7,1
+8,Microsoft,sites internos travando e conexao fragmentando pacotes,Conectividade,8,1
+9,Microsoft,chamada do microsoft teams com audio falhando e cortando,Conectividade,9,1
+10,Microsoft,minha placa de rede ethernet desliga sozinha quando paro de usar,Conectividade,10,1
+11,Microsoft,esqueci minha senha e minha conta de usuario foi bloqueada,Autenticação,11,1
+12,Microsoft,falha na relacao de confianca entre estacao e dominio,Autenticação,12,1
+13,Microsoft,nao recebo notificacao do aplicativo autenticador mfa,Autenticação,13,1
+14,Microsoft,relogio do computador com diferenca de horario e erro de login,Autenticação,14,1
+15,Microsoft,outlook fica pedindo senha o tempo todo,Autenticação,15,1
+16,Microsoft,como forcar atualizacao das politicas de gpo,Autenticação,16,1
+17,Microsoft,pin do windows hello nao disponivel apos ligar,Autenticação,17,1
+18,Microsoft,leitor de cartao inteligente smart card nao reconhecido,Autenticação,18,1
+19,Microsoft,auditoria de tentativas de senha incorreta no windows,Autenticação,19,1
+20,Microsoft,alterei a senha no computador mas na nuvem nao atualizou,Autenticação,20,1
+21,Microsoft,computador travou e deu tela azul critical process died,Sistema Operacional,21,1
+22,Microsoft,meu computador ta muito lento com disco em 100 porcento,Sistema Operacional,22,1
+23,Microsoft,windows update travado baixando atualizacoes,Sistema Operacional,23,1
+24,Microsoft,windows travado na tela azul de reparo automatico,Sistema Operacional,24,1
+25,Microsoft,como voltar o windows para uma data anterior restaurar,Sistema Operacional,25,1
+26,Microsoft,processo interrupcoes do sistema usando muita cpu,Sistema Operacional,26,1
+27,Microsoft,erro de boot winload.efi ausente no windows,Sistema Operacional,27,1
+28,Microsoft,como fazer inicializacao limpa para testar programas,Sistema Operacional,28,1
+29,Microsoft,adicionar caminho no path do sistema windows,Sistema Operacional,29,1
+30,Microsoft,barra de tarefas travou e menu iniciar nao clica,Sistema Operacional,30,1
+31,Ubuntu,erro could not get lock dpkg quebrado no terminal,Gerenciamento de Pacotes,101,1
+32,Ubuntu,como configurar ip fixo com netplan no ubuntu,Conectividade,102,1
+33,Ubuntu,computador liga na tela grub rescue nao inicia o linux,Sistema Operacional,103,1
+34,Ubuntu,servidor linux travando com processo usando toda a memoria e cpu,Sistema Operacional,104,1
+35,Ubuntu,nao consigo conectar por ssh na porta 22 connection refused,Conectividade,105,1
+36,Ubuntu,disco cheio no ubuntu como liberar espaco em var log,Armazenamento,106,1
+37,Ubuntu,como montar hd ou particao automaticamente no fstab,Armazenamento,107,1
+38,Ubuntu,permissao negada em pasta chmod chown para usuario,Segurança,108,1
+39,Ubuntu,como ativar firewall ufw e liberar portas no ubuntu,Segurança,109,1
+40,Ubuntu,wifi nao aparece no notebook com ubuntu driver broadcom,Conectividade,110,1
+41,Ubuntu,como reiniciar servico e ver logs com systemctl e journalctl,Serviços & Daemons,111,1
+42,Ubuntu,como colocar script para rodar sozinho todo dia no crontab,Serviços & Daemons,112,1
+43,Ubuntu,esqueci a senha de root e administrador no ubuntu como recuperar,Segurança,113,1
+44,Ubuntu,servidor matando processos por falta de memoria como criar swap,Armazenamento,114,1
+45,Ubuntu,tela preta com placa de video nvidia no linux,Sistema Operacional,115,1
+46,Ubuntu,erro de permissao ao rodar comando docker sem sudo,Serviços & Daemons,116,1
+47,Ubuntu,kernel panic unable to mount root fs apos atualizar o ubuntu,Sistema Operacional,117,1
+48,Ubuntu,como mudar o horario e fuso horario no linux timedatectl,Sistema Operacional,118,1
+49,Ubuntu,como ver qual processo esta lendo e escrevendo muito no disco,Armazenamento,119,1
+50,Ubuntu,como fazer login por chave ssh sem precisar digitar senha,Segurança,120,1
+51,Ubuntu,erro de chave gpg expirada ao dar apt update,Gerenciamento de Pacotes,121,1
+52,Ubuntu,servidor nao pinga fora da rede rota padrao sumiu,Conectividade,122,1
+53,Ubuntu,erro no initramfs prompt apos desligar no botao,Sistema Operacional,123,1
+54,Ubuntu,particao montou como somente leitura read only reparar com fsck,Armazenamento,124,1
+55,Ubuntu,como ver quais portas e programas estao ouvindo com comando ss,Segurança,125,1
+56,Ubuntu,configurar servico no systemd para reiniciar sozinho se cair,Serviços & Daemons,126,1
+57,Ubuntu,disco 100 porcento ocupado mas du nao acha arquivos apagados abertos,Armazenamento,127,1
+58,Ubuntu,erro no space left on device mesmo com espaco livre inodes,Armazenamento,128,1
+59,Ubuntu,erro etc sudoers is world writable perdi acesso ao sudo,Segurança,129,1
+60,Ubuntu,warning remote host identification has changed ssh known hosts,Segurança,130,1
