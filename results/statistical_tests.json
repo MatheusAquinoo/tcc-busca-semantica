@@ -1,9 +1,29 @@
 {
+  "nivel_significancia_adotado_alpha": 0.01,
   "semantica_vs_lexical_disjuntivo": {
     "t_statistic": 4.7757,
     "p_value_ttest": 1.2247089920456023e-05,
     "wilcoxon_statistic": 66.5,
-    "p_value_wilcoxon": 6.223643070256143e-05
+    "p_value_wilcoxon": 6.223643070256143e-05,
+    "significativo_alpha_001": true,
+    "interpretacao": "Rejeita-se H0 (p < 0.0001 < alpha = 0.01). A busca semântica vetorial pura supera de forma estatisticamente significativa o baseline lexical representativo."
+  },
+  "semantica_prefilter_vs_lexical_disjuntivo": {
+    "t_statistic": 5.2027,
+    "p_value_ttest": 2.592981535002222e-06,
+    "wilcoxon_statistic": 49.0,
+    "p_value_wilcoxon": 1.6522128807582356e-05,
+    "significativo_alpha_001": true,
+    "interpretacao": "Rejeita-se H0 (p < 0.0001 < alpha = 0.01). A busca semântica com pré-filtragem relacional supera de forma estatisticamente significativa o baseline lexical representativo."
+  },
+  "semantica_prefilter_vs_semantica_pura": {
+    "t_statistic": 1.8765,
+    "p_value_ttest": 0.06553271696646908,
+    "wilcoxon_statistic": 0.0,
+    "p_value_wilcoxon": 0.06559969214707187,
+    "significativo_alpha_001": false,
+    "significativo_alpha_005": false,
+    "interpretacao": "Não se rejeita H0 ao nível de significância adotado (p = 0.0655 > alpha = 0.01 e p > 0.05). Os resultados não demonstram superioridade estatisticamente significativa da pré-filtragem relacional sobre a busca semântica pura em termos de MRR global."
   },
   "hibrida_vs_lexical_disjuntivo": {
     "t_statistic": 5.2027,

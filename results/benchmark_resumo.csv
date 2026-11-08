@@ -1,5 +1,5 @@
 Abordagem,Hits@1,Precisão@5 Média,Revocação@5 Média,MRR,T_emb Médio (ms),T_sql Médio (ms),T_total Médio (ms)
 Busca Lexical Estrita (FTS Conjuntivo AND),0.0000,0.0000,0.0000,0.0000,0.00,17.31,17.31
 Busca Lexical Flexível (FTS Disjuntivo OR / GIN),0.4833,0.1500,0.7500,0.5919,0.00,32.92,32.92
-Busca Semântica Vetorial (pgvector HNSW),0.8333,0.1933,0.9667,0.8944,14.31,2.56,16.87
-Busca Semântica Híbrida (HNSW + Pre-filtering RF07),0.8500,0.2000,1.0000,0.9139,13.13,1.69,14.81
+Busca Semântica Vetorial Pura (pgvector HNSW),0.8333,0.1933,0.9667,0.8944,14.31,2.56,16.87
+Busca Semântica com Pré-filtragem Relacional (HNSW + RF07),0.8500,0.2000,1.0000,0.9139,13.13,1.69,14.81

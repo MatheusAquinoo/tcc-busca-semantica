@@ -57,8 +57,12 @@ def run_ingestion(max_chars: int = 260, overlap: int = 50):
             chunk_meta["total_chunks"] = len(chunks)
 
             chunk_records.append({
+                "chunk_index_global": len(chunk_records) + 1,
                 "documento_id": doc_id,
+                "titulo_documento": titulo,
+                "fonte": doc["fonte"],
                 "conteudo": ch,
+                "texto_vetorizado": f"{titulo}. {ch}",
                 "categoria": categoria,
                 "metadados": chunk_meta
             })
@@ -68,6 +72,23 @@ def run_ingestion(max_chars: int = 260, overlap: int = 50):
     t_prep_end = time.perf_counter()
     t_prep_s = round(t_prep_end - t_prep_start, 4)
     print(f"[*] Gerados {len(chunk_records)} fragmentos (chunks) estruturados a partir dos {len(all_raw_docs)} documentos em {t_prep_s:.2f}s.")
+
+    # Exporta os fragmentos processados para data/processed/ para garantir auditabilidade e reprodutibilidade
+    os.makedirs("data/processed", exist_ok=True)
+    with open("data/processed/chunks_indexados.json", "w", encoding="utf-8") as f_json:
+        json.dump(chunk_records, f_json, indent=2, ensure_ascii=False)
+
+    import csv
+    with open("data/processed/chunks_indexados.csv", "w", encoding="utf-8", newline="") as f_csv:
+        writer = csv.DictWriter(
+            f_csv,
+            fieldnames=["chunk_index_global", "documento_id", "titulo_documento", "fonte", "categoria", "conteudo", "texto_vetorizado", "metadados"]
+        )
+        writer.writeheader()
+        for r in chunk_records:
+            row_copy = dict(r)
+            row_copy["metadados"] = json.dumps(r["metadados"], ensure_ascii=False)
+            writer.writerow(row_copy)
 
     # 3. Geração de Embeddings em Lote (Sentence-Transformers 768d - RF03)
     print(f"[*] Computando embeddings (768d) em lote com Sentence-Transformers...")

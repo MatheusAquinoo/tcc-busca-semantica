@@ -13,9 +13,6 @@ ENV/
 data/cache/
 /models/
 
-# Benchmark results logs
-results/*.png
-
 # IDE
 .vscode/
 .idea/
@@ -24,5 +21,6 @@ results/*.png
 tcc1/
 Template-Relatório-Técnico-BES-UTFPR/
 Template-Relat*
+TCC2_Matheus.pdf
 
 

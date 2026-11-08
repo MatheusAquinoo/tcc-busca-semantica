@@ -1,0 +1,64 @@
+﻿============================= test session starts =============================
+platform win32 -- Python 3.11.9, pytest-9.1.1, pluggy-1.7.0 -- C:\tcc\.venv\Scripts\python.exe
+cachedir: .pytest_cache
+rootdir: C:\tcc
+plugins: anyio-4.15.1
+collecting ... collected 23 items
+
+tests/test_api.py::test_root_endpoint PASSED                             [  4%]
+tests/test_api.py::test_api_info_endpoint PASSED                         [  8%]
+tests/test_api.py::test_health_check_endpoint PASSED                     [ 13%]
+tests/test_api.py::test_categories_and_stats_endpoints PASSED            [ 17%]
+tests/test_api.py::test_documents_listing_and_detail_endpoints PASSED    [ 21%]
+tests/test_api.py::test_semantic_search_endpoint_and_deduplication PASSED [ 26%]
+tests/test_api.py::test_semantic_search_with_category_and_tag_prefiltering PASSED [ 30%]
+tests/test_api.py::test_lexical_search_modes PASSED                      [ 34%]
+tests/test_api.py::test_compare_search_endpoint PASSED                   [ 39%]
+tests/test_api.py::test_document_ingest_endpoint_lifecycle PASSED        [ 43%]
+tests/test_persistence.py::test_pgvector_extension_installed PASSED      [ 47%]
+tests/test_persistence.py::test_tables_and_columns_schema PASSED         [ 52%]
+tests/test_persistence.py::test_hnsw_and_gin_indexes_exist PASSED        [ 56%]
+tests/test_persistence.py::test_referential_integrity_cascade_delete PASSED [ 60%]
+tests/test_persistence.py::test_cosine_distance_operator_and_ordering PASSED [ 65%]
+tests/test_unit.py::test_clean_text_removes_control_chars_and_multiple_spaces PASSED [ 69%]
+tests/test_unit.py::test_chunk_text_short_document_single_chunk PASSED   [ 73%]
+tests/test_unit.py::test_chunk_text_long_document_creates_overlapping_chunks PASSED [ 78%]
+tests/test_unit.py::test_load_dataset_json_and_csv_equivalence PASSED    [ 82%]
+tests/test_unit.py::test_embedding_dimension_and_l2_normalization PASSED [ 86%]
+tests/test_unit.py::test_semantic_similarity_synonyms_vs_unrelated PASSED [ 91%]
+tests/test_unit.py::test_pydantic_search_request_validation PASSED       [ 95%]
+tests/test_unit.py::test_pydantic_document_ingest_request_validation PASSED [100%]
+
+============================== warnings summary ===============================
+.venv\Lib\site-packages\fastapi\testclient.py:1
+  C:\tcc\.venv\Lib\site-packages\fastapi\testclient.py:1: StarletteDeprecationWarning: Using `httpx` with `starlette.testclient` is deprecated; install `httpx2` instead.
+    from starlette.testclient import TestClient as TestClient  # noqa
+
+-- Docs: https://docs.pytest.org/en/stable/how-to/capture-warnings.html
+=================================== PASSES ====================================
+------------- generated xml file: C:\tcc\results\pytest_junit.xml -------------
+=========================== short test summary info ===========================
+PASSED tests/test_api.py::test_root_endpoint
+PASSED tests/test_api.py::test_api_info_endpoint
+PASSED tests/test_api.py::test_health_check_endpoint
+PASSED tests/test_api.py::test_categories_and_stats_endpoints
+PASSED tests/test_api.py::test_documents_listing_and_detail_endpoints
+PASSED tests/test_api.py::test_semantic_search_endpoint_and_deduplication
+PASSED tests/test_api.py::test_semantic_search_with_category_and_tag_prefiltering
+PASSED tests/test_api.py::test_lexical_search_modes
+PASSED tests/test_api.py::test_compare_search_endpoint
+PASSED tests/test_api.py::test_document_ingest_endpoint_lifecycle
+PASSED tests/test_persistence.py::test_pgvector_extension_installed
+PASSED tests/test_persistence.py::test_tables_and_columns_schema
+PASSED tests/test_persistence.py::test_hnsw_and_gin_indexes_exist
+PASSED tests/test_persistence.py::test_referential_integrity_cascade_delete
+PASSED tests/test_persistence.py::test_cosine_distance_operator_and_ordering
+PASSED tests/test_unit.py::test_clean_text_removes_control_chars_and_multiple_spaces
+PASSED tests/test_unit.py::test_chunk_text_short_document_single_chunk
+PASSED tests/test_unit.py::test_chunk_text_long_document_creates_overlapping_chunks
+PASSED tests/test_unit.py::test_load_dataset_json_and_csv_equivalence
+PASSED tests/test_unit.py::test_embedding_dimension_and_l2_normalization
+PASSED tests/test_unit.py::test_semantic_similarity_synonyms_vs_unrelated
+PASSED tests/test_unit.py::test_pydantic_search_request_validation
+PASSED tests/test_unit.py::test_pydantic_document_ingest_request_validation
+======================= 23 passed, 1 warning in 10.36s ========================

@@ -1,8 +1,25 @@
 """
-Script gerador de bases de dados técnicas com 200 tópicos REAIS e ÚNICOS (sem repetições ou clones sintéticos).
-- Cenário A: 100 FAQs de suporte corporativo Microsoft (IDs 1 a 100)
-- Cenário B: 100 Diálogos/Logs de suporte técnico Ubuntu (IDs 101 a 200)
-- 60 Consultas analíticas de teste do Padrão-Ouro (Ground Truth) com relevância binária
+Script gerador de bases de dados técnicas com 200 tópicos REAIS e ÚNICOS (sem repetições ou clones sintéticos)
+e da Matriz de Padrão-Ouro (Ground Truth) de 60 consultas analíticas.
+
+Protocolo Metodológico de Construção do Corpus e do Padrão-Ouro (Seção 2.5.2 do TCC 2):
+1. Curadoria de Exclusividade Temática (Modelo KCS - Knowledge-Centered Service):
+   - Cenário A: 100 FAQs de suporte corporativo Microsoft (IDs 1 a 100) em 6 categorias.
+   - Cenário B: 100 Diálogos/Logs de suporte técnico Ubuntu Linux (IDs 101 a 200) em 6 categorias.
+   - Cada documento aborda uma única causa-raiz e procedimento técnico canônico (estruturado em
+     Sintoma, Causa e Solução técnica), inexistindo documentos duplicados sobre o mesmo incidente.
+2. Amostragem Estratificada (|Q| = 60 consultas):
+   - 30 consultas para o Cenário A (Microsoft: IDs 1 a 30, sendo 10 de Conectividade, 10 de Autenticação
+     e 10 de Sistema Operacional) e 30 consultas para o Cenário B (Ubuntu: IDs 101 a 130, abrangendo
+     Gerenciamento de Pacotes, Conectividade, Sistema Operacional, Armazenamento, Segurança e Serviços & Daemons).
+3. Formulação Reversa Baseada em Sintomas (Symptom-Driven Query Formulation):
+   - As consultas simulam o relato de usuários ou analistas de 1º nível a partir do sintoma observável,
+     aplicando paráfrases coloquiais, omissão deliberada dos comandos da solução técnica e ausência
+     de acentuação ortográfica estrita.
+4. Determinação de Relevância Binária e Busca por Item Conhecido (Known-Item Search, |Rel_q| = 1):
+   - Um documento recebe relevância binária R = 1 se, e somente se, seu procedimento técnico soluciona
+     diretamente a causa-raiz descrita na consulta. Foi realizada auditoria cruzada contra os demais
+     199 documentos do corpus para assegurar unicidade de resposta canônica por consulta.
 """
 
 import json
